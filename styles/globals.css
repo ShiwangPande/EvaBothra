@@ -1,29 +1,6 @@
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 255, 255, 255;
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-}
-
-* {
-  transition: all 0.3s ease-in-out;
-}
-
-.image-hover {
-  transition: transform 0.3s ease-in-out;
-}
-
-.image-hover:hover {
-  transform: scale(1.05);
-}
-
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -146,51 +123,3 @@ body {
     @apply bg-background text-foreground;
   }
 }
-
-
-@font-face {
-  font-family: 'Ayer Poster Web';
-  src: url('/fonts/AyerPoster-Regular-Web.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Optional: set as default font */
-h1,h2, h3 {
-  font-family: 'Ayer Poster Web', serif;
-}
-
-html {
-  scroll-behavior: smooth;
-  scrollbar-width: thin;
-}
-
-section {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.8s forwards;
-}
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.grid > div {
-  opacity: 0;
-  animation: fadeIn 0.5s forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-.grid > div:nth-child(1) { animation-delay: 0.1s; }
-.grid > div:nth-child(2) { animation-delay: 0.2s; }
-.grid > div:nth-child(3) { animation-delay: 0.3s; }
-/* ... add more if needed */
