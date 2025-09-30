@@ -71,7 +71,7 @@ export default function HomePage() {
     return () => clearTimeout(timer)
   }, [])
 
-  const sectionKeys = Object.keys(portfolioData) as (keyof typeof portfolioData)[]
+  const tiles = portfolioData.homeTiles ?? []
 
   return (
     <>
@@ -91,31 +91,21 @@ export default function HomePage() {
           transition={{ duration: 0.8, delay: 3 }}
           className="fixed inset-0 flex items-center justify-center pointer-events-none z-0"
         >
-          <h1 className="text-[15vw] sm:text-[18vw] lg:text-[20vw] font-medium text-gray-200 select-none leading-none">
+          <span className="text-[15vw] sm:text-[18vw] lg:text-[20vw] font-medium eva-font  select-none leading-none">
             EVA BOTHRA
-          </h1>
+          </span>
         </motion.div>
 
-        {/* View Mode Toggle */}
-        <motion.div
+        {/* Tagline instead of toggle */}
+        {/* <motion.div
           variants={ANIMATION_VARIANTS.slideUp}
           transition={{ duration: 0.5, delay: 3.8 }}
           className="fixed top-4 right-4 md:top-8 md:right-8 z-40"
         >
-          <motion.button
-            onClick={toggleViewMode}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-white border border-black px-3 py-2 md:px-4 md:py-2 text-xs md:text-sm hover:bg-black hover:text-white transition-all duration-300"
-          >
-            <span className="hidden md:inline">
-              {viewMode === 'overlay' ? 'Navigate to Pages' : 'Show Overlays'}
-            </span>
-            <span className="md:hidden">
-              {viewMode === 'overlay' ? 'Navigate' : 'Overlay'}
-            </span>
-          </motion.button>
-        </motion.div>
+          <div className="bg-white border border-black px-3 py-2 md:px-4 md:py-2 text-xs md:text-sm">
+            Enter into the journey of my impact.
+          </div>
+        </motion.div> */}
 
         {/* Portfolio Grid */}
         <motion.section
@@ -129,21 +119,22 @@ export default function HomePage() {
               variants={ANIMATION_VARIANTS.stagger}
               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-12"
             >
-              {sectionKeys.map((key) => (
+              {tiles.map((tile) => (
                 <motion.div
-                  key={key}
+                  key={tile.key}
                   variants={ANIMATION_VARIANTS.slideUp}
                   transition={{ duration: 0.5 }}
                   className="flex justify-center"
                 >
                   <PortfolioImage
-                    isSelected={selectedSectionKey === key}
-                    hasSelection={!!selectedSectionKey}
-                    imageSrc={'imageSrc' in portfolioData[key] ? (portfolioData[key] as any).imageSrc : ''}
-                    altText={portfolioData[key].title}
-                    sectionKey={key}
-                    onClick={() => handleImageClick(key)}
-                    enableNavigation={viewMode === 'navigate'}
+                    isSelected={false}
+                    hasSelection={false}
+                    imageSrc={tile.imageSrc}
+                    altText={tile.title}
+                    sectionKey={tile.key}
+                    href={tile.href}
+                    external={tile.external}
+                    enableNavigation={false}
                   />
                 </motion.div>
               ))}
@@ -151,12 +142,12 @@ export default function HomePage() {
           </div>
         </motion.section>
         {/* <Navbar/> */}
-            <Tabbar/>
+         
         {/* Additional Sections */}
         {isReady && (
           <Suspense fallback={null}>
-            <section id="about" className="min-h-screen relative z-10">
-              <AboutMe />
+            <section id="about" className="relative z-10 py-8 md:py-12">
+              <AboutMe compact />
             </section>
 
             <section id="testimonials" className="min-h-screen relative z-10">

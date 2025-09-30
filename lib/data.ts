@@ -132,6 +132,7 @@ export const portfolioData: PortfolioData = {
                         description: "Conducted an independent research project analyzing India-focused healthcare models reducing long-term costs",
                         details: "Selected to present at Innosphere 2025 (Sigma Xi Research Conference), Published in IJSSER, Received Crest Gold Award. 80+ hours of structured research (formal research methods, data modeling, report writing).",
                         category: "Independent Research",
+                        imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1759262127/Acceptance_Letter_research_paper_page-0001_fp73y1.jpg",
                         achievements: ["80+ research hours", "Conference selection", "Publication submission", "Award entry"]
                     },
                     {
@@ -205,10 +206,10 @@ export const portfolioData: PortfolioData = {
                 title: "TeenLink – Founder",
                 grade: "Current",
                 description: "First 'LinkedIn for teenagers' with 400+ beta users, live on the App Store and Play Store",
-                details: "TeenLink grew from frustration into action. At my old school, I launched a Debate Club from scratch – organizing rooms, teachers, logistics, and over 70 members– only to be told we couldn't compete. That moment showed me the gap between talent and opportunity. Transferring schools revealed a new world of possibilities, and I realized that thousands of students were being denied access to mentorship, internships, and growth opportunities. TeenLink became my answer.\n\nI built the platform from the ground up: coding the app, designing the interface, creating graphics, planning onboarding, and drafting marketing strategies. Late nights debugging, learning from professional coders, and iterating endlessly taught me that real entrepreneurship is persistence in action.\n\nToday, TeenLink has 400 beta users, with a roadmap to reach 20,000 in the next app update. Partnerships with Mauka onboarded 80 NGOs and 56 companies for volunteer work, while over 20 school counselors expanded their mentorship programs. Early funding of ₹4 lakhs (~$5K) and selection in the TYE Rajasthan accelerator validated the work.\n\nEvery feature, every pitch, every bug fix reflects my drive to transform a gap I experienced firsthand into a platform that empowers thousands of students to discover opportunities and connect with mentors.",
+                details: "TeenLink grew from frustration into action. At my old school, I launched a Debate Club from scratch – organizing rooms, teachers, logistics, and over 70 members– only to be told we couldn’t compete. That moment showed me the gap between talent and opportunity. Transferring schools revealed a new world of possibilities, and I realized that thousands of students were being denied access to mentorship, internships, and growth opportunities. TeenLink became my answer.\n\nI built the platform from the ground up: coding the app, designing the interface, creating graphics, planning onboarding, and drafting marketing strategies. Late nights debugging, learning from professional coders, and iterating endlessly taught me that real entrepreneurship is persistence in action.\n\nToday, TeenLink has 400 beta users, with a roadmap to reach 20,000 in the next app update. Partnerships with Mauka onboarded 80 NGOs and 56 companies for volunteer work, while over 20 school counselors expanded their mentorship programs. Early funding of ₹4 lakhs (~$5K) and selection in the TYE Rajasthan accelerator validated the work.\n\nEvery feature, every pitch, every bug fix reflects my drive to transform a gap I experienced firsthand into a platform that empowers thousands of students to discover opportunities and connect with mentors.",
                 category: "Tech Entrepreneurship",
                 achievements: ["400+ beta users", "App Store & Play Store live", "₹4 lakhs funding", "TYE accelerator selection"],
-                link: "App Store and Play Store"
+                link: "Available on App Store and Play Store: https://apps.apple.com/ https://play.google.com/"
             },
             {
                 id: "sfcc",
@@ -218,7 +219,7 @@ export const portfolioData: PortfolioData = {
                 details: "As Finance Head for SFCC, I co-led India's most extensive student wellness campaign: a 12-hour national livestream that attracted 1,000+ participants and raised $140,000+. My role spanned sponsor negotiations, allocation of funds, and directing operations to sustain on-ground therapy in Kota, a city where over 100,000 students prepare for competitive exams under intense pressure.\n\nI personally coordinated workshops in hostels with psychologists Dr. Prerna Maheshwari and Dr. Pankhuri Monga, directly engaging 300 students. The funds we raised enabled us to place full-time therapists in Kota, providing free, continuous mental health support.\n\nBeing on the ground in Kota, hearing students' silent struggles, made every sponsorship negotiation urgent and personal. For me, finance became more than numbers — it was the scaffolding for lives under strain.",
                 category: "Social Impact",
                 achievements: ["$140,000+ raised", "1,000+ participants", "Mental health support in Kota", "12-hour livestream"],
-                link: "Campaign Video"
+                link: "https://www.youtube.com/watch?v=G_ya89GaXDg"
             },
             {
                 id: "cortisolx",
@@ -602,6 +603,65 @@ export const portfolioData: PortfolioData = {
                 achievements: ["Resilience building", "Character development", "Problem-solving approach", "Empathy cultivation"]
             }
         ]
-    }
+    },
+
+    homeTiles: [
+        {
+            key: 'legal-saathi',
+            title: 'Legal Saathi',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1758530018/Your_Legal_Rights_y1znqt.png',
+            href: 'https://legalsaathi.org',
+            external: true
+        },
+        {
+            key: 'janam',
+            title: 'Janam',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1758530520/janam_mxcgpx.png',
+            href: 'https://janamindia.vercel.app',
+            external: true
+        },
+        {
+            key: 'sfcc',
+            title: 'SFCC',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253125/Kota_SFCC1_lviu66.jpg',
+            href: '/sfcc',
+            external: false
+        },
+        {
+            key: 'cortisolx',
+            title: 'CortisolX',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253115/cortisolx_mgbl2b.jpg',
+            href: 'https://www.youtube.com/watch?v=G_ya89GaXDg',
+            external: true
+        },
+        {
+            key: 'iris-national',
+            title: 'IRIS National',
+            imageSrc: '/placeholder.jpg',
+            href: '/iris-national',
+            external: false
+        },
+        {
+            key: 'internlectual',
+            title: 'Internlectual',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258931/566c3c68-a099-4a25-af70-abe033958a13.png',
+            href: 'https://internlectual.com',
+            external: true
+        },
+        {
+            key: 'teenlink',
+            title: 'TeenLink',
+            imageSrc: '/placeholder.jpg',
+            href: 'https://play.google.com/',
+            external: true
+        },
+        {
+            key: 'reshaping-society',
+            title: 'Reshaping Society – Podcast',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258538/Reshaping_Society_vrh7he.png',
+            href: 'https://www.youtube.com/@ReshapingSociety',
+            external: true
+        }
+    ]
 }
  

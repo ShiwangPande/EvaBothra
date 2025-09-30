@@ -57,6 +57,15 @@ export type PortfolioData = {
   awards: PortfolioSection
   youtube: PortfolioSection
   reflections: PortfolioSection
+  homeTiles?: HomeTile[]
+}
+
+export type HomeTile = {
+  key: string
+  title: string
+  imageSrc: string
+  href: string
+  external: boolean
 }
 
 

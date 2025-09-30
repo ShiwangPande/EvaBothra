@@ -13,6 +13,8 @@ interface PortfolioImageProps {
   sectionKey: string
   onClick?: () => void
   enableNavigation?: boolean
+  href?: string
+  external?: boolean
 }
 
 export const PortfolioImage = memo(function PortfolioImage({
@@ -22,13 +24,21 @@ export const PortfolioImage = memo(function PortfolioImage({
   altText,
   sectionKey,
   onClick,
-  enableNavigation = false
+  enableNavigation = false,
+  href,
+  external
 }: PortfolioImageProps) {
   const [isLoading, setIsLoading] = useState(true)
   const router = useRouter()
 
   const handleClick = () => {
-    if (enableNavigation) {
+    if (href) {
+      if (external) {
+        window.open(href, '_blank')
+      } else {
+        router.push(href)
+      }
+    } else if (enableNavigation) {
       router.push(`/${sectionKey}`)
     } else if (onClick) {
       onClick()
