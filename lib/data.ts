@@ -637,7 +637,7 @@ export const portfolioData: PortfolioData = {
         {
             key: 'iris-national',
             title: 'IRIS National',
-            imageSrc: '/placeholder.jpg',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1759299129/IRIS_1_sugz6f.png',
             href: '/iris-national',
             external: false
         },
@@ -651,7 +651,7 @@ export const portfolioData: PortfolioData = {
         {
             key: 'teenlink',
             title: 'TeenLink',
-            imageSrc: '/placeholder.jpg',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1759302338/TEENLink_3_vjzmqw.png',
             href: 'https://play.google.com/',
             external: true
         },
