@@ -48,9 +48,9 @@ export default function AcademicsPage() {
             )}
           </div>
           <div>
-            <div className="relative w-full h-64 md:h-96 rounded-md overflow-hidden border border-gray-200">
+            {/* <div className="relative w-full h-64 md:h-96 rounded-md overflow-hidden border border-gray-200">
               <Image src={data.imageSrc} alt={data.title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 40vw" />
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

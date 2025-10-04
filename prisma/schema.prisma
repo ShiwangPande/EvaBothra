@@ -1,0 +1,52 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Testimonial {
+  id          String   @id @default(cuid())
+  author      String
+  role        String
+  content     String
+  imageSrc    String?
+  email       String?
+  userId      String?  // Clerk user ID
+  status      Status   @default(PENDING)
+  approved    Boolean  @default(false)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map("testimonials")
+}
+
+model ContactMessage {
+  id        String            @id @default(cuid())
+  name      String
+  email     String
+  message   String
+  userId    String?            // Clerk user ID
+  status    ContactStatus     @default(PENDING)
+  createdAt DateTime          @default(now())
+  updatedAt DateTime          @updatedAt
+
+  @@map("contact_messages")
+}
+
+enum Status {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum ContactStatus {
+  PENDING
+  READ
+  REPLIED
+}

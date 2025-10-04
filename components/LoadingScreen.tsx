@@ -1,29 +1,31 @@
 "use client"
 
 import { motion, Variants, easeInOut } from "framer-motion"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 
 const letterAnimation: Variants = {
   initial: { 
     y: 400, 
     opacity: 0 
   },
-  animate: {
+  animate: (i: number) => ({
     y: 0,
     opacity: 1,
     transition: {
       ease: easeInOut,
       duration: 1,
+      delay: i * 0.08,
     },
-  },
-  exit: {
+  }),
+  exit: (i: number) => ({
     y: -200,
     opacity: 0,
     transition: {
       ease: easeInOut,
       duration: 0.5,
+      delay: i * 0.05,
     },
-  },
+  }),
 }
 
 const containerAnimation: Variants = {
@@ -54,19 +56,57 @@ const lineAnimation: Variants = {
 
 export function LoadingScreen() {
   const [progress, setProgress] = useState(0)
+  const [smoothProgress, setSmoothProgress] = useState(0)
+  const requestRef = useRef<number | null>(null)
 
+  // Progress logic: fill to 100% over 2s, then hold
   useEffect(() => {
-    const timer = setInterval(() => {
-      setProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(timer)
-          return 100
-        }
-        return prev + 1
-      })
-    }, 20)
-    return () => clearInterval(timer)
+    let start: number | null = null
+    let animationFrame: number
+
+    function animateProgress(ts: number) {
+      if (start === null) start = ts
+      const elapsed = ts - start
+      const duration = 2000 // ms
+      let nextProgress = Math.min(100, (elapsed / duration) * 100)
+      setProgress(nextProgress)
+      if (nextProgress < 100) {
+        animationFrame = requestAnimationFrame(animateProgress)
+      } else {
+        setProgress(100)
+      }
+    }
+
+    animationFrame = requestAnimationFrame(animateProgress)
+    return () => cancelAnimationFrame(animationFrame)
   }, [])
+
+  // Smooth progress bar using lerp
+  useEffect(() => {
+    function lerp(a: number, b: number, t: number) {
+      return a + (b - a) * t
+    }
+    let running = true
+    function animate() {
+      setSmoothProgress(prev => {
+        const next = lerp(prev, progress, 0.15)
+        if (Math.abs(next - progress) < 0.5) return progress
+        return next
+      })
+      if (running && smoothProgress < 100) {
+        requestRef.current = requestAnimationFrame(animate)
+      }
+    }
+    if (progress < 100 || smoothProgress < 100) {
+      running = true
+      requestRef.current = requestAnimationFrame(animate)
+    }
+    return () => {
+      running = false
+      if (requestRef.current) cancelAnimationFrame(requestRef.current)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [progress])
 
   const firstName = "EVA".split("")
   const lastName = "BOTHRA".split("")
@@ -91,11 +131,11 @@ export function LoadingScreen() {
             {firstName.map((letter, i) => (
               <motion.span
                 key={`first-${letter}-${i}`}
+                custom={i}
                 variants={letterAnimation}
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                transition={{ delay: i * 0.1 }}
                 className="text-[12vw] sm:text-[15vw] font-['Ayer_Poster_Web'] text-white inline-block"
               >
                 {letter}
@@ -107,11 +147,11 @@ export function LoadingScreen() {
             {lastName.map((letter, i) => (
               <motion.span
                 key={`last-${letter}-${i}`}
+                custom={i + firstName.length}
                 variants={letterAnimation}
                 initial="initial"
                 animate="animate"
                 exit="exit"
-                transition={{ delay: 0.3 + i * 0.1 }}
                 className="text-[12vw] sm:text-[15vw] font-['Ayer_Poster_Web'] text-white inline-block"
               >
                 {letter}
@@ -143,8 +183,9 @@ export function LoadingScreen() {
           <motion.div 
             className="h-full bg-white"
             initial={{ width: "0%" }}
-            animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.1 }}
+            animate={{ width: `${smoothProgress}%` }}
+            transition={{ duration: 0.2, ease: "easeInOut" }}
+            style={{ willChange: "width" }}
           />
         </motion.div>
       </div>

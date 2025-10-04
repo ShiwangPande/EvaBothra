@@ -68,6 +68,47 @@ export type HomeTile = {
   external: boolean
 }
 
+export type Testimonial = {
+  id: string
+  author: string
+  role: string
+  content: string
+  imageSrc: string | null
+  email: string | null
+  userId: string | null
+  status: 'PENDING' | 'APPROVED' | 'REJECTED'
+  createdAt: Date
+  updatedAt: Date
+  approved: boolean
+}
+
+export type TestimonialFormData = {
+  author: string
+  role: string
+  content: string
+  imageSrc?: string
+  email?: string
+  status?: 'PENDING' | 'APPROVED' | 'REJECTED'
+  submittedAt?: Date
+}
+
+export type ContactMessage = {
+  id: string
+  name: string
+  email: string
+  message: string
+  userId: string | null
+  status: 'PENDING' | 'READ' | 'REPLIED'
+  createdAt: Date
+  updatedAt: Date
+}
+
+export type ContactFormData = {
+  name: string
+  email: string
+  message: string
+}
+
 
 // export type PortfolioSection = 
 //   | 'academics' 

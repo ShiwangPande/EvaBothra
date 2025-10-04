@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Tabbar from '@/components/Tabbar'
 import ScrollToTop from '@/components/ScrollToTop'
+import { ClerkProvider } from "@clerk/nextjs"
+import { Toaster } from '@/components/ui/sonner'
 
 // Add favicon/icon
 export const metadata: Metadata = {
@@ -18,16 +20,19 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <head>
-        {/* If you want to add more icons or meta tags, you can do so here */}
-        <link rel="icon" href="./favicon.ico" />
-      </head>
-      <body className={`font-sans bg-white text-black`}>
-      <Tabbar/>
-        {children}
-        <ScrollToTop />
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <head>
+          {/* If you want to add more icons or meta tags, you can do so here */}
+          <link rel="icon" href="./favicon.ico" />
+        </head>
+        <body className={`font-sans bg-white text-black`}>
+          <Tabbar/>
+          {children}
+          <ScrollToTop />
+          <Toaster />
+        </body>
+      </html>
+    </ClerkProvider>
   )
 }
