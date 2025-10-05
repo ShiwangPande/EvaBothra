@@ -85,7 +85,7 @@ export default function Testimonials() {
 
   if (isLoading) {
     return (
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-transparent">
         <div className="max-w-5xl mx-auto px-4">
           <div className="text-center">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900 mx-auto"></div>
@@ -97,7 +97,7 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50/50">
       <div className="max-w-5xl mx-auto px-4">
         <div className="flex items-center justify-between mb-8">
           <div>

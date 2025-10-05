@@ -12,7 +12,8 @@ export type PortfolioItem = {
   achievements: string[]
   grade?: string
   link?: string
-  imageSrc?: string
+  imageSrc?: string | string[]
+  images?: string[]
 }
 
 export type PortfolioSection = {

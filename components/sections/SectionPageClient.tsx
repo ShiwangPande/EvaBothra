@@ -70,7 +70,7 @@ function DetailCard({ item, theme }: { item: PortfolioItem; theme: Required<Sect
       {item.imageSrc && (
         <div className="px-8 pb-6">
           <div className="relative w-full h-48 md:h-64 overflow-hidden group">
-            <Image src={item.imageSrc} alt={item.title} fill className="object-contain group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 100vw" />
+            <Image src={(Array.isArray(item.imageSrc) ? item.imageSrc[0] : item.imageSrc) || ''} alt={item.title} fill className="object-contain group-hover:scale-105 transition-transform duration-500" sizes="(max-width: 768px) 100vw, 100vw" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
           </div>
         </div>
@@ -99,19 +99,36 @@ function DetailCard({ item, theme }: { item: PortfolioItem; theme: Required<Sect
       </div>
 
       <div className="px-8 pb-8">
-        <motion.button onClick={() => setIsExpanded(!isExpanded)} className={`flex items-center gap-3 border border-black px-6 py-3 text-sm font-medium hover:bg-black hover:text-white transition-all duration-300 group/btn ${theme.textPrimary}`} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
-          {isExpanded ? (
-            <>
-              <ChevronUp className="w-4 h-4 group-hover/btn:rotate-180 transition-transform duration-300" />
-              <span>Show Less</span>
-            </>
-          ) : (
-            <>
-              <ChevronDown className="w-4 h-4 group-hover/btn:rotate-180 transition-transform duration-300" />
-              <span>Read Full Story</span>
-            </>
+        <div className="flex items-center gap-4">
+          <motion.button onClick={() => setIsExpanded(!isExpanded)} className={`flex items-center gap-3 border border-black px-6 py-3 text-sm font-medium hover:bg-black hover:text-white transition-all duration-300 group/btn ${theme.textPrimary}`} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+            {isExpanded ? (
+              <>
+                <ChevronUp className="w-4 h-4 group-hover/btn:rotate-180 transition-transform duration-300" />
+                <span>Show Less</span>
+              </>
+            ) : (
+              <>
+                <ChevronDown className="w-4 h-4 group-hover/btn:rotate-180 transition-transform duration-300" />
+                <span>Read Full Story</span>
+              </>
+            )}
+          </motion.button>
+          {item.link && (
+            <motion.a 
+              href={item.link} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 border border-gray-300 px-6 py-3 text-sm font-medium hover:bg-gray-50 transition-all duration-300 group/link"
+              whileHover={{ scale: 1.02 }} 
+              whileTap={{ scale: 0.98 }}
+            >
+              <span>Learn More</span>
+              <svg className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </motion.a>
           )}
-        </motion.button>
+        </div>
       </div>
 
       <AnimatePresence>
@@ -181,6 +198,19 @@ function AcademicSubsectionCard({ title, items, icon: Icon, theme }: { title: st
                   </div>
                 </div>
                 <p className={`${theme.textSecondary} text-sm leading-relaxed mb-4 font-light`}>{item.description}</p>
+                {item.link && (
+                  <a 
+                    href={item.link} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs text-blue-600 hover:text-blue-800 transition-colors duration-200 group/link"
+                  >
+                    <span>Learn More</span>
+                    <svg className="w-3 h-3 group-hover/link:translate-x-0.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )}
               </div>
             ))}
             {items.length > 2 && (

@@ -95,7 +95,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="py-16 bg-gray-50">
+    <div className="py-16 bg-transparent">
       <div className="max-w-3xl mx-auto px-4">
         <div className="flex items-center justify-between mb-8">
           <div>

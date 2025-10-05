@@ -13,7 +13,7 @@ export const NAV_ITEMS = [
   { href: '/community', label: 'Community Impact' },
   { href: '/skills', label: 'Skills & Interests' },
   { href: '/awards', label: 'Awards & Media Recognition' },
-  { href: '/youtube', label: 'YouTube' },
+  { href: 'https://www.youtube.com/@ReshapingSociety', label: 'YouTube' },
   { href: '/reflections', label: 'Reflections' }
 ]
 

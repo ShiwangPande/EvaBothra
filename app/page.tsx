@@ -161,11 +161,11 @@ export default function HomePage() {
               <AboutMe compact />
             </section>
 
-            <section id="testimonials" className="min-h-screen relative z-10">
+            <section id="testimonials" className=" relative z-10 py-8 md:py-12">
               <Testimonials />
             </section>
 
-            <section id="contact" className="min-h-screen relative z-10">
+            <section id="contact" className="relative z-10 py-8 md:py-12">
               <ContactForm />
             </section>
           </Suspense>
