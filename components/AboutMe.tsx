@@ -42,7 +42,7 @@ export default function AboutMe({ compact = false }: AboutMeProps) {
   const aboutData = portfolioData.about
 
   return (
-    <section className={compact ? "py-12 bg-white relative overflow-x-clip" : "py-20 bg-gradient-to-b from-[#f8fafc] via-white to-[#f8fafc] relative overflow-x-clip"}>
+    <section className={compact ? "py-16 bg-white relative overflow-x-clip" : "py-32 bg-gradient-to-b from-[#f8fafc] via-white to-[#f8fafc] relative overflow-x-clip"}>
       {/* Decorative background shapes */}
       {/* Ultra-minimal, refined quote presentation */}
       <motion.div

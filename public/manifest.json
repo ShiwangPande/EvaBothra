@@ -1,0 +1,19 @@
+{
+  "name": "Eva Bothra - Portfolio",
+  "short_name": "Eva Portfolio",
+  "description": "Portfolio showcasing Eva Bothra's academic achievements, leadership, and community impact",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#007B78",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["portfolio", "education", "leadership"],
+  "lang": "en-US"
+}

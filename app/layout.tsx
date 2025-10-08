@@ -7,11 +7,12 @@ import { Toaster } from '@/components/ui/sonner'
 
 // Add favicon/icon
 export const metadata: Metadata = {
-  title: 'My Elevator Pitch - Why You Should Admit Me',
+  title: 'Eva Bothra - Portfolio',
   description: 'Enter into the journey of my impact — academics, leadership, community, skills, awards, YouTube, and reflections.',
   icons: {
-    icon: '/favicon.ico', // Make sure this file exists in your public/ directory
+    icon: '/favicon.ico',
   },
+  manifest: '/manifest.json',
 }
 
 export default function RootLayout({
@@ -23,8 +24,25 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <head>
-          {/* If you want to add more icons or meta tags, you can do so here */}
-          {/* <link rel="icon" href="./favicon.ico" /> */}
+          <link rel="manifest" href="/manifest.json" />
+          <meta name="theme-color" content="#007B78" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                if ('serviceWorker' in navigator) {
+                  window.addEventListener('load', function() {
+                    navigator.serviceWorker.register('/sw.js')
+                      .then(function(registration) {
+                        console.log('SW registered: ', registration);
+                      })
+                      .catch(function(registrationError) {
+                        console.log('SW registration failed: ', registrationError);
+                      });
+                  });
+                }
+              `,
+            }}
+          />
         </head>
         <body className={`font-sans bg-white text-black`}>
           <Tabbar/>

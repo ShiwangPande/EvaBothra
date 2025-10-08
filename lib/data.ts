@@ -3,8 +3,8 @@ import { PortfolioData } from './types'
 export const portfolioData: PortfolioData = {
     about: {
         title: "About Me",
-        description: "Hi, I'm Eva. I've always carried this urge to leave a mark wherever I go– not just through what I achieve, but through the people I fight for and the changes I help spark. Among my friends, I'm known as the \"dadi\" of the house, the one they turn to for perspective, advice, and the occasional reality check. If I had to describe myself in three words, they would be grit, anti-fragile, and wise beyond my years.",
-        fullStory: "My friends once said the song that captures me best is 'Fight Song,' and honestly, I think that fits. Life has never felt like a smooth road; it's felt like a fight. But I've never wanted to fight just for myself. I fight for others too– for fairness, for dignity, for the courage to face what's uncomfortable.\n\nI've lived through experiences that gave me a raw, unfiltered lens on the world. Instead of breaking me, they've made me sharper, hungrier, and more curious. They taught me not just to see problems but to take responsibility for fixing them. And that's what excites me about the future: the chance to learn endlessly, to keep pushing my limits, and to leave behind not just footprints, but real impact.",
+        description: "Hi! I'm Eva, a student who believes titles or trophies don't measure that impact, but by the people you stand up for and the changes you help build. Among my friends, I'm known as the \"dadi\" of the group – the one who listens, gives perspective, and keeps things honest.",
+        fullStory: "Growing up, I've learned that life rarely goes as planned, but that's what makes it all the more meaningful. I've had to grow up fast, and it's taught me grit, patience, and perspective. If I had to describe myself, I'd say I'm grounded, quietly strong, and someone who believes in showing up – for myself and for others.\n\nMy friends say Fight Song captures me best – and maybe it does. But I've never seen myself as someone fighting against life; I fight for it – for fairness, dignity, and courage, both mine and others'.",
         callToAction: "Enter into the journey of my impact.",
         imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008695/About_Me_vjwifi.png"
         // imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1759007019/About_Me_qysv4w.png"
@@ -18,7 +18,7 @@ export const portfolioData: PortfolioData = {
         stats: [
             { label: "IGCSE Score", value: "7 A*, 2 A" },
             { label: "IB Score", value: "41/42" },
-            { label: "SAT Score", value: "1500" },
+            { label: "SAT Score", value: "1520" },
             { label: "Research Hours", value: "80+" }
         ],
         sections: {
@@ -41,7 +41,7 @@ export const portfolioData: PortfolioData = {
                         title: "IB Diploma Programme (Grade 11–12)",
                         grade: "Grade 11-12",
                         description: "Score: 41/42 in Grade 11. Subjects: Mathematics AA HL, Economics HL, Business Management HL, Hindi SL, English SL, Computer Science SL",
-                        details: "In IB, I sharpened my focus by diving deep into mathematics, economics, and business management, while also exploring new territory in computer science. That mix of depth and breadth helped me see connections between numbers, systems, and people in ways I hadn't before. I scored 41/42, but what mattered more was learning how to balance ambition with time, a skill that now defines how I approach both academics and life.",
+                        details: "In IB, I sharpened my focus by diving deep into mathematics and Business Management, while also exploring new territory in economics and computer science. That mix of depth and breadth helped me see connections between numbers, systems, and people in ways I hadn't before. I scored 41/42, but what mattered more was learning how to balance ambition with time, a skill that now defines how I approach both academics and life.",
                         category: "Academic Performance",
                         achievements: ["41/42 score", "3 Higher Level subjects", "Comprehensive curriculum", "Time management"],
                         imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008710/Academics_Research_Activities_qfuz07.png",
@@ -51,10 +51,10 @@ export const portfolioData: PortfolioData = {
                         id: "sat",
                         title: "SAT",
                         grade: "Recent",
-                        description: "1500 - Math has always been my stronghold (thanks, Kumon). English took more work – I had to build that foundation later, through deliberate effort.",
+                        description: "1520 - Math has always been my stronghold (thanks, Kumon). English took more work – I had to build that foundation later, through deliberate effort.",
                         details: "I scored higher in mocks (1550+), but test-day anxiety hit me hard. I had no chance to retake it, but honestly, the SAT ended up being more of a teacher than a test – it showed me the importance of preparation, balance, and staying calm under pressure.",
                         category: "Standardized Testing",
-                        achievements: ["1500 score", "Math excellence", "English improvement", "Test resilience"],
+                        achievements: ["1520 score", "Math excellence", "English improvement", "Test resilience"],
                         imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008710/Academics_Research_Activities_qfuz07.png",
                         link: "https://satsuite.collegeboard.org/sat"
                     }
@@ -103,7 +103,7 @@ export const portfolioData: PortfolioData = {
                         category: "International Award",
                         achievements: ["Global Top 32", "Only team from India", "Policy case presentation", "Healthcare focus"],
                         imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759007160/8a695a64-f612-4bb7-bd33-5ce64d0867ce.png",
-                        link: "https://www.ippfdebate.com/"
+                        link: "https://www.ippfdebate.com/announcing-the-2024-25-top-32"
                     },
                     {
                         id: "economics-world-cup",
@@ -113,8 +113,7 @@ export const portfolioData: PortfolioData = {
                         details: "Demonstrated advanced economic knowledge and problem-solving skills to become a finalist in this global competition.",
                         category: "International Award",
                         achievements: ["Finalist status", "Global competition", "Economic excellence"],
-                        imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008710/Academics_Research_Activities_qfuz07.png",
-                        link: "https://economicsworldcup.com/"
+                        imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759952592/edf1c953-1c8d-4dcf-94d6-74f89eb2bc52.png"
                     },
                     {
                         id: "melbourne-case-competition",
@@ -124,7 +123,7 @@ export const portfolioData: PortfolioData = {
                         details: "Presented strategic solutions for the Education industry to University of Melbourne judges and industry leaders, showcasing strong business analysis and presentation skills.",
                         category: "International Award",
                         achievements: ["Top 20 ranking", "300+ international teams", "Strategic solutions", "Education focus"],
-                        imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008710/Academics_Research_Activities_qfuz07.png",
+                        imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759952698/cf99df25-95c9-426d-b84a-0aacb7791a9b.png",
                         link: "https://fbe.unimelb.edu.au/students/competitions/melbourne-case-competition"
                     },
                     {
@@ -151,7 +150,8 @@ export const portfolioData: PortfolioData = {
                         details: "Selected to present at Innosphere 2025 (Sigma Xi Research Conference), Published in IJSSER, Received Crest Gold Award. 80+ hours of structured research (formal research methods, data modeling, report writing).",
                         category: "Independent Research",
                         imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1759262127/Acceptance_Letter_research_paper_page-0001_fp73y1.jpg",
-                        achievements: ["80+ research hours", "Conference selection", "Publication submission", "Award entry"]
+                        achievements: ["80+ research hours", "Conference selection", "Publication submission", "Award entry"],
+                        link: "https://ijsser.org/"
                     },
                     {
                         id: "harvard-program",
@@ -170,7 +170,8 @@ export const portfolioData: PortfolioData = {
                         description: "Selected in the top 3% of my school for advanced calculus and number theory",
                         details: "Selected in the top 3% of my school, I attended the Stanford-led Advanced Math Program. For two weeks, I immersed myself in advanced calculus, number theory, and finance models, solving AMC-style puzzles and tackling SUMaC-style problems.\n\nThe experience reminded me that math is not just a subject but a way of thinking — recursive, rigorous, and creative. Working through proof-based logic and game theory, I realized mathematics is my foundation, the lens through which I frame economics, finance, and even social ventures.",
                         category: "Summer Program",
-                        achievements: ["Top 3% selection", "Advanced mathematics", "Proof-based logic", "Game theory"]
+                        achievements: ["Top 3% selection", "Advanced mathematics", "Proof-based logic", "Game theory"],
+                        certificate: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759007150/279df43f-c71e-45b7-8964-ff93412eab30.png"
                     },
                     {
                         id: "finance-intern",
@@ -179,7 +180,8 @@ export const portfolioData: PortfolioData = {
                         description: "Applied classroom skills to real-world finance and market analysis",
                         details: "At Capital Edge Technologies and 10xcapital10x, I stepped into the professional world of finance, applying classroom skills to real-world analysis. I worked on modeling tools, exploring how market dynamics shift under different assumptions, and saw how decisions were shaped by more than just formulas — context and intuition mattered equally.\n\nThe internship taught me to communicate insights in concise, business-ready language. It was my first time being accountable not just to my own learning, but to a firm that expected results. That sense of accountability to external stakeholders was both daunting and exhilarating.",
                         category: "Internship",
-                        achievements: ["Real-world finance analysis", "Market modeling", "Professional communication", "Stakeholder accountability"]
+                        achievements: ["Real-world finance analysis", "Market modeling", "Professional communication", "Stakeholder accountability"],
+                        certificate: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759007150/279df43f-c71e-45b7-8964-ff93412eab30.png"
                     }
                 ]
             }
@@ -192,7 +194,7 @@ export const portfolioData: PortfolioData = {
         imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png",
         // imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759006602/Leadership_Activities_bpofbc.png",
         stats: [
-            { label: "Organizations Founded", value: "6+" },
+            { label: "Organizations Founded", value: "3+" },
             { label: "People Impacted", value: "35,000+" },
             { label: "Funding Raised", value: "$20,000+" },
             { label: "Team Members Led", value: "100+" }
@@ -225,7 +227,8 @@ export const portfolioData: PortfolioData = {
                 category: "Healthcare Innovation",
                 imageSrc:["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008708/janam_okbwp6.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307908/frame_0_06_22f_zzopbp.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307914/frame_0_13_10f_apucfz.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307915/frame_0_18_3f_fucwx2.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307871/frame_0_19_22f_hqb9nk.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307915/frame_0_30_18f_jqzige.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307885/frame_0_54_20f_ale2lk.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307909/frame_3_12_23f_d1rczo.jpg"],
                 achievements: ["3 centers (1 completed)", "100+ midwives trained", "1,500+ villagers served", "$12,000+ raised"],
-                link: "https://janamindia.vercel.app"
+                link: "https://janamindia.vercel.app",
+                instagram: "https://www.instagram.com/janamindia"
             },
             {
                 id: "teenlink",
@@ -236,7 +239,14 @@ export const portfolioData: PortfolioData = {
                 category: "Tech Entrepreneurship",
                 achievements: ["400+ beta users", "App Store & Play Store live", "₹4 lakhs funding", "TYE accelerator selection"],
                 link: "Available on App Store and Play Store: https://apps.apple.com/ https://play.google.com/",
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759302338/TEENLink_3_vjzmqw.png"
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759302338/TEENLink_3_vjzmqw.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942972/abf60202-755d-40f3-8f41-d4f4dc394843.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942944/b65e1e81-9bf6-4b7c-b793-732fa10f9458.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942921/789058cc-51b5-49df-b731-43a4677cecb1.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942894/8410607b-4b66-4001-ad19-bb54189186a7.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942852/3be6dd35-ba4a-4edd-b21a-cca7c872ca62.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942802/d2d776e5-c3ab-4940-a9f3-6fcefcf4709c.png",
+                ]
             },
             {
                 id: "sfcc",
@@ -276,7 +286,7 @@ export const portfolioData: PortfolioData = {
                 title: "Reshaping Society – Podcast Host",
                 grade: "Current",
                 description: "Founded a podcast platform to open conversations on taboo issues like sexual abuse and drug use",
-                details: "I founded Reshaping Society to open conversations around taboo issues like sexual abuse, mental health, and drug use—topics often silenced in families and communities. Through the podcast, I hosted lawyers, psychologists, and survivors, facilitating candid yet grounded dialogues that balanced honesty with sensitivity. Partnering with the Karnataka Government's anti-drug campaign allowed the conversations to extend beyond the digital sphere, creating real-world awareness and engagement.\n\nAlongside the podcast, I facilitated weekly anonymous support groups on Zoom, co-hosted by licensed therapist Dr. Prerna Maheshwari. These sessions became spaces where survivors could speak, share, and simply be heard. Each Thursday evening brought raw, sometimes challenging conversations, but it taught me that silence is not inevitable—spaces for voice can be intentionally created.\n\nThe process of hosting and moderating the podcast taught me resilience, empathy, and the responsibility that comes with giving people a platform. I realized that dialogue itself can be transformative: breaking stigma, connecting communities, and giving survivors agency over their stories. Launching Reshaping Society reinforced why I'm drawn to initiatives that combine communication, social impact, and practical action—it's not enough to observe problems; meaningful change starts with creating channels for understanding and expression.",
+                details: "Reshaping Society began as a small idea — to speak openly about what most people avoid: sexual abuse, mental health, and drug use. I founded and hosted the podcast to create conversations that were honest, sensitive, and informed. Each episode brought together lawyers, psychologists, and survivors for dialogues that blended empathy with realism, translating personal experience into social insight.\n\nIn partnership with the Karnataka Government's Anti-Drug Campaign, the conversations extended beyond the digital space into public awareness initiatives. Alongside the podcast, I co-facilitated weekly anonymous support groups on Zoom with licensed therapist Dr. Prerna Maheshwari, offering survivors a quiet, safe space to share.\n\nBeyond hosting, I handled the full production process — scripting, editing, and designing promotional clips to grow viewership. I taught myself video editing and digital promotion, learning to balance authenticity with algorithmic reach. Every thumbnail, caption, and cut became an extension of the message: that dialogue is powerful only when it's accessible.\n\nThrough Reshaping Society, I learned that storytelling isn't just expression — it's impact. A conversation, when handled with care, can challenge silence, rebuild trust, and give people ownership of their stories.",
                 category: "Media & Advocacy",
                 achievements: ["Podcast founder", "Government partnership", "Support groups facilitated", "Weekly sessions"],
                 link: "https://www.youtube.com/@ReshapingSociety",
@@ -286,8 +296,8 @@ export const portfolioData: PortfolioData = {
                 id: "school-captain",
                 title: "Jayshree Periwal International School – School Captain",
                 grade: "Grade 12",
-                description: "Led 2,400 students across academic and hostel life responsibilities",
-                details: "As School Captain of 2,400 students, I led assemblies, managed school-wide events, and carried out dual responsibilities in both academic and hostel life leadership. My tenure included curating speakers for TEDx JPIS, overseeing the school's finance club and editorial board, and designing a summer council program on finance and entrepreneurship for 56 juniors.\n\nLeadership here was less about titles and more about unseen work — late-night calls from anxious boarders, debates over wellness curricula, or guiding juniors through both academics and life away from home. It made me realize that authority is not granted by a badge but earned through reliability.",
+                description: "As School Captain of 2,400 students, I led assemblies, managed school-wide events, and balanced dual responsibilities in both academic and hostel leadership. My tenure included curating speakers for TEDx JPIS, overseeing the school's Finance Club and Editorial Board, and designing a summer council program on finance and entrepreneurship for 56 juniors.",
+                details: "But the real work of leadership often began after hours — in hostel corridors, during late-night conversations with homesick juniors, or in quiet corners, where they helped outline essays and plan extracurricular projects. I spent evenings mentoring students on everything from MUN speeches to balancing academics with self-care. Over time, I realized that the most meaningful influence isn't in giving directions, but in listening — helping others find their own footing rather than walking them through it.\n\nLeadership, I learned, isn't about being in charge; it's about being someone others trust when things feel uncertain. Authority isn't earned through a badge, but through consistency, empathy, and showing up even when no one's watching.",
                 category: "Institutional Leadership",
                 achievements: ["2,400 students led", "TEDx curation", "Finance club oversight", "56 juniors mentored"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png",
@@ -301,7 +311,10 @@ export const portfolioData: PortfolioData = {
                 details: "I revitalized JPIS's Finance Club into a thriving hub of dialogue and practice. Under my leadership, the club hosted weekly sessions, published a 25-issue newsletter on financial trends, and coded a budgeting website for students.\n\nOur flagship initiatives included \"Future of Finance,\" a virtual series featuring experts such as ISB's N.V. Kumaraguru, and Invested, a mock investment competition that drew over 150 participants nationwide. We also partnered with DhanSarthi to lead financial literacy workshops for over 300 rural women, teaching them banking and savings practices.\n\nThe club convinced me that finance education isn't elitist — it's liberating. Whether through stock simulations or real women opening their first bank accounts, I saw finance as a language of empowerment.",
                 category: "Club Leadership",
                 achievements: ["Newsletter published", "Budgeting website", "Workshops for 300+ women", "150+ competition participants"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png",
+                imageSrc: [
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png"
+                ],
                 link: "https://jpis.edu.in/finance-club"
             },
             {
@@ -313,6 +326,7 @@ export const portfolioData: PortfolioData = {
                 category: "Community Leadership",
                 achievements: ["26,000+ women reached", "Financial literacy workshops", "Banking access", "Entrepreneurship training"],
                 link: "https://dhansarthi.com",
+                instagram: "https://www.instagram.com/dhansarthi",
                 imageSrc: [ "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689580/3ce8955f-9d70-4e80-851a-0d7db1163af6.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689615/25b83a4a-016b-4a58-9ced-b3b6a22b2302.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689686/5178beb4-6f88-4fd8-b1b5-106dbc149694.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689717/c387feee-eddb-4cfb-a5a4-547a9857ddae.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689751/34101eba-0e51-423a-b627-f739e99b6040.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689783/d2c1c0a5-2194-4944-b988-34feb93330cf.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689827/9ae52579-dbad-4b7d-bbb3-e6262cb08949.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689883/6fb986ad-fa2e-4190-8196-9bd92d3692af.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689902/17ae6f94-ffa3-480a-8ec5-fef4ab51e85e.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689918/fc134777-b874-4596-9d55-f134f0e934ac.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689938/89b0109c-845c-43cf-87da-d92fe7f463c6.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689948/7d85ecaf-fce1-4d16-8991-38f06d860e4f.png"]
             },
             {
@@ -324,7 +338,7 @@ export const portfolioData: PortfolioData = {
                 category: "Event Management",
                 achievements: ["Speaker curation", "Event logistics", "Student innovation showcase", "Panel themes"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png",
-                link: "https://www.ted.com/tedx/events/12345"
+                link: "https://www.tedxyouthjpis.com/"
             },
             {
                 id: "editorial-board",
@@ -334,7 +348,7 @@ export const portfolioData: PortfolioData = {
                 details: "I led the school's Editorial Board, steering the transition from print to digital platforms. Our team curated student voices into published issues, blending creativity with editorial discipline. Beyond editing, I mentored juniors, guiding them not only in writing but also in developing their critical voice.\n\nThe shift to digital forced me to think about accessibility — how to keep student writing engaging in an online-first world. More than an editorial project, it was about reimagining how young voices are archived and amplified.",
                 category: "Media & Publishing",
                 achievements: ["Digital transition", "Student voice amplification", "Junior mentoring", "Online adaptation"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png",
+                imageSrc: [],
                 link: "https://jpis.edu.in/editorial-board"
             },
             {
@@ -345,8 +359,26 @@ export const portfolioData: PortfolioData = {
                 details: "At Tech4Bharat, I led the Jaipur city chapter, teaching underserved communities and seniors how to navigate the internet, use smartphones, and access banking services. What seemed simple to me — logging into an app, paying a bill online — was often intimidating for first-time users.\n\nTeaching digital literacy reinforced my belief that technology is not an equalizer unless paired with patient instruction. Every time someone made their first digital payment or video call, I saw how empowerment can look like the smallest of victories.",
                 category: "Community Leadership",
                 achievements: ["Jaipur city head", "Digital literacy workshops", "Senior focus", "Banking services"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png",
-                link: "https://tech4bharat.org/"
+                   imageSrc: [
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942552/62769f9c-3325-4fb5-81a3-1e4a9f193d3a.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942550/d9c1dc5f-c493-4fa7-ad90-2e7499afff1d.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942546/32f4aeb6-bc0f-4f45-b559-46e2a9785827.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942543/a6ed614e-ec00-4ee6-b220-4775ef43b7f9.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942540/fc75d69d-c543-4bb1-9cb4-09e35cd3fc0c.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942536/7b405df0-de3e-4d07-836f-3406c171455a.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942530/7e6953f5-0339-43a1-8edd-55dbd71070a5.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942528/3b7182cb-3145-449c-af66-ed47f53dc722.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942525/ada74401-df59-4363-a2c1-6973b62a38ed.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942521/bcb34f03-d7c0-4234-a6be-da34ed87d702.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942517/980b040c-5964-42d6-b030-4f950d33bac9.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942513/27a41b88-0909-4782-9668-819e13bb0191.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942506/9b41437e-4a0e-4a40-8e3f-d59e1f89a0fa.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942503/c565592b-cedf-4bbf-89e5-3557285de683.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942496/beace0ed-373a-4805-9ebe-9b183a2db7cb.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942490/d9c3883c-3174-4a27-874a-2e629d4eef08.png",
+
+                ],
+                link: "https://www.tech4bharat.org.in/"
             },
             {
                 id: "jpis-science-fair",
@@ -356,7 +388,7 @@ export const portfolioData: PortfolioData = {
                 details: "As Finance Head for the regional science fair at JPIS, I managed a budget of ₹80,000 and coordinated prize allocations for the largest school science fair in the region. Beyond the numbers, I ensured that funds were distributed transparently and fairly, giving participants confidence in the process.\n\nThe role served as a reminder that even in a student setting, finance carries significant responsibility. A poorly allocated budget could undermine months of work. Handling that responsibility gave me early practice in accountability under pressure.",
                 category: "Event Management",
                 achievements: ["₹80,000 budget managed", "Transparent fund distribution", "Regional scale", "Prize coordination"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png",
+                imageSrc: [],
                 link: "https://jpis.edu.in/science-fair"
             },
             {
@@ -379,7 +411,8 @@ export const portfolioData: PortfolioData = {
                 category: "Tech Entrepreneurship",
                 achievements: ["50+ users", "Sustainable barter platform", "First entrepreneurship experience", "Real-world problem solving"],
                 imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690300/4983d63a-3ea4-4ce9-b8cb-5ee39c0a2205.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690247/0448036d-53dc-4a4e-bc6a-be892114382a.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690340/493f5b4c-6212-4023-8123-485597df432a.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690373/60cf08bc-94a3-4d27-bfeb-95af9df71aa1.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690438/f9427036-83d7-4d55-8362-dfae82e0e28d.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690493/fac227d5-8eb3-40e5-92e2-a127b10994f0.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690509/e8e2a5bf-be3e-472e-9543-0550b0ab06bc.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690536/87299668-5cd5-48af-9cb6-2a41e3f4feb1.png"],
-                link: "https://www.instagram.com/schoolswapstation"
+                link: "https://www.instagram.com/schoolswapstation",
+                instagram: "https://www.instagram.com/schoolswapstation"
             },
             {
                 id: "iris-national-science-fair-finalist",
@@ -389,7 +422,8 @@ export const portfolioData: PortfolioData = {
                 details: "Selected from over 8,000 students nationwide, I presented an original prototype of biodegradable faux leather made entirely from banana stems and rice husks at the IRIS National Science Fair. The project grew from curiosity-driven experimentation in chemistry and materials science—concepts I had first explored during my IGCSE science studies, which taught me to approach problems methodically, observe carefully, and iterate constantly.\n\nUnlike a purely theoretical project, I moved from idea to prototype to production. I extracted fibers from banana stems, processed rice husks, and combined them using natural binders, experimenting with texture, durability, and flexibility until the material could actually function as leather. Beyond the lab, I approached the project like an entrepreneur: calculating costs, optimizing production steps, and imagining how this material could be scaled for real-world applications.\n\nPresenting before a panel of national experts was both exhilarating and humbling. I learned that science isn't just about invention—it's about defending your process, explaining your choices, and translating technical complexity into clear, compelling communication. Standing there, I felt the full arc of research: curiosity, experimentation, iteration, and public engagement.\n\nThe IRIS experience was my first true intersection of science and entrepreneurship, showing me how rigorous research can be paired with practical innovation to create solutions that matter.",
                 category: "Science & Innovation",
                 achievements: ["8,000+ applicants", "Original prototype", "Entrepreneurial approach", "National recognition"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759299129/IRIS_1_sugz6f.png"
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759299129/IRIS_1_sugz6f.png",
+                link: "https://irisnationalfair.org/"
             }
         ]
     },
@@ -447,7 +481,7 @@ export const portfolioData: PortfolioData = {
                 category: "Social Services",
                 achievements: ["Accessibility initiatives", "Community events organized", "Resource distribution", "Human connection"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008703/Community_Impact_jgtfmp.png",
-                link: "https://mitrajyothi.org/"
+                link: "https://www.globalgiving.org/pfil/55418/projdoc.pdf"
             },
             {
                 id: "rotary-club",
@@ -461,17 +495,6 @@ export const portfolioData: PortfolioData = {
                 link: "https://www.rotary.org/"
             },
             {
-                id: "tech4bharat-community",
-                title: "Tech4Bharat – Digital Literacy",
-                grade: "Current",
-                description: "Led workshops teaching digital skills to seniors and underserved communities",
-                details: "As Jaipur City Head for Tech4Bharat, I led workshops teaching digital skills to seniors and underserved communities. We covered smartphone use, digital payments, and accessing government services online.\n\nWhat struck me was how something as simple as teaching someone to use WhatsApp video calls could help bridge the isolation. Service here wasn't about grand systemic reform, but about closing everyday gaps in access and dignity.",
-                category: "Education & Literacy",
-                achievements: ["Digital literacy workshops led", "Senior focus", "Government services access", "Digital payments"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008703/Community_Impact_jgtfmp.png",
-                link: "https://tech4bharat.org/"
-            },
-            {
                 id: "welfare-access-cards",
                 title: "Community Impact via Janam – Welfare Access Cards",
                 grade: "Current",
@@ -480,78 +503,111 @@ export const portfolioData: PortfolioData = {
                 imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008708/janam_okbwp6.png",
                 // imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1758530520/janam_mxcgpx.png",
                 category: "Social Services",
-                achievements: ["200,000+ cards distributed", "Access to government schemes", "Rural outreach", "Welfare awareness"]
+                achievements: ["200,000+ cards distributed", "Access to government schemes", "Rural outreach", "Welfare awareness"],
+                link: "https://yojanacard.haqdarshak.com"
             },
             {
-                id: "asha-niketan-foundation",
-                title: "Asha Niketan Foundation – Volunteer",
+                id: "no-plastic-use-india",
+                title: "No Plastic Use India – Social Media Volunteer",
                 grade: "Current",
-                description: "Helped create inclusive spaces for individuals with Down syndrome, bipolar disorder, intellectual disabilities, and the elderly",
-                details: "At Asha Niketan, a foundation that provides a home for individuals with Down syndrome, bipolar disorder, intellectual disabilities, and the elderly, I helped create inclusive spaces that blended care with community. I organized multi-faith prayer circles that celebrated verses from the Gita, Bible, and Quran, hosted karaoke nights and pizza parties, and led wellness sessions designed to bring residents joy and connection.\n\nAlongside daily engagement, I worked with residents to produce handmade greeting cards and candles, small crafts that generated income while restoring dignity in their labor. I spent time listening to their stories, playing games, and holding space for silence when words were unnecessary.\n\nThrough these activities, I saw how inclusion can be lived: not as charity, but as a matter of dignity and companionship. Asha Niketan taught me that empathy is a practice, not a gesture, and that the most profound impact is often quietly found in shared meals, small creations, and the recognition of humanity in one another.",
-                category: "Social Services",
-                achievements: ["Multi-faith prayer circles", "Income-generating crafts", "Wellness sessions", "Community building"],
+                description: "I volunteered with No Plastic Use India, a movement committed to reducing single-use plastic and promoting sustainable living. My specific role was handling their social media — creating content, managing community engagement, and helping grow their online presence.",
+                details: "Through this, I learned more than just posting: I shaped conversations. I crafted messages that encouraged people to rethink everyday choices — from plastic bags and straws to packaging, urging small changes that can add up. I responded to comments, helped explain the impacts of plastic pollution, and shared tips on alternatives, such as cloth bags or reusable containers.\n\nWorking with No Plastic Use India, I also saw how digital stories can drive real-world behavior change: when someone said they'd stopped using plastic cutlery or started reusing containers, it wasn't just a social media post — it was an action. That made me realise that awareness and voice matter, but only if they lead to meaningful and lasting changes.",
+                category: "Environmental Advocacy",
+                achievements: ["Social media management", "Community engagement", "Behavior change campaigns", "Sustainable living promotion"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008703/Community_Impact_jgtfmp.png",
-                link: "https://ashaniketan.org/"
+                link: "https://www.instagram.com/noplasticuseindia/?hl=en"
             }
         ]
     },
 
     skills: {
         title: "Skills & Interests",
-        description: "Comprehensive technical and professional skill development spanning programming, design, finance, research methodology, and leadership capabilities.",
+        description: "A comprehensive skill set developed through hands-on experience, from full-stack development and design thinking to finance, leadership, and social impact.",
         imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008692/Skills_Interests_iaaxxa.png",
         // imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759005754/Skills_Interests_ygsjpc.png",
         stats: [
-            { label: "Programming", value: "JavaScript, Python" },
-            { label: "Frameworks", value: "React, Node.js" },
-            { label: "Design", value: "UI/UX, Figma" },
-            { label: "Languages", value: "Hindi, English" }
+            { label: "Programming", value: "JavaScript, React, Node.js" },
+            { label: "Design", value: "Figma, UI/UX" },
+            { label: "Finance", value: "₹10L+ raised" },
+            { label: "Languages", value: "English, Hindi, Marwadi" }
         ],
         items: [
             {
-                id: "programming",
-                title: "Programming & Development",
-                grade: "Advanced",
-                description: "Full-stack development with modern web technologies",
-                details: "Proficient in JavaScript, Python, and Java. Experience with React, Node.js, Express framework. Built TeenLink app from scratch including frontend, backend, and mobile deployment to App Store and Play Store.",
+                id: "programming-development",
+                title: "💻 Programming & Development",
+                grade: "Beginner to Intermediate",
+                description: "I'm a beginner full-stack developer, currently mastering JavaScript, React, Node.js, and Next.js through hands-on projects.",
+                details: "I've learned most by doing — building websites for Legal Saathi, Janam, and Internlectual, and developing TeenLink, a student networking app that evolved from a small prototype into a fully functional platform.\n\nI'm still learning — improving my database design, debugging, and UI skills (with tools like Tailwind CSS and shadcn/ui) every week, often by watching how more experienced developers problem-solve. What I love most about programming is how it transforms ideas into something tangible that you can interact with, test, and refine. For me, development isn't about mastery yet — it's about momentum and learning through building.",
                 category: "Technical",
-                achievements: ["Full-stack development", "Mobile app deployment", "Modern frameworks", "Production applications"],
+                achievements: ["TeenLink app development", "Multiple website builds", "Learning through building", "Modern frameworks"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008692/Skills_Interests_iaaxxa.png",
                 link: "https://github.com/eva"
             },
             {
-                id: "research-methodology",
-                title: "Research & Analysis",
-                grade: "Advanced",
-                description: "Structured research methodology with publication experience",
-                details: "80+ hours of structured research on healthcare economics. Formal research methods, data modeling, report writing. Selected for conference presentation, submitted for academic publication. Experience with both quantitative and qualitative research approaches.",
-                category: "Academic",
-                achievements: ["80+ research hours", "Conference selection", "Publication submission", "Mixed methods"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759262127/Acceptance_Letter_research_paper_page-0001_fp73y1.jpg",
-                link: "https://ijsser.org/"
+                id: "ui-ux-design",
+                title: "🎨 UI/UX & Design Thinking",
+                grade: "Intermediate",
+                description: "Skilled in Figma and user-centered design. I focus on creating intuitive, accessible interfaces that balance form and function.",
+                details: "Designed digital platforms like Legal Saathi, Janam and TeenLink, emphasizing clarity, inclusivity, and multilingual usability. My approach to design is always user-first, ensuring that complex systems feel simple and accessible to everyone.",
+                category: "Design",
+                achievements: ["Figma proficiency", "User-centered design", "Multilingual interfaces", "Accessibility focus"],
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008692/Skills_Interests_iaaxxa.png",
+                link: "https://figma.com"
             },
             {
-                id: "financial-modeling",
-                title: "Financial Analysis & Modeling",
-                grade: "Intermediate",
-                description: "Financial modeling, budgeting, and investment analysis",
-                details: "Experience from finance internships and club leadership. Budget management for multiple projects totaling $20,000+. Investment competition organization, financial literacy curriculum development, and real-world modeling tools application.",
+                id: "finance-economics",
+                title: "📊 Finance, Economics & Strategy",
+                grade: "Advanced",
+                description: "My experience in finance has always been hands-on — balancing event budgets, managing shared revenues, and negotiating sponsorships.",
+                details: "As Finance Club President, I coordinated budgeting for school events, handled shared profit systems for inter-house stalls, and organized sponsorship drives with local firms to fund student projects.\n\nI've made more real-world calls to potential sponsors than most adults I know — from securing ₹4L in early-stage funding for TeenLink to raising ₹10L+ for Janam and ₹140K+ for SFCC's wellness campaign. Beyond fundraising, I managed fund allocation across logistics, welfare programs, and marketing — ensuring that every rupee was spent where it created a visible impact.\n\nAt the same time, I deepened my interest in financial modeling and market analysis, competing in case challenges such as those hosted by Wharton, Melbourne, and TIE Entrepreneurs, as well as the IB League, where I applied theoretical concepts to live business simulations. My approach to finance blends economics with execution — thinking like an analyst, but operating like an entrepreneur.",
                 category: "Finance",
-                achievements: ["$20,000+ budget management", "Investment analysis", "Curriculum development", "Real-world modeling"],
+                achievements: ["₹10L+ raised", "Sponsorship negotiations", "Financial modeling", "Case competition experience"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008692/Skills_Interests_iaaxxa.png",
                 link: "https://www.investopedia.com/financial-modeling-4689758"
             },
             {
-                id: "leadership-management",
-                title: "Leadership & Project Management",
+                id: "leadership-mentorship",
+                title: "🧠 Leadership & Mentorship",
                 grade: "Advanced",
-                description: "Leading teams, managing projects, and scaling organizations",
-                details: "Led teams of 100+ members across multiple organizations. Managed complex projects from Legal Saathi (15 volunteers, 7 states) to SFCC ($140,000 campaign). Experience in strategic planning, resource allocation, and stakeholder management.",
-                // imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1758530018/Your_Legal_Rights_y1znqt.png",
-                imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008688/legal_ttr2ku.png",
+                description: "My first taste of leadership came on the hockey field — as Team Captain, I learned to lead through rhythm, resilience, and quiet example.",
+                details: "I wasn't the loudest on the team, but I became the one who noticed when someone needed a push or space to breathe. Around the same time, I founded my school's Debate Club, a space that started with 12 members and grew to 70+. Managing heated discussions, scheduling sessions, and balancing voices taught me the value of structure and inclusion — that leadership isn't about commanding attention, but creating space for it.\n\nWhen I transferred to a new, much larger school, those lessons shaped how I led as School Captain of 2,200+ students. I coordinated councils, assemblies, and hostel life, but most of my work happened behind the scenes — mentoring juniors through essays, extracurriculars, and late-night conversations that often mattered more than any event. Between leading wellness initiatives, designing the Summer with Council program for 56 juniors, and bridging divides between day scholars and boarders, I learned that leadership grows quieter as it grows deeper.\n\nIt began with team spirit and debate rounds — it evolved into listening, guiding, and building systems that outlast me.",
                 category: "Leadership",
-                achievements: ["100+ team members", "Multi-state operations", "Strategic planning", "Stakeholder management"],
+                achievements: ["2,200+ students led", "Debate club founder", "Mentorship programs", "System building"],
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008688/legal_ttr2ku.png",
                 link: "https://legalsaathi.org"
+            },
+            {
+                id: "social-impact",
+                title: "🌍 Social Impact & Advocacy",
+                grade: "Advanced",
+                description: "Volunteered with No Plastic Use India, leading digital outreach to promote sustainable living.",
+                details: "Founded Legal Saathi, India's first QR-based legal literacy platform reaching 8,500+ workers, and prompted Janam, turning shipping containers into safe birthing spaces for rural women. Experienced in campaign design, social media strategy, and on-ground operations.",
+                category: "Social Impact",
+                achievements: ["8,500+ workers reached", "Campaign design", "Social media strategy", "On-ground operations"],
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008703/Community_Impact_jgtfmp.png",
+                link: "https://legalsaathi.org"
+            },
+            {
+                id: "writing-communication",
+                title: "🗣️ Writing & Communication",
+                grade: "Advanced",
+                description: "Podcast host of Reshaping Society, exploring economics, policy, and human behavior.",
+                details: "Wrote extensively for school publications as editorial board president and research projects, from economic IAs to policy essays for IPPF and my research paper. Skilled in storytelling, speechwriting, and clear, persuasive communication.",
+                category: "Communication",
+                achievements: ["Podcast hosting", "Research writing", "Editorial leadership", "Policy essays"],
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258538/Reshaping_Society_vrh7he.png",
+                link: "https://www.youtube.com/@ReshapingSociety"
+            },
+            {
+                id: "languages",
+                title: "🌱 Languages",
+                grade: "Multilingual",
+                description: "Fluent in English and Hindi, conversational in Marwadi, basic in Kannada.",
+                details: "My multilingual abilities have been crucial in my social impact work, allowing me to communicate effectively with diverse communities across India. This linguistic diversity has been particularly valuable in projects like Legal Saathi and Janam, where clear communication across language barriers is essential for impact.",
+                category: "Language",
+                achievements: ["English fluency", "Hindi fluency", "Marwadi conversational", "Kannada basic"],
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008692/Skills_Interests_iaaxxa.png",
+                link: ""
             }
         ]
     },
@@ -562,65 +618,109 @@ export const portfolioData: PortfolioData = {
         imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008704/Awards_Media_Recognition_mffpnj.png",
         // imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759005852/Awards_Media_Recognition_kmpyq1.png",
         stats: [
-            { label: "National Awards", value: "5+" },
-            { label: "International Recognition", value: "3" },
-            { label: "Scholarship Programs", value: "2" },
-            { label: "Media Features", value: "Multiple" }
+            { label: "International Awards", value: "5+" },
+            { label: "Grant Recipient", value: "3" },
+            { label: "Media Features", value: "Multiple" },
+            { label: "Global Recognition", value: "Top 5%" }
         ],
         items: [
             {
-                id: "ibo-global",
-                title: "International Business Olympiad - Global Top 10",
+                id: "ibo-gold-medalist",
+                title: "International Business Olympiad (Gold Medalist)",
                 grade: "Grade 12",
-                description: "Highest Distinction with 198/200 score, represented India internationally",
-                details: "Achieved highest distinction with 198/200 score. Ranked Top 5 in India (National Round) and Top 10 globally in both presentation and individual test. Represented India in international competition, showcasing exceptional business acumen on global stage.",
+                description: "Scored 198/200; represented India internationally; ranked Top 10 globally",
+                details: "Achieved gold medal status with 198/200 score in the International Business Olympiad. Represented India internationally and ranked Top 10 globally, showcasing exceptional business acumen and analytical skills on the world stage.",
                 category: "International Award",
-                achievements: ["198/200 score", "Top 5 India", "Top 10 Global", "International representation"],
+                achievements: ["198/200 score", "Gold Medalist", "Top 10 Global", "India representative"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008704/Awards_Media_Recognition_mffpnj.png",
-                link: "https://ibo.ibo.org/"
+                link: "https://www.business-olympiad.org/"
+            },
+            {
+                id: "ib-youth-grant",
+                title: "IB Youth Grant Recipient",
+                grade: "Current",
+                description: "Awarded funding in support of Janam, enabling expanded outreach in rural communities",
+                details: "Awarded funding in support of Janam, enabling expanded outreach in rural communities, development of educational materials, and operational scaling of birthing centers. The grant recognized not only innovation in maternal healthcare but also community-driven impact and sustainability.",
+                category: "Grant Award",
+                achievements: ["Funding for Janam", "Rural outreach expansion", "Educational materials", "Operational scaling"],
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008708/janam_okbwp6.png",
+                link: "https://www.ibo.org/festival-of-hope/youth-in-action/janam?contentId=204588"
+            },
+            {
+                id: "inflection-grant",
+                title: "Inflection Grant (Global Top 5)",
+                grade: "Current",
+                description: "Selected from 350+ applicants worldwide for exceptional social innovation; awarded $2,000 to scale Janam",
+                details: "Selected from 350+ applicants worldwide for exceptional social innovation in the Inflection Grant program. Awarded $2,000 to scale Janam's impact, recognizing the project's potential for transformative change in maternal healthcare.",
+                category: "International Grant",
+                achievements: ["Global Top 5", "350+ applicants", "$2,000 funding", "Social innovation"],
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008708/janam_okbwp6.png",
+                link: ""
+            },
+            {
+                id: "health-ministry-recognition",
+                title: "Indian Health Ministry Recognition",
+                grade: "Current",
+                description: "Janam acknowledged for rural maternal health innovation and distributed 10,000+ bilingual pregnancy guides",
+                details: "Janam received official recognition from the Indian Health Ministry for rural maternal health innovation. The project has distributed 10,000+ bilingual pregnancy guides, demonstrating significant impact in improving maternal healthcare access in rural communities.",
+                category: "Government Recognition",
+                achievements: ["Health Ministry recognition", "10,000+ guides distributed", "Rural innovation", "Bilingual materials"],
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008708/janam_okbwp6.png",
+                link: ""
+            },
+            {
+                id: "ippf-global",
+                title: "International Public Policy Forum (Top 32 Global)",
+                grade: "Grade 11",
+                description: "Only Indian team to qualify for 2024 finals",
+                details: "Advanced to Top 32 worldwide in International Public Policy Forum (IPPF). Only team from India to qualify for the 2024 finals. Argued policy case on preventive healthcare before global panel of judges.",
+                category: "International Award",
+                imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1759007160/8a695a64-f612-4bb7-bd33-5ce64d0867ce.png",
+                achievements: ["Global Top 32", "Only India team", "2024 finals", "Policy argumentation"]
             },
             {
                 id: "iris-national",
-                title: "IRIS National Science Fair - Top 50 Finalist",
+                title: "IRIS National Science Fair (Finalist)",
                 grade: "Grade 11",
-                description: "Selected from 6,000+ applicants for national-level science competition",
-                details: "Selected as 1 of 50 students nationwide from over 6,000 applicants. Presented original biodegradable faux leather prototype to panel of national experts. Recognition for innovation in sustainable materials science.",
+                description: "Presented self-developed biodegradable leather prototype to national experts",
+                details: "Selected as finalist in IRIS National Science Fair. Presented self-developed biodegradable leather prototype made from banana stems and rice husks to panel of national experts, showcasing innovation in sustainable materials science.",
                 category: "National Award",
-                achievements: ["Top 50 nationwide", "6,000+ applicant pool", "Original prototype", "Expert presentation"],
+                achievements: ["National finalist", "Original prototype", "Biodegradable leather", "Expert presentation"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759299129/IRIS_1_sugz6f.png",
                 link: "https://irisnationalfair.org/"
             },
             {
                 id: "economics-olympiad-rank",
-                title: "International Economics Olympiad - AIR 39",
+                title: "International Economics Olympiad (AIR 39)",
                 grade: "Grade 11",
-                description: "All India Rank 39 from approximately 7,000 participants",
-                details: "Achieved All India Rank 39 in International Economics Olympiad (Meccademia) with approximately 7,000 participants. Demonstrated exceptional understanding of economic principles and analytical thinking.",
+                description: "Ranked top 1% in India out of 7,000+ participants",
+                details: "Achieved All India Rank 39 in International Economics Olympiad, ranking in the top 1% in India out of 7,000+ participants. Demonstrated exceptional understanding of economic principles and analytical thinking.",
                 category: "National Award",
-                achievements: ["AIR 39", "7,000+ participants", "Economic excellence", "Analytical recognition"],
+                achievements: ["AIR 39", "Top 1% in India", "7,000+ participants", "Economic excellence"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008704/Awards_Media_Recognition_mffpnj.png",
                 link: "https://meccademia.com/"
             },
             {
-                id: "ippf-global",
-                title: "International Public Policy Forum - Global Top 32",
-                grade: "Grade 11",
-                description: "Only team from India to qualify for global top 32",
-                details: "Advanced to Top 32 worldwide in International Public Policy Forum (IPPF). Only team from India to qualify. Argued policy case on preventive healthcare before global panel of judges.",
-                category: "International Award",
-                imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1759007160/8a695a64-f612-4bb7-bd33-5ce64d0867ce.png",
-                achievements: ["Global Top 32", "Only India team", "Policy argumentation", "Healthcare focus"]
+                id: "social-innovation-award",
+                title: "Best Social Innovation Award (School)",
+                grade: "Current",
+                description: "Honored for Janam's sustainable healthcare model",
+                details: "Received Best Social Innovation Award at school level for Janam's sustainable healthcare model. The award recognized the project's innovative approach to addressing maternal healthcare challenges through community-driven solutions.",
+                category: "School Award",
+                achievements: ["Social innovation", "Sustainable model", "Healthcare focus", "Community impact"],
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008708/janam_okbwp6.png",
+                link: ""
             },
             {
-                id: "tie-finalist",
-                title: "TIE Young Entrepreneurs - State Finalist",
-                grade: "Grade 11",
-                description: "Selected among Top 15 state teams for entrepreneurship competition",
-                details: "Selected among Top 15 state teams in TIE Young Entrepreneurs competition. Pitched TeenLink, high school networking platform, to panel of investors and mentors in TYE accelerator program.",
-                category: "State Award",
-                achievements: ["Top 15 state teams", "Investor pitch", "Accelerator selection", "Networking platform"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008704/Awards_Media_Recognition_mffpnj.png",
-                link: "https://tie.org/tye"
+                id: "legal-saathi-newspaper",
+                title: "Legal Saathi Featured in Sandesh Patrika",
+                grade: "Current",
+                description: "Legal Saathi featured in the Sandesh Patrika (Rajasthan newspaper)",
+                details: "Legal Saathi received media recognition through a feature in Sandesh Patrika, a prominent Rajasthan newspaper. The coverage highlighted the platform's innovative approach to legal literacy and its impact on worker rights across the state.",
+                category: "Media Recognition",
+                achievements: ["Newspaper feature", "Rajasthan coverage", "Legal literacy", "Worker rights"],
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759952247/newpaper_ocdbkh.png",
+                link: ""
             }
         ]
     },
@@ -653,37 +753,26 @@ export const portfolioData: PortfolioData = {
 
     reflections: {
         title: "Reflections",
-        description: "Personal insights, lessons learned, and thoughts on impact, leadership, and growth.",
+        description: "Personal insights and contemplations on growth, awareness, and the deeper currents of experience.",
         imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Reflections_g1ubec.png",
         // imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759006094/Reflections_q0oejj.png",
         stats: [
-            { label: "Reflection Essays", value: "15+" },
-            { label: "Topics Covered", value: "Leadership, Impact, Growth" },
-            { label: "Words Written", value: "10,000+" },
-            { label: "Personal Growth", value: "Continuous" }
+            { label: "Meditation Hours", value: "1,400+" },
+            { label: "Days in Silence", value: "10" },
+            { label: "Teacher", value: "Dr. Renuka Goel" },
+            { label: "Tradition", value: "S. N. Goenka" }
         ],
         items: [
             {
-                id: "leadership-reflections",
-                title: "On Leadership and Service",
-                grade: "Current",
-                description: "Reflections on what it means to lead with empathy and create lasting impact",
-                details: "Through my experiences leading Legal Saathi, Janam, and TeenLink, I've learned that true leadership isn't about titles or recognition—it's about the quiet moments of service, the late-night calls from team members, and the responsibility of turning ideas into tangible change that improves lives.",
-                category: "Personal Growth",
-                achievements: ["Leadership insights", "Service philosophy", "Impact measurement", "Team dynamics"],
+                id: "vipassana-reflection",
+                title: "Vipassana Reflection",
+                grade: "Recent",
+                description: "Ten days in silence — no phone, no books, no conversation, and nearly 1,400 hours of meditation",
+                details: "In the stillness of a Jaipur winter, I spent ten days in silence — no phone, no books, no conversation, and nearly 1,400 hours of meditation under the guidance of Dr. Renuka Goel, my Vipassana teacher. It was my first sustained experience of complete inward observation, and perhaps the first time I understood the discipline of simply being.\n\nVipassana, as taught in the tradition of S. N. Goenka, is a technique of insight — a systematic training of awareness through continuous attention to bodily sensations. From 4:00 a.m. until 9:00 p.m., the day unfolded in complete silence. Ten hours of seated meditation, broken only by brief meals and rest, created a rhythm that dissolved the usual boundaries between body and mind. With no clocks, no mirrors, and no eye contact, time lost its familiar weight; what remained was the cycle of breath and the movement of attention.\n\nEach session began with ānāpāna, observing the breath as it flows in and out — not controlling it, just noticing. Gradually, the practice deepened into Vipassana: scanning the body from head to toe, observing sensations — heat, tingling, tightness, calm — without reaction or preference. The simplicity is deceptive. To sit perfectly still for an hour is to watch the mind's restlessness laid bare. Yet in that repetition lies the heart of the practice: equanimity.\n\nDr. Goel often reminded us that Vipassana isn't about escape or transcendence, but about seeing reality as it is — impermanent, interconnected, and constantly changing. Over days, I began to feel that truth not as a concept, but as an experience. A sensation would arise, crest, and dissolve — like thoughts, emotions, and memories themselves. Nothing stayed fixed.\n\nWhat Vipassana offered was not peace in the sentimental sense, but clarity — a quietness that isn't the absence of noise but the ability to stay undisturbed within it. The silence became a mirror, reflecting how every moment, no matter how fleeting, carries its own completeness.\n\nWhen the ten days ended, the world outside felt louder but lighter. Vipassana didn't change my circumstances; it changed my relationship to them. It taught me that awareness is not passive — it's active presence. To observe without resistance is to understand, and to understand is to begin transforming.",
+                category: "Meditation & Mindfulness",
+                achievements: ["10 days in silence", "1,400+ meditation hours", "Complete inward observation", "Equanimity practice"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Reflections_g1ubec.png",
-                link: "https://medium.com/@eva/leadership-and-service"
-            },
-            {
-                id: "resilience-journey",
-                title: "Building Resilience Through Adversity",
-                grade: "Current",
-                description: "How challenges shaped my character and approach to problem-solving",
-                details: "Life has never felt like a smooth road; it's felt like a fight. But I've never wanted to fight just for myself. I fight for others too– for fairness, for dignity, for the courage to face what's uncomfortable. These experiences have made me sharper, hungrier, and more curious.",
-                category: "Personal Growth",
-                achievements: ["Resilience building", "Character development", "Problem-solving approach", "Empathy cultivation"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Reflections_g1ubec.png",
-                link: "https://medium.com/@eva/resilience-through-adversity"
+                link: ""
             }
         ]
     },

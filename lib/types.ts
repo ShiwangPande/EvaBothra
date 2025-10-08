@@ -14,6 +14,9 @@ export type PortfolioItem = {
   link?: string
   imageSrc?: string | string[]
   images?: string[]
+  certificate?: string
+  instagram?: string
+  video?: string
 }
 
 export type PortfolioSection = {

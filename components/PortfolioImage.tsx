@@ -2,7 +2,6 @@
 import { memo, useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { useRouter } from 'next/navigation'
 import { TRANSITION_CLASSES } from '../app/constants'
 
 interface PortfolioImageProps {
@@ -12,9 +11,6 @@ interface PortfolioImageProps {
   altText: string
   sectionKey: string
   onClick?: () => void
-  enableNavigation?: boolean
-  href?: string
-  external?: boolean
 }
 
 export const PortfolioImage = memo(function PortfolioImage({
@@ -24,26 +20,8 @@ export const PortfolioImage = memo(function PortfolioImage({
   altText,
   sectionKey,
   onClick,
-  enableNavigation = false,
-  href,
-  external
 }: PortfolioImageProps) {
   const [isLoading, setIsLoading] = useState(true)
-  const router = useRouter()
-
-  const handleClick = () => {
-    if (href) {
-      if (external) {
-        window.open(href, '_blank')
-      } else {
-        router.push(href)
-      }
-    } else if (enableNavigation) {
-      router.push(`/${sectionKey}`)
-    } else if (onClick) {
-      onClick()
-    }
-  }
 
   const className = `${TRANSITION_CLASSES.base} ${
     isSelected
@@ -55,13 +33,13 @@ export const PortfolioImage = memo(function PortfolioImage({
 
   return (
     <motion.div
-      className={`${className} w-full max-w-[280px] aspect-[4/5] relative cursor-pointer overflow-hidden group`}
-      onClick={handleClick}
+      className={`${className} w-full max-w-[240px] aspect-[4/5] relative cursor-pointer overflow-hidden group`}
+      onClick={onClick}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -30 }}
       transition={{ duration: 0.5 }}
-      whileHover={{ y: -5 }}
+      whileHover={{ y: -3 }}
     >
       {isLoading && (
         <div className="absolute inset-0 bg-black/10 animate-pulse z-10" />
@@ -72,21 +50,25 @@ export const PortfolioImage = memo(function PortfolioImage({
         alt={altText}
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-        className="object-cover border-black border-2 transition-transform duration-500 group-hover:scale-105"
+        className="object-cover border-gray-200 border-2 transition-all duration-500 group-hover:scale-105 group-hover:shadow-lg"
         onLoad={() => setIsLoading(false)}
+        quality={90}
+        priority={false}
       />
 
-      {/* Overlay with section title */}
-      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-end">
-        <div className="p-3 md:p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-          <h3 className="font-['Ayer_Poster_Web'] text-sm md:text-lg leading-tight">
-            {altText}
-          </h3>
-          {enableNavigation && (
-            <p className="text-xs md:text-sm opacity-80 mt-1">Click to explore →</p>
-          )}
+      {/* Overlay with better visual feedback */}
+      <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end">
+        <div className="w-full flex justify-center pb-4">
+          <div className="bg-white/95 backdrop-blur-sm px-4 py-2 rounded-lg shadow-lg border border-white/20">
+            <p className="text-sm font-semibold text-gray-800">
+              Click to explore →
+            </p>
+          </div>
         </div>
       </div>
+      
+      {/* Subtle border highlight on hover */}
+      <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#007B78]/50 rounded-lg transition-all duration-300 pointer-events-none"></div>
     </motion.div>
   )
 })

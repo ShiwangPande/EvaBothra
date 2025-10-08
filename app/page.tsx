@@ -100,7 +100,7 @@ export default function HomePage() {
           transition={{ duration: 0.8, delay: 3 }}
           className="fixed inset-0 flex items-center justify-center pointer-events-none z-0"
         >
-          <span className="text-[15vw] sm:text-[18vw] lg:text-[20vw] font-medium eva-font select-none leading-none">
+          <span className="text-[12vw] sm:text-[15vw] lg:text-[18vw] font-medium eva-font select-none leading-none opacity-30">
             EVA BOTHRA
           </span>
         </motion.div>
@@ -123,12 +123,24 @@ export default function HomePage() {
           id="portfolio"
           variants={ANIMATION_VARIANTS.fadeIn}
           transition={{ duration: 0.8, delay: 3.5 }}
-          className="min-h-screen py-20 relative z-10"
+          className="min-h-screen py-32 relative z-10"
         >
-          <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="max-w-8xl mx-auto px-6 md:px-12">
+            {/* Subtle instruction */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 4 }}
+              className="text-center mb-12"
+            >
+              <p className="text-gray-500 text-sm font-medium">
+                Click on any project to explore
+              </p>
+            </motion.div>
+            
             <motion.div
               variants={ANIMATION_VARIANTS.stagger}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 lg:gap-12"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 md:gap-12 lg:gap-16"
             >
               {tiles.map((tile) => (
                 <motion.div
@@ -143,9 +155,6 @@ export default function HomePage() {
                     imageSrc={tile.imageSrc}
                     altText={tile.title}
                     sectionKey={tile.key}
-                    href={tile.href}
-                    external={tile.external}
-                    enableNavigation={false}
                   />
                 </motion.div>
               ))}
@@ -157,15 +166,15 @@ export default function HomePage() {
         {/* Additional Sections */}
         {isReady && (
           <Suspense fallback={null}>
-            <section id="about" className="relative z-10 py-8 md:py-12">
+            <section id="about" className="relative z-10 py-16 md:py-24">
               <AboutMe compact />
             </section>
 
-            <section id="testimonials" className=" relative z-10 py-8 md:py-12">
+            <section id="testimonials" className="relative z-10 py-16 md:py-24">
               <Testimonials />
             </section>
 
-            <section id="contact" className="relative z-10 py-8 md:py-12">
+            <section id="contact" className="relative z-10 py-16 md:py-24">
               <ContactForm />
             </section>
           </Suspense>
