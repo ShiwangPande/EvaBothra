@@ -42,55 +42,119 @@ export default function AboutMe({ compact = false }: AboutMeProps) {
   const aboutData = portfolioData.about
 
   return (
-    <section className={compact ? "py-16 bg-white relative overflow-x-clip" : "py-32 bg-gradient-to-b from-[#f8fafc] via-white to-[#f8fafc] relative overflow-x-clip"}>
+    <section className={compact ? " bg-gray-50/50 relative overflow-x-clip" : " bg-gradient-to-b from-[#f8fafc] via-white to-[#f8fafc] relative overflow-x-clip"}>
       {/* Decorative background shapes */}
       {/* Ultra-minimal, refined quote presentation */}
       <motion.div
-  className="max-w-3xl mx-auto px-6 mb-16 relative z-10"
+   className="max-w-5xl mx-auto px-6 mb-16 relative z-10"
+   variants={quoteVariants}
+   initial="initial"
+   whileInView="animate"
+   viewport={{ once: true }}
+ >
+   <div className="space-y-12">
+     {/* First Quote - Dr. Seuss */}
+     <motion.div
+  className="max-w-5xl mx-auto px-6 mb-20 relative z-10"
   variants={quoteVariants}
   initial="initial"
   whileInView="animate"
   viewport={{ once: true }}
 >
-  <figure className="text-center">
-    <blockquote>
-      <p className="text-2xl md:text-4xl font-serif italic leading-relaxed text-gray-800 relative">
-        <span
-          className="absolute -left-6 -top-4 text-5xl text-gray-300 font-bold select-none"
-          aria-hidden="true"
-        >
-          “
-        </span>
-        <span className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text text-transparent">
-          {aboutData.callToAction}
-        </span>
-        <span
-          className="absolute -right-6 -bottom-4 text-5xl text-gray-300 font-bold select-none"
-          aria-hidden="true"
-        >
-          ”
-        </span>
-      </p>
-    </blockquote>
+  {/* Soft glow background */}
+  <div className="absolute inset-0 bg-gradient-to-r from-[#007B78]/5 via-transparent to-[#007B78]/5 blur-2xl rounded-full" />
 
-    <motion.figcaption
-      className="mt-8 text-center text-base md:text-lg text-gray-600 font-medium tracking-wide"
-      initial={{ opacity: 0, y: 20 }}
+  <div className="space-y-16 relative">
+
+    {/* First Quote */}
+    <motion.figure
+      className="text-center relative"
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.2 }}
+      transition={{ duration: 0.9, delay: 0.2, ease: easeInOut }}
+      viewport={{ once: true }}
     >
-      <span
-        className="inline-block w-10 h-px bg-gray-300 align-middle mr-3"
-        aria-hidden="true"
-      ></span>
-      Eva Bothra
-      <span
-        className="inline-block w-10 h-px bg-gray-300 align-middle ml-3"
-        aria-hidden="true"
-      ></span>
-    </motion.figcaption>
-  </figure>
+      <blockquote className="relative">
+        <p className="text-3xl md:text-4xl font-serif italic leading-relaxed text-gray-800">
+          <span
+            className="absolute -left-6 -top-6 text-6xl text-[#007B78]/30 font-extrabold select-none"
+            aria-hidden="true"
+          >
+            “
+          </span>
+          <span className="bg-gradient-to-r from-[#007B78] via-gray-700 to-[#007B78] bg-clip-text text-transparent font-medium">
+            Kid, you'll move mountains.
+          </span>
+          <span
+            className="absolute -right-6 -bottom-6 text-6xl text-[#007B78]/30 font-extrabold select-none"
+            aria-hidden="true"
+          >
+            ”
+          </span>
+        </p>
+      </blockquote>
+      <figcaption className="mt-5 text-sm tracking-wide text-gray-500 font-semibold uppercase">
+        — Dr. Seuss
+      </figcaption>
+    </motion.figure>
+
+    {/* Divider */}
+    <div className="flex justify-center">
+      <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-[#007B78]/40 to-transparent rounded-full" />
+    </div>
+
+    {/* Second Quote */}
+    <motion.figure
+      className="text-center relative"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9, delay: 0.4, ease: easeInOut }}
+      viewport={{ once: true }}
+    >
+      <blockquote className="relative">
+        <p className="text-3xl md:text-4xl font-serif italic leading-relaxed text-gray-800">
+          <span
+            className="absolute -left-6 -top-6 text-6xl text-[#007B78]/30 font-extrabold select-none"
+            aria-hidden="true"
+          >
+            “
+          </span>
+          <span className="bg-gradient-to-r from-[#007B78] via-gray-700 to-[#007B78] bg-clip-text text-transparent font-medium">
+            The wound is the place where the light enters you.
+          </span>
+          <span
+            className="absolute -right-6 -bottom-6 text-6xl text-[#007B78]/30 font-extrabold select-none"
+            aria-hidden="true"
+          >
+            ”
+          </span>
+        </p>
+      </blockquote>
+      <figcaption className="mt-5 text-sm tracking-wide text-gray-500 font-semibold uppercase">
+        — Rumi
+      </figcaption>
+    </motion.figure>
+
+    {/* Elegant Closing Name */}
+    <motion.div
+      className="text-center relative pt-6"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.9, delay: 0.6, ease: easeInOut }}
+      viewport={{ once: true }}
+    >
+      <div className="relative flex items-center justify-center">
+        <div className="absolute w-full border-t border-gray-200"></div>
+        <span className="relative bg-white px-6 text-lg md:text-xl font-semibold text-[#007B78] tracking-wide">
+          Eva Bothra
+        </span>
+      </div>
+    </motion.div>
+  </div>
 </motion.div>
+
+  </div>
+  </motion.div>
 
 
       {/* Title Centered */}

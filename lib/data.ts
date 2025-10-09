@@ -153,6 +153,11 @@ export const portfolioData: PortfolioData = {
                         achievements: ["80+ research hours", "Conference selection", "Publication submission", "Award entry"],
                         link: "https://ijsser.org/"
                     },
+                ]
+            },
+            summer: {
+                title: "How I Spent My Summer",
+                items: [
                     {
                         id: "harvard-program",
                         title: "Harvard Ventures Tech Summer Program – Participant",
@@ -184,7 +189,7 @@ export const portfolioData: PortfolioData = {
                         certificate: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759007150/279df43f-c71e-45b7-8964-ff93412eab30.png"
                     }
                 ]
-            }
+            },
         }
     },
 
@@ -238,7 +243,7 @@ export const portfolioData: PortfolioData = {
                 details: "TeenLink grew from frustration into action. At my old school, I launched a Debate Club from scratch – organizing rooms, teachers, logistics, and over 70 members– only to be told we couldn't compete. That moment showed me the gap between talent and opportunity. Transferring schools revealed a new world of possibilities, and I realized that thousands of students were being denied access to mentorship, internships, and growth opportunities. TeenLink became my answer.\n\nI built the platform from the ground up: coding the app, designing the interface, creating graphics, planning onboarding, and drafting marketing strategies. Late nights debugging, learning from professional coders, and iterating endlessly taught me that real entrepreneurship is persistence in action.\n\nToday, TeenLink has 400 beta users, with a roadmap to reach 20,000 in the next app update. Partnerships with Mauka onboarded 80 NGOs and 56 companies for volunteer work, while over 20 school counselors expanded their mentorship programs. Early funding of ₹4 lakhs (~$5K) and selection in the TYE Rajasthan accelerator validated the work.\n\nEvery feature, every pitch, every bug fix reflects my drive to transform a gap I experienced firsthand into a platform that empowers thousands of students to discover opportunities and connect with mentors.",
                 category: "Tech Entrepreneurship",
                 achievements: ["400+ beta users", "App Store & Play Store live", "₹4 lakhs funding", "TYE accelerator selection"],
-                link: "Available on App Store and Play Store: https://apps.apple.com/ https://play.google.com/",
+                link: "https://apps.apple.com/in/app/teenlink-connect/id6746079280",
                 imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759302338/TEENLink_3_vjzmqw.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942972/abf60202-755d-40f3-8f41-d4f4dc394843.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942944/b65e1e81-9bf6-4b7c-b793-732fa10f9458.png",
@@ -290,7 +295,7 @@ export const portfolioData: PortfolioData = {
                 category: "Media & Advocacy",
                 achievements: ["Podcast founder", "Government partnership", "Support groups facilitated", "Weekly sessions"],
                 link: "https://www.youtube.com/@ReshapingSociety",
-                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258538/Reshaping_Society_vrh7he.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689215/8970a709-f434-4f8c-a033-623ee5b189bc.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689327/42c14bee-be47-4c9d-8472-7df2ff1797c3.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689419/950bc5c4-4fae-4d61-8705-4ff20e8e219c.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689460/77258afa-3120-4646-bc40-87794c5ff32c.png"]
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258538/Reshaping_Society_vrh7he.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689215/8970a709-f434-4f8c-a033-623ee5b189bc.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689327/42c14bee-be47-4c9d-8472-7df2ff1797c3.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689419/950bc5c4-4fae-4d61-8705-4ff20e8e219c.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689460/77258afa-3120-4646-bc40-87794c5ff32c.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760009972/7b98f911-eeb8-439d-a43e-6a0d246f0cef.png"]
             },
             {
                 id: "school-captain",
@@ -447,8 +452,8 @@ export const portfolioData: PortfolioData = {
                 details: "Over the past few months, I had the privilege of volunteering at Asha Niketan, a home for individuals with Down syndrome, bipolar disorder, intellectual disabilities, and elderly residents often overlooked by society.\n\nWhat began as a simple desire to give back transformed into one of the most meaningful journeys I've experienced. I organized multi-faith prayer circles, led karaoke nights and pizza parties, and ran wellness sessions—spaces where joy, resilience, and connection emerged in the most unexpected moments. I also created handmade greeting cards and candles, providing both income and dignity to their makers.\n\nBeyond activities, I spent hours listening to residents' life stories, sharing laughs over board games, and holding space for silence when words weren't needed. Through these experiences, I learned that empathy isn't just kindness—it's commitment; inclusion isn't just access—it's dignity.\n\nVolunteering at Asha Niketan reminded me that impact isn't always loud—often, it's quiet, consistent, and deeply human. The lessons I gained continue to guide my approach to service, leadership, and community engagement.",
                 category: "Social Services",
                 achievements: ["Inclusive spaces created", "Income-generating crafts", "Multi-faith circles", "Wellness sessions"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008703/Community_Impact_jgtfmp.png",
-                link: "https://ashaniketan.org/"
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760007127/eb3bf492-4d2b-499e-b110-510c446395e6.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760007211/a1bd512a-a51f-4e8d-831a-3d47e9cb4fdc.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760007268/341a3a17-24a4-4313-8fc6-f9a794f2977d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760007308/6b070aa0-40c3-45be-81e1-079ebdfe1700.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760007308/6b070aa0-40c3-45be-81e1-079ebdfe1700.png"],
+                link: "https://www.linkedin.com/posts/eva-bothra-56650325a_over-the-past-few-months-i-had-the-privilege-activity-7342855198857404416-M-5l?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfMsd4ButU3MKvKyp1BTqPv6UHrURqhH_Q"
             },
             {
                 id: "protecther",
@@ -458,7 +463,7 @@ export const portfolioData: PortfolioData = {
                 details: "Through Janam's partnerships, I helped organize cervical cancer vaccination drives in collaboration with ProtectHer. Beyond equipping birthing spaces, we saw the urgent need for preventive healthcare in rural communities. Coordinating with health workers, we ensured that vaccines reached underserved women, many of whom had never previously interacted with formal healthcare.\n\nEach drive reminded me how inequities in health access aren't just about hospitals — they're about distance, stigma, and awareness. By embedding vaccination into Janam's broader maternal health framework, we weren't just protecting women in the moment, but reshaping long-term health trajectories for families.",
                 category: "Public Health",
                 achievements: ["Vaccination drives organized", "Partnership with Janam", "Rural healthcare access", "Preventive healthcare"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008708/janam_okbwp6.png",
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008708/janam_okbwp6.png"],
                 link: "https://protecther.org/"
             },
             {
@@ -519,94 +524,120 @@ export const portfolioData: PortfolioData = {
             }
         ]
     },
-
     skills: {
-        title: "Skills & Interests",
-        description: "A comprehensive skill set developed through hands-on experience, from full-stack development and design thinking to finance, leadership, and social impact.",
-        imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008692/Skills_Interests_iaaxxa.png",
-        // imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759005754/Skills_Interests_ygsjpc.png",
+        title: "Skills & Expertise",
+        description: "Full-stack developer, designer, and social entrepreneur building impactful digital solutions. From leading 2,200+ students to raising ₹10L+ in funding, I combine technical execution with strategic thinking.",
+        imageSrc: "/images/skills-hero.jpg", // Add your preferred image
         stats: [
-            { label: "Programming", value: "JavaScript, React, Node.js" },
-            { label: "Design", value: "Figma, UI/UX" },
-            { label: "Finance", value: "₹10L+ raised" },
-            { label: "Languages", value: "English, Hindi, Marwadi" }
+            { label: "Projects Shipped", value: "8+" },
+            { label: "Funds Raised", value: "₹15L+" },
+            { label: "Users Reached", value: "8,500+" },
+            { label: "Team Leadership", value: "2,200+" }
         ],
         items: [
             {
-                id: "programming-development",
-                title: "💻 Programming & Development",
-                grade: "Beginner to Intermediate",
-                description: "I'm a beginner full-stack developer, currently mastering JavaScript, React, Node.js, and Next.js through hands-on projects.",
-                details: "I've learned most by doing — building websites for Legal Saathi, Janam, and Internlectual, and developing TeenLink, a student networking app that evolved from a small prototype into a fully functional platform.\n\nI'm still learning — improving my database design, debugging, and UI skills (with tools like Tailwind CSS and shadcn/ui) every week, often by watching how more experienced developers problem-solve. What I love most about programming is how it transforms ideas into something tangible that you can interact with, test, and refine. For me, development isn't about mastery yet — it's about momentum and learning through building.",
-                category: "Technical",
-                achievements: ["TeenLink app development", "Multiple website builds", "Learning through building", "Modern frameworks"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008692/Skills_Interests_iaaxxa.png",
-                link: "https://github.com/eva"
-            },
-            {
-                id: "ui-ux-design",
-                title: "🎨 UI/UX & Design Thinking",
-                grade: "Intermediate",
-                description: "Skilled in Figma and user-centered design. I focus on creating intuitive, accessible interfaces that balance form and function.",
-                details: "Designed digital platforms like Legal Saathi, Janam and TeenLink, emphasizing clarity, inclusivity, and multilingual usability. My approach to design is always user-first, ensuring that complex systems feel simple and accessible to everyone.",
-                category: "Design",
-                achievements: ["Figma proficiency", "User-centered design", "Multilingual interfaces", "Accessibility focus"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008692/Skills_Interests_iaaxxa.png",
-                link: "https://figma.com"
-            },
-            {
-                id: "finance-economics",
-                title: "📊 Finance, Economics & Strategy",
+                id: "fullstack-dev",
+                title: "Full-Stack Development",
                 grade: "Advanced",
-                description: "My experience in finance has always been hands-on — balancing event budgets, managing shared revenues, and negotiating sponsorships.",
-                details: "As Finance Club President, I coordinated budgeting for school events, handled shared profit systems for inter-house stalls, and organized sponsorship drives with local firms to fund student projects.\n\nI've made more real-world calls to potential sponsors than most adults I know — from securing ₹4L in early-stage funding for TeenLink to raising ₹10L+ for Janam and ₹140K+ for SFCC's wellness campaign. Beyond fundraising, I managed fund allocation across logistics, welfare programs, and marketing — ensuring that every rupee was spent where it created a visible impact.\n\nAt the same time, I deepened my interest in financial modeling and market analysis, competing in case challenges such as those hosted by Wharton, Melbourne, and TIE Entrepreneurs, as well as the IB League, where I applied theoretical concepts to live business simulations. My approach to finance blends economics with execution — thinking like an analyst, but operating like an entrepreneur.",
-                category: "Finance",
-                achievements: ["₹10L+ raised", "Sponsorship negotiations", "Financial modeling", "Case competition experience"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008692/Skills_Interests_iaaxxa.png",
-                link: "https://www.investopedia.com/financial-modeling-4689758"
+                description: "Building functional web applications with modern JavaScript frameworks and tools",
+                details: "Self-taught full-stack developer specializing in JavaScript, React, Node.js, and Next.js. Learned through hands-on projects including Legal Saathi, Janam, and TeenLink — a student networking app that grew from prototype to fully functional platform. Currently improving database design, debugging workflows, and UI implementation with Tailwind CSS and shadcn/ui. Development approach centers on transforming ideas into tangible, testable products through momentum and continuous learning.",
+                category: "Technical",
+                achievements: [
+                    "Built TeenLink from prototype to production-ready platform",
+                    "Developed websites for Legal Saathi (8,500+ users), Janam, and Internlectual",
+                    "Mastered modern React patterns and Next.js app architecture",
+                    "Implemented responsive designs using Tailwind CSS and shadcn/ui"
+                ],
+                link: ""
+            },
+            {
+                id: "uiux-design",
+                title: "UI/UX & Design Thinking",
+                grade: "Advanced",
+                description: "Creating intuitive, accessible interfaces that balance aesthetics with usability",
+                details: "Skilled in Figma and user-centered design methodology. Focus on building interfaces that prioritize clarity, inclusivity, and multilingual accessibility. Designed complete digital experiences for Legal Saathi, Janam, and TeenLink, ensuring every interaction serves user needs while maintaining visual consistency and brand identity.",
+                category: "Design",
+                achievements: [
+                    "Designed multilingual interfaces for diverse user bases",
+                    "Created accessible design systems from scratch",
+                    "Led user research and iterative design processes",
+                    "Built design libraries in Figma for consistency"
+                ],
+                link: ""
+            },
+            {
+                id: "finance-strategy",
+                title: "Finance, Economics & Strategy",
+                grade: "Expert",
+                description: "From fundraising to financial modeling, blending economic theory with entrepreneurial execution",
+                details: "Finance Club President with extensive hands-on experience in budgeting, sponsorship negotiation, and fund allocation. Secured ₹4L for TeenLink's early-stage funding, raised ₹10L+ for Janam, and ₹140K+ for SFCC wellness campaigns. Managed complex budget coordination for school events, inter-house stall profit-sharing systems, and strategic fund deployment across logistics, welfare, and marketing. Competed in prestigious case competitions (Wharton, Melbourne, TIE, IB League) applying financial modeling and market analysis to real business scenarios.",
+                category: "Business",
+                achievements: [
+                    "Raised ₹15L+ across multiple ventures and initiatives",
+                    "Coordinated budgets for large-scale school events",
+                    "Competed in international case competitions",
+                    "Negotiated sponsorships with local and regional firms"
+                ],
+                link: ""
             },
             {
                 id: "leadership-mentorship",
-                title: "🧠 Leadership & Mentorship",
-                grade: "Advanced",
-                description: "My first taste of leadership came on the hockey field — as Team Captain, I learned to lead through rhythm, resilience, and quiet example.",
-                details: "I wasn't the loudest on the team, but I became the one who noticed when someone needed a push or space to breathe. Around the same time, I founded my school's Debate Club, a space that started with 12 members and grew to 70+. Managing heated discussions, scheduling sessions, and balancing voices taught me the value of structure and inclusion — that leadership isn't about commanding attention, but creating space for it.\n\nWhen I transferred to a new, much larger school, those lessons shaped how I led as School Captain of 2,200+ students. I coordinated councils, assemblies, and hostel life, but most of my work happened behind the scenes — mentoring juniors through essays, extracurriculars, and late-night conversations that often mattered more than any event. Between leading wellness initiatives, designing the Summer with Council program for 56 juniors, and bridging divides between day scholars and boarders, I learned that leadership grows quieter as it grows deeper.\n\nIt began with team spirit and debate rounds — it evolved into listening, guiding, and building systems that outlast me.",
+                title: "Leadership & Mentorship",
+                grade: "Expert",
+                description: "Leading through listening, building systems that empower others to grow",
+                details: "Leadership journey began as Hockey Team Captain, learning to lead through resilience and awareness. Founded school Debate Club, growing membership from 12 to 70+ by creating inclusive, structured environments. Served as School Captain for 2,200+ students, coordinating councils, assemblies, and hostel life while mentoring juniors through applications, extracurriculars, and personal challenges. Designed Summer with Council program for 56 juniors. Leadership philosophy: create space for others, build lasting systems, lead quietly but deeply.",
                 category: "Leadership",
-                achievements: ["2,200+ students led", "Debate club founder", "Mentorship programs", "System building"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008688/legal_ttr2ku.png",
-                link: "https://legalsaathi.org"
+                achievements: [
+                    "Led 2,200+ students as School Captain",
+                    "Grew Debate Club from 12 to 70+ members",
+                    "Mentored 56+ juniors through structured programs",
+                    "Bridged community divides between day scholars and boarders"
+                ],
+                link: ""
             },
             {
                 id: "social-impact",
-                title: "🌍 Social Impact & Advocacy",
+                title: "Social Impact & Advocacy",
                 grade: "Advanced",
-                description: "Volunteered with No Plastic Use India, leading digital outreach to promote sustainable living.",
-                details: "Founded Legal Saathi, India's first QR-based legal literacy platform reaching 8,500+ workers, and prompted Janam, turning shipping containers into safe birthing spaces for rural women. Experienced in campaign design, social media strategy, and on-ground operations.",
-                category: "Social Impact",
-                achievements: ["8,500+ workers reached", "Campaign design", "Social media strategy", "On-ground operations"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008703/Community_Impact_jgtfmp.png",
-                link: "https://legalsaathi.org"
+                description: "Building platforms and campaigns that create measurable change in underserved communities",
+                details: "Founded Legal Saathi, India's first QR-based legal literacy platform reaching 8,500+ workers with accessible rights information. Co-created Janam, transforming shipping containers into safe birthing spaces for rural women. Led digital outreach for No Plastic Use India promoting sustainable living practices. Experienced in campaign design, social media strategy, community mobilization, and on-ground operations that bridge technology with grassroots needs.",
+                category: "Impact",
+                achievements: [
+                    "Reached 8,500+ workers through Legal Saathi",
+                    "Launched innovative maternal health solution (Janam)",
+                    "Led sustainability campaigns with measurable engagement",
+                    "Designed multi-channel advocacy strategies"
+                ],
+                link: ""
             },
             {
                 id: "writing-communication",
-                title: "🗣️ Writing & Communication",
+                title: "Writing & Communication",
                 grade: "Advanced",
-                description: "Podcast host of Reshaping Society, exploring economics, policy, and human behavior.",
-                details: "Wrote extensively for school publications as editorial board president and research projects, from economic IAs to policy essays for IPPF and my research paper. Skilled in storytelling, speechwriting, and clear, persuasive communication.",
+                description: "Crafting compelling narratives across podcasts, publications, and policy research",
+                details: "Host of Reshaping Society podcast exploring economics, policy, and human behavior. Served as Editorial Board President, writing extensively for school publications. Produced research ranging from economic Internal Assessments to policy essays for IPPF. Skilled in storytelling, speechwriting, persuasive communication, and translating complex concepts into accessible content for diverse audiences.",
                 category: "Communication",
-                achievements: ["Podcast hosting", "Research writing", "Editorial leadership", "Policy essays"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258538/Reshaping_Society_vrh7he.png",
-                link: "https://www.youtube.com/@ReshapingSociety"
+                achievements: [
+                    "Hosted Reshaping Society podcast series",
+                    "Led editorial board and school publications",
+                    "Published policy research and economic analysis",
+                    "Delivered speeches to audiences of 2,000+ students"
+                ],
+                link: ""
             },
             {
                 id: "languages",
-                title: "🌱 Languages",
-                grade: "Multilingual",
-                description: "Fluent in English and Hindi, conversational in Marwadi, basic in Kannada.",
-                details: "My multilingual abilities have been crucial in my social impact work, allowing me to communicate effectively with diverse communities across India. This linguistic diversity has been particularly valuable in projects like Legal Saathi and Janam, where clear communication across language barriers is essential for impact.",
-                category: "Language",
-                achievements: ["English fluency", "Hindi fluency", "Marwadi conversational", "Kannada basic"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008692/Skills_Interests_iaaxxa.png",
+                title: "Multilingual Communication",
+                grade: "Fluent",
+                description: "Communicating across cultures with fluency in English, Hindi, and conversational proficiency in regional languages",
+                details: "Fluent in English and Hindi, enabling seamless communication in professional and community settings. Conversational proficiency in Marwadi and basic knowledge of Kannada, facilitating connections with diverse communities across India. Language skills enhance user research, community engagement, and inclusive design practices.",
+                category: "Communication",
+                achievements: [
+                    "Fluent in English and Hindi",
+                    "Conversational in Marwadi",
+                    "Basic proficiency in Kannada",
+                    "Designed multilingual platforms for diverse users"
+                ],
                 link: ""
             }
         ]
@@ -624,17 +655,17 @@ export const portfolioData: PortfolioData = {
             { label: "Global Recognition", value: "Top 5%" }
         ],
         items: [
-            {
-                id: "ibo-gold-medalist",
-                title: "International Business Olympiad (Gold Medalist)",
-                grade: "Grade 12",
-                description: "Scored 198/200; represented India internationally; ranked Top 10 globally",
-                details: "Achieved gold medal status with 198/200 score in the International Business Olympiad. Represented India internationally and ranked Top 10 globally, showcasing exceptional business acumen and analytical skills on the world stage.",
-                category: "International Award",
-                achievements: ["198/200 score", "Gold Medalist", "Top 10 Global", "India representative"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008704/Awards_Media_Recognition_mffpnj.png",
-                link: "https://www.business-olympiad.org/"
-            },
+            // {
+            //     id: "ibo-gold-medalist",
+            //     title: "International Business Olympiad (Gold Medalist)",
+            //     grade: "Grade 12",
+            //     description: "Scored 198/200; represented India internationally; ranked Top 10 globally",
+            //     details: "Achieved gold medal status with 198/200 score in the International Business Olympiad. Represented India internationally and ranked Top 10 globally, showcasing exceptional business acumen and analytical skills on the world stage.",
+            //     category: "International Award",
+            //     achievements: ["198/200 score", "Gold Medalist", "Top 10 Global", "India representative"],
+            //     imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008704/Awards_Media_Recognition_mffpnj.png",
+            //     link: "https://www.business-olympiad.org/"
+            // },
             {
                 id: "ib-youth-grant",
                 title: "IB Youth Grant Recipient",
@@ -746,7 +777,7 @@ export const portfolioData: PortfolioData = {
                 category: "Media & Advocacy",
                 achievements: ["Weekly episodes", "Government partnership", "Support groups", "Survivor advocacy"],
                 link: "www.youtube.com/@ReshapingSociety",
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258538/Reshaping_Society_vrh7he.png"
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760009972/7b98f911-eeb8-439d-a43e-6a0d246f0cef.png"
             }
         ]
     },
@@ -830,9 +861,10 @@ export const portfolioData: PortfolioData = {
         {
             key: 'reshaping-society',
             title: 'Reshaping Society – Podcast',
-            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258538/Reshaping_Society_vrh7he.png',
-            href: 'https://www.youtube.com/@ReshapingSociety',
-            external: true
+            // imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258538/Reshaping_Society_vrh7he.png',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1760009972/7b98f911-eeb8-439d-a43e-6a0d246f0cef.png',
+            href: '/youtube',
+            external: false
         }
     ]
 }

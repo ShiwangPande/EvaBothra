@@ -123,7 +123,7 @@ export default function HomePage() {
           id="portfolio"
           variants={ANIMATION_VARIANTS.fadeIn}
           transition={{ duration: 0.8, delay: 3.5 }}
-          className="min-h-screen py-32 relative z-10"
+          className="min-h-screen py-20 relative z-10"
         >
           <div className="max-w-8xl mx-auto px-6 md:px-12">
             {/* Subtle instruction */}
@@ -155,6 +155,9 @@ export default function HomePage() {
                     imageSrc={tile.imageSrc}
                     altText={tile.title}
                     sectionKey={tile.key}
+                    href={tile.href}
+                    external={tile.external}
+                    enableNavigation={false}
                   />
                 </motion.div>
               ))}
@@ -166,15 +169,15 @@ export default function HomePage() {
         {/* Additional Sections */}
         {isReady && (
           <Suspense fallback={null}>
-            <section id="about" className="relative z-10 py-16 md:py-24">
+            <section id="about" className="relative bg-gray-50/50 z-10 py-12 md:py-16">
               <AboutMe compact />
             </section>
 
-            <section id="testimonials" className="relative z-10 py-16 md:py-24">
+            <section id="testimonials" className="relative bg-gray-50/50 z-10 py-12 md:py-16">
               <Testimonials />
             </section>
 
-            <section id="contact" className="relative z-10 py-16 md:py-24">
+            <section id="contact" className="relative bg-gray-50/50 z-10 py-12 md:py-16">
               <ContactForm />
             </section>
           </Suspense>

@@ -167,54 +167,62 @@ export default function LeadershipPage() {
   return (
     <main className={`min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 ${inter.variable} ${playfair.variable} ${poppins.variable} ${lora.variable}`}>
       {/* Hero */}
-      <section className="relative flex flex-col items-center justify-center min-h-[100vh] px-6 md:px-10 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-  {/* Animated gradient orbs */}
-  <div className="absolute inset-0 overflow-hidden">
-    <div className="absolute top-[-100px] left-[-100px] w-[400px] h-[400px] bg-blue-200/40 rounded-full blur-3xl animate-pulse" />
-    <div className="absolute bottom-[-150px] right-[-100px] w-[500px] h-[500px] bg-indigo-200/40 rounded-full blur-3xl animate-pulse" />
-    <div className="absolute bottom-[20%] left-[10%] w-[200px] h-[200px] bg-blue-100/30 rounded-full blur-2xl animate-bounce-slow" />
-  </div>
-
-  {/* Content */}
-  <div className="relative z-10 max-w-4xl text-center">
+{/* Hero */}
+<section className="relative flex flex-col items-center justify-center min-h-[75vh] px-6 md:px-10 bg-white">
+  {/* Main Content */}
+  <div className="max-w-4xl text-center space-y-8">
+    {/* Title */}
     <FadeInSection>
-      <h1 className="text-5xl md:text-7xl font-extrabold text-gray-900 tracking-tight leading-tight mb-6">
+      <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 tracking-tight leading-tight font-[family-name:var(--font-playfair)]">
         {data.title}
       </h1>
-      <p className="text-lg md:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-light">
+    </FadeInSection>
+
+    {/* Description */}
+    <FadeInSection delay={100}>
+      <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-[family-name:var(--font-inter)]">
         {data.description}
       </p>
     </FadeInSection>
 
     {/* Stats */}
     {data.stats && (
-      <FadeInSection delay={300}>
-        <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-8 justify-center border-t border-gray-200 pt-10">
-          {data.stats.map((s) => (
-            <div key={String(s.label)} className="text-center">
-              <div className="text-3xl md:text-4xl font-semibold text-gray-900 mb-1">
-                {s.value}
+      <FadeInSection delay={200}>
+        <div className="mt-20 pt-10 border-t border-gray-200">
+          <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 max-w-4xl mx-auto">
+            {data.stats.map((s) => (
+              <div key={String(s.label)} className="text-center">
+                <div className="text-5xl font-bold text-gray-900 mb-3">
+                  {s.value}
+                </div>
+                <div className="text-sm text-gray-500">
+                  {s.label}
+                </div>
               </div>
-              <div className="text-xs uppercase tracking-widest text-gray-500">
-                {s.label}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </FadeInSection>
     )}
+    {/* Quote */}
+    <FadeInSection delay={300}>
+      <p className="mt-16 text-2xl md:text-3xl font-medium text-gray-800 font-[family-name:var(--font-playfair)] italic">
+        "This is only the beginning"
+      </p>
+    </FadeInSection>
   </div>
+</section>
 
-  {/* Scroll indicator */}
-  <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10">
-    <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-      <div className="w-1 h-2 bg-gray-400 rounded-full mt-2 animate-bounce" />
-    </div>
-  </div>
-  </section>
+
+
+
+
+
+      {/* Inspirational Quotes Section */}
+      
 
       {/* Leadership Items */}
-      <section className="max-w-7xl mx-auto px-6 md:px-8 pb-28 space-y-28">
+      <section className="max-w-7xl mx-auto px-6 md:px-8 pb-28 pt-10 space-y-28">
         {data.items.map((item, idx) => (
           <FadeInSection key={item.id} delay={100}>
             <article className="relative">

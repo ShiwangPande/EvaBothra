@@ -41,6 +41,7 @@ export type AcademicSection = {
     academicPerformance: AcademicSubsection
     olympiads: AcademicSubsection
     research: AcademicSubsection
+    summer: AcademicSubsection
   }
 }
 

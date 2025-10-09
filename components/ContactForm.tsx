@@ -77,71 +77,99 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="relative py-32 bg-white overflow-hidden">
+    <section className="relative  bg-gray-50/50 overflow-hidden">
       <div className="max-w-2xl mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold text-[#007B78] mb-6">
-            Get in Touch
-          </h2>
-          <p className="text-lg text-gray-700 leading-relaxed mb-12">
-            Let's collaborate, connect, or chat — I'd love to hear from you.
-          </p>
+      <motion.div
+  initial={{ opacity: 0, y: 30 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6 }}
+  className="text-center mb-16"
+>
+  <h2 className="relative inline-block mb-6 text-3xl md:text-4xl font-bold text-[#007B78] tracking-tight">
+    Get in Touch
+    <motion.span
+      initial={{ width: 0 }}
+      whileInView={{ width: '100%' }}
+      transition={{ duration: 0.6, delay: 0.2 }}
+      className="absolute left-0 -bottom-1 h-[3px] bg-[#007B78] rounded-full"
+    />
+  </h2>
 
-          {/* Social Media Links */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex flex-wrap justify-center gap-6 mb-8"
-          >
-            <a
-              href="https://www.linkedin.com/in/eva-bothra-56650325a/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-6 py-3 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-md"
-            >
-              <Linkedin className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />
-              <span className="text-blue-700 font-medium group-hover:text-blue-800">LinkedIn</span>
-              <ExternalLink className="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
+  <p className="text-lg text-gray-700 leading-relaxed mb-6 max-w-xl mx-auto">
+    Don’t hesitate to reach out with the contact information below, or send a message using the form.
+  </p>
 
-            <a
-              href="https://www.instagram.com/evabothra/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-6 py-3 bg-pink-50 hover:bg-pink-100 border border-pink-200 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-md"
-            >
-              <Instagram className="w-5 h-5 text-pink-600 group-hover:text-pink-700" />
-              <span className="text-pink-700 font-medium group-hover:text-pink-800">Instagram</span>
-              <ExternalLink className="w-4 h-4 text-pink-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
+  {/* Email Section */}
+  <motion.div
+    initial={{ opacity: 0, y: 15 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.5, delay: 0.3 }}
+    className="flex items-center justify-center gap-3 mb-12 text-gray-700"
+  >
+    <Mail className="w-5 h-5 text-[#007B78]" />
+    <button
+      onClick={() => {
+        navigator.clipboard.writeText('evabothra@gmail.com')
+        toast.success('Email address copied!')
+      }}
+      className="font-medium text-[#007B78] hover:underline focus:outline-none transition-all"
+    >
+      evabothra@gmail.com
+    </button>
+  </motion.div>
 
-            <a
-              href="https://www.youtube.com/@ReshapingSociety"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-6 py-3 bg-red-50 hover:bg-red-100 border border-red-200 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-md"
-            >
-              <Youtube className="w-5 h-5 text-red-600 group-hover:text-red-700" />
-              <span className="text-red-700 font-medium group-hover:text-red-800">YouTube</span>
-              <ExternalLink className="w-4 h-4 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </a>
-          </motion.div>
+  {/* Social Media Links */}
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.6, delay: 0.4 }}
+    className="flex flex-wrap justify-center gap-6 mb-8"
+  >
+    <a
+      href="https://www.linkedin.com/in/eva-bothra-56650325a/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center gap-3 px-6 py-3 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-md"
+    >
+      <Linkedin className="w-5 h-5 text-blue-600 group-hover:text-blue-700" />
+      <span className="text-blue-700 font-medium group-hover:text-blue-800">LinkedIn</span>
+      <ExternalLink className="w-4 h-4 text-blue-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+    </a>
 
-          {/* Divider */}
-          <div className="flex items-center justify-center gap-4 mb-8">
-            <div className="h-px bg-gray-200 flex-1 max-w-20"></div>
-            <span className="text-sm text-gray-500 font-medium">OR</span>
-            <div className="h-px bg-gray-200 flex-1 max-w-20"></div>
-          </div>
-        </motion.div>
+    <a
+      href="https://www.instagram.com/evabothra/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center gap-3 px-6 py-3 bg-pink-50 hover:bg-pink-100 border border-pink-200 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-md"
+    >
+      <Instagram className="w-5 h-5 text-pink-600 group-hover:text-pink-700" />
+      <span className="text-pink-700 font-medium group-hover:text-pink-800">Instagram</span>
+      <ExternalLink className="w-4 h-4 text-pink-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+    </a>
+
+    <a
+      href="https://www.youtube.com/@ReshapingSociety"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex items-center gap-3 px-6 py-3 bg-red-50 hover:bg-red-100 border border-red-200 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-md"
+    >
+      <Youtube className="w-5 h-5 text-red-600 group-hover:text-red-700" />
+      <span className="text-red-700 font-medium group-hover:text-red-800">YouTube</span>
+      <ExternalLink className="w-4 h-4 text-red-500 opacity-0 group-hover:opacity-100 transition-opacity" />
+    </a>
+  </motion.div>
+
+  {/* Divider */}
+  <div className="flex items-center justify-center gap-4 mb-8">
+    <div className="h-px bg-gray-200 flex-1 max-w-20"></div>
+    <span className="text-sm text-gray-500 font-medium">OR</span>
+    <div className="h-px bg-gray-200 flex-1 max-w-20"></div>
+  </div>
+</motion.div>
+
 
         <motion.div
           initial={{ opacity: 0, scale: 0.98 }}

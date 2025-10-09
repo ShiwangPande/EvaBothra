@@ -3,6 +3,8 @@ import { memo, useState } from 'react'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { TRANSITION_CLASSES } from '../app/constants'
+import { useRouter } from 'next/navigation'
+
 
 interface PortfolioImageProps {
   isSelected: boolean
@@ -11,6 +13,9 @@ interface PortfolioImageProps {
   altText: string
   sectionKey: string
   onClick?: () => void
+  enableNavigation?: boolean
+  href?: string
+  external?: boolean
 }
 
 export const PortfolioImage = memo(function PortfolioImage({
@@ -20,8 +25,32 @@ export const PortfolioImage = memo(function PortfolioImage({
   altText,
   sectionKey,
   onClick,
+  enableNavigation = false,
+  href,
+  external
 }: PortfolioImageProps) {
   const [isLoading, setIsLoading] = useState(true)
+
+  const router = useRouter()
+
+  const handleClick = () => {
+    try {
+      if (href) {
+        if (external) {
+          window.open(href, '_blank', 'noopener,noreferrer')
+        } else {
+          router.push(href)
+        }
+      } else if (enableNavigation) {
+        router.push(`/${sectionKey}`)
+      } else if (onClick) {
+        onClick()
+      }
+    } catch (err) {
+      console.error('Navigation error:', err)
+    }
+  }
+
 
   const className = `${TRANSITION_CLASSES.base} ${
     isSelected
@@ -33,8 +62,8 @@ export const PortfolioImage = memo(function PortfolioImage({
 
   return (
     <motion.div
+    onClick={handleClick}
       className={`${className} w-full max-w-[240px] aspect-[4/5] relative cursor-pointer overflow-hidden group`}
-      onClick={onClick}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -30 }}
