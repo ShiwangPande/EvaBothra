@@ -418,13 +418,17 @@ export default function LeadershipPage() {
           {data.stats && (
             <FadeInSection delay={200}>
               <div className="mt-20 pt-10 border-t border-gray-200">
-                <div className="flex flex-wrap justify-center gap-x-16 gap-y-12 max-w-4xl mx-auto">
+                <div className="flex flex-row justify-center items-end gap-x-16 max-w-4xl mx-auto flex-nowrap overflow-x-auto">
                   {data.stats.map((s) => (
-                    <div key={String(s.label)} className="text-center">
-                      <div className="text-5xl font-bold text-gray-900 mb-3">
+                    <div
+                      key={String(s.label)}
+                      className="text-center flex-shrink-0 min-w-[120px]"
+                      style={{whiteSpace: 'nowrap'}}
+                    >
+                      <div className="text-5xl font-bold text-gray-900 mb-1 leading-tight">
                         {s.value}
                       </div>
-                      <div className="text-sm text-gray-500">
+                      <div className="text-sm text-gray-500 leading-tight">
                         {s.label}
                       </div>
                     </div>
