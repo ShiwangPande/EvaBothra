@@ -68,7 +68,7 @@ export default function AwardsPage() {
                         src={typeof item.imageSrc === "string" ? item.imageSrc : ""}
                         alt={item.title}
                         fill
-                        className="object-cover transition-transform duration-300 group-hover/image:scale-[1.01]"
+                        className="object-contain transition-transform duration-300 group-hover/image:scale-[1.01]"
                         sizes="(max-width: 640px) 100vw, 44vw"
                       />
                       <span className="absolute bottom-3 right-3 bg-white/80 text-xs font-medium px-2 py-1 rounded shadow opacity-0 group-hover/image:opacity-100 transition-opacity duration-200 flex items-center gap-1 z-20">
@@ -115,7 +115,36 @@ export default function AwardsPage() {
                   </p>
                 )}
 
-                {item.link && (
+{item.link && (
+                    <div className="pt-3">
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-all font-[family-name:var(--font-inter)]"
+                      >
+                        <span className="truncate max-w-[250px] underline decoration-blue-400 group-hover:decoration-blue-800">
+                          {item.link}
+                        </span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4 text-blue-600 group-hover:text-blue-800 transition-transform group-hover:translate-x-0.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  )}
+
+                {/* {item.link && (
                   <a
                     href={item.link}
                     target="_blank"
@@ -137,7 +166,7 @@ export default function AwardsPage() {
                       />
                     </svg>
                   </a>
-                )}
+                )} */}
               </div>
             </article>
           ))}

@@ -11,13 +11,15 @@ export async function GET() {
 
     // Check if user is admin by comparing with environment variable
     const adminUserId = process.env.ADMIN_USER_ID
+      ? process.env.ADMIN_USER_ID.split(',').map(id => id.trim())
+      : []
     
     if (!adminUserId) {
       console.error('ADMIN_USER_ID not set in environment variables')
       return NextResponse.json({ error: 'Admin configuration missing' }, { status: 500 })
     }
 
-    const isAdmin = userId === adminUserId
+    const isAdmin = adminUserId.includes(userId)
 
     if (!isAdmin) {
       return NextResponse.json({ error: 'Access denied - not an admin' }, { status: 403 })

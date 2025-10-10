@@ -71,8 +71,8 @@ export const portfolioData: PortfolioData = {
                         details: "Represented India internationally after achieving a Top 5 ranking in the National Round. Ranked Top 10 globally in both presentation and the individual test, showcasing exceptional business acumen.",
                         category: "International Award",
                         achievements: ["198/200 score", "Top 5 in India", "Top 10 Globally", "International representation"],
-                        imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008710/Academics_Research_Activities_qfuz07.png",
-                        link: "https://ibo.ibo.org/"
+                        imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759259344/IBO-Integrated-Objective-Test_fki6bx.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759259344/IBO-Gold-Award_mi4dci.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759259342/IBO-National-Team-Performance_ueaqs7.jpg"],
+                        // link: "https://ibo.ibo.org/"
                     },
                     {
                         id: "iris-science-fair",
@@ -81,6 +81,7 @@ export const portfolioData: PortfolioData = {
                         description: "Selected as 1 of 50 students nationwide from 6,000+ applicants",
                         details: "Selected from over 8,000 students nationwide, I presented an original prototype of biodegradable faux leather made entirely from banana stems and rice husks at the IRIS National Science Fair. The project grew from curiosity-driven experimentation in chemistry and materials science—concepts I had first explored during my IGCSE science studies, which taught me to approach problems methodically, observe carefully, and iterate constantly.\n\nUnlike a purely theoretical project, I moved from idea to prototype to production. I extracted fibers from banana stems, processed rice husks, and combined them using natural binders, experimenting with texture, durability, and flexibility until the material could actually function as leather. Beyond the lab, I approached the project like an entrepreneur: calculating costs, optimizing production steps, and imagining how this material could be scaled for real-world applications.\n\nPresenting before a panel of national experts was both exhilarating and humbling. I learned that science isn't just about invention—it's about defending your process, explaining your choices, and translating technical complexity into clear, compelling communication. Standing there, I felt the full arc of research: curiosity, experimentation, iteration, and public engagement.\n\nThe IRIS experience was my first true intersection of science and entrepreneurship, showing me how rigorous research can be paired with practical innovation to create solutions that matter.",
                         category: "National Award",
+                        imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253136/IRISNational_kgkqwk.jpg",
                         achievements: ["1 of 50 selected", "6,000+ applicants", "Original prototype", "Sustainability focus"]
                     },
                     {
@@ -91,8 +92,8 @@ export const portfolioData: PortfolioData = {
                         details: "Demonstrated exceptional understanding of economic principles and analytical thinking in this prestigious international competition.",
                         category: "National Award",
                         achievements: ["AIR 39", "7,000+ participants", "International level", "Economic excellence"],
-                        imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008710/Academics_Research_Activities_qfuz07.png",
-                        link: "https://meccademia.com/"
+                        imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253117/IEO2025_jy4xmv.jpg",
+                        // link: "https://meccademia.com/"
                     },
                     {
                         id: "ippf",
@@ -124,7 +125,7 @@ export const portfolioData: PortfolioData = {
                         category: "International Award",
                         achievements: ["Top 20 ranking", "300+ international teams", "Strategic solutions", "Education focus"],
                         imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759952698/cf99df25-95c9-426d-b84a-0aacb7791a9b.png",
-                        link: "https://fbe.unimelb.edu.au/students/competitions/melbourne-case-competition"
+                        // link: "https://fbe.unimelb.edu.au/students/competitions/melbourne-case-competition"
                     },
                     {
                         id: "tie-young-entrepreneurs",
@@ -134,8 +135,8 @@ export const portfolioData: PortfolioData = {
                         details: "Pitched TeenLink, a high school networking platform, to investors and mentors, gaining valuable experience in business presentation and the startup ecosystem.",
                         category: "State Award",
                         achievements: ["Top 15 state teams", "TYE accelerator", "Startup pitch experience", "Networking platform"],
-                        imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008710/Academics_Research_Activities_qfuz07.png",
-                        link: "https://tie.org/tye"
+                        // imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008710/Academics_Research_Activities_qfuz07.png",
+                        // link: "https://tie.org/tye"
                     }
                 ]
             },
@@ -230,7 +231,7 @@ export const portfolioData: PortfolioData = {
                 description: "Transform waste shipping containers into mobile birthing centers, combining safety, dignity, and scale",
                 details: "On a rusted stretcher with paint flaking like ash, my aunt screamed through childbirth with no doctor in sight. Standing frozen in Jaipuria Government Hospital, I realized that sterile wards, steady hands, and safe births– the things I had taken for granted in Bangalore– were privileges reserved for a few. Later, talking to baijis who delivered babies on muddy floors or in hospital corridors, I saw how society normalizes its most profound injustices. That moment didn't make me despair– it made me act.\n\nJanam was born from that urgency. We transform waste shipping containers into mobile birthing centers, combining safety, dignity, and scale. One container is already operational in Mahapura, and two more are underway. Each is fully equipped, designed in collaboration with gynecologists, the National Health Mission, and Aastrika Foundation, and supported by local panchayats. Beyond infrastructure, I trained over 100 midwives, organized health camps for more than 1,500 villagers, and published illustrated pregnancy guides in both Hindi and English to dispel common myths. In partnership with ProtectHer and Suraksha, we conducted cervical vaccination drives and menstrual hygiene programs.\n\nOn the financial side, I raised over $ 12,000 through crowdfunding, CSR partnerships, and grants, managing the allocation of funds across construction, equipment, and educational materials to ensure sustainability.\n\nEvery container, every midwife trained, every rupee spent became more than a statistic– it became a lifeline. Janam taught me that confronting systemic inequity is not about charity; it's about designing solutions that are practical, scalable, and rooted in dignity. Seeing women access care once denied to them is the reason I fight to transform ideas into real-world change.",
                 category: "Healthcare Innovation",
-                imageSrc:["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008708/janam_okbwp6.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307908/frame_0_06_22f_zzopbp.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307914/frame_0_13_10f_apucfz.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307915/frame_0_18_3f_fucwx2.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307871/frame_0_19_22f_hqb9nk.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307915/frame_0_30_18f_jqzige.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307885/frame_0_54_20f_ale2lk.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307909/frame_3_12_23f_d1rczo.jpg"],
+                imageSrc:[ "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307908/frame_0_06_22f_zzopbp.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307914/frame_0_13_10f_apucfz.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307915/frame_0_18_3f_fucwx2.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307871/frame_0_19_22f_hqb9nk.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307915/frame_0_30_18f_jqzige.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307885/frame_0_54_20f_ale2lk.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307909/frame_3_12_23f_d1rczo.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760113969/c574c622-fc10-426a-898d-d0dbcfea8419.png"],
                 achievements: ["3 centers (1 completed)", "100+ midwives trained", "1,500+ villagers served", "$12,000+ raised"],
                 link: "https://janamindia.vercel.app",
                 instagram: "https://www.instagram.com/janamindia"
@@ -262,7 +263,7 @@ export const portfolioData: PortfolioData = {
                 category: "Social Impact",
                 achievements: ["$140,000+ raised", "1,000+ participants", "Mental health support in Kota", "12-hour livestream"],
                 link: "https://www.youtube.com/watch?v=G_ya89GaXDg",
-                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253125/Kota_SFCC1_lviu66.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688525/5c56cfc7-a01d-4ee2-8b37-492db05db49c.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688589/30ece55b-e54e-494d-bee4-0a1476529c1c.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688654/c0c4b6e9-ad6a-428d-a539-80ae0a3e733c.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688709/d4a08f8e-bb76-4912-b769-df7648000028.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688747/86235179-bbad-4d74-af33-930444f78a98.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688784/540785fb-4605-4c1b-81d1-351d50c81629.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688836/85bddedc-b587-4944-bb75-c22dfd92759a.png"]
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253125/Kota_SFCC1_lviu66.jpg",  "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688589/30ece55b-e54e-494d-bee4-0a1476529c1c.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688654/c0c4b6e9-ad6a-428d-a539-80ae0a3e733c.png",  "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688747/86235179-bbad-4d74-af33-930444f78a98.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688784/540785fb-4605-4c1b-81d1-351d50c81629.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688836/85bddedc-b587-4944-bb75-c22dfd92759a.png"]
             },
             {
                 id: "cortisolx",
@@ -273,7 +274,7 @@ export const portfolioData: PortfolioData = {
                 category: "Biotech & Health Tech",
                 achievements: ["1,000+ tests conducted", "Global survey", "$10,000 investment offer", "5-country reach"],
                 link: "https://cortisolx.in",
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253115/cortisolx_mgbl2b.jpg"
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114674/2e2096f5-c4c3-4f44-8ee6-8641786dcfa7.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114662/4038fc99-adb7-4321-bec5-68d03c8916e3.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114638/7f4b01d2-1a4b-45f6-9574-3be7efd4f886.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114626/b7e6efa2-e046-4bca-8ca1-7db45aa1d8dc.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114614/9b439bda-89f0-44fe-b2ae-dae841e1b02d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114605/61e04a16-d0cb-456e-a549-8dcc0f44873d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114592/bd9cdf98-039c-4e59-b2d8-04c19e6c37b9.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114579/a40bc024-3639-4d96-811b-b236cf9fc91d.png",""]
             },
             {
                 id: "internlectual",
@@ -284,7 +285,7 @@ export const portfolioData: PortfolioData = {
                 category: "Education Platform",
                 achievements: ["Global reach", "$2,000 raised", "Internships awarded", "6-country participation"],
                 link: "https://internlectual.com",
-                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258931/566c3c68-a099-4a25-af70-abe033958a13.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688979/51fc820a-bbfc-465a-900d-7dbe8df1fa89.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689046/2beaf7cb-eba7-4fcc-8a73-6388bf674b3a.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689100/b739e621-bf41-4d1e-8cfc-e3a2ca6cab8d.png"]
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258931/566c3c68-a099-4a25-af70-abe033958a13.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114893/f6bce22d-1631-4f4c-9d26-c9736676abb6.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760115114/3bee8ac3-c5b6-4d0e-9b25-58dd8ecec26d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760115149/fe33afce-4f49-4d9a-9323-679a26d44cc7.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760115066/34fb9bbb-b3be-456e-962f-2ee78757c6d4.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689046/2beaf7cb-eba7-4fcc-8a73-6388bf674b3a.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760115014/42a7ffa1-f321-4da1-8129-8984e4a93933.png"]
             },
             {
                 id: "reshaping-society",
@@ -305,8 +306,8 @@ export const portfolioData: PortfolioData = {
                 details: "But the real work of leadership often began after hours — in hostel corridors, during late-night conversations with homesick juniors, or in quiet corners, where they helped outline essays and plan extracurricular projects. I spent evenings mentoring students on everything from MUN speeches to balancing academics with self-care. Over time, I realized that the most meaningful influence isn't in giving directions, but in listening — helping others find their own footing rather than walking them through it.\n\nLeadership, I learned, isn't about being in charge; it's about being someone others trust when things feel uncertain. Authority isn't earned through a badge, but through consistency, empathy, and showing up even when no one's watching.",
                 category: "Institutional Leadership",
                 achievements: ["2,400 students led", "TEDx curation", "Finance club oversight", "56 juniors mentored"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png",
-                link: "https://jpis.edu.in/"
+                // imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png",
+                link: "https://jpischool.com/"
             },
             {
                 id: "finance-club",
@@ -317,10 +318,9 @@ export const portfolioData: PortfolioData = {
                 category: "Club Leadership",
                 achievements: ["Newsletter published", "Budgeting website", "Workshops for 300+ women", "150+ competition participants"],
                 imageSrc: [
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png",
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png"
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124146/564ad808-0ec5-49ef-951a-fc4dd6493123.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124198/eb747039-57be-4057-b6bd-abd03ff4ab55.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124241/b96d42ae-900f-4041-b449-37dbc1376d03.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124304/93cf4ee1-9ade-41db-8389-3d7233ad3eb3.png"
                 ],
-                link: "https://jpis.edu.in/finance-club"
+                link: "https://www.instagram.com/jpisfinance?igsh=MTd2MnduNDJyN25sMQ=="
             },
             {
                 id: "dhan-sarthi",
@@ -332,7 +332,7 @@ export const portfolioData: PortfolioData = {
                 achievements: ["26,000+ women reached", "Financial literacy workshops", "Banking access", "Entrepreneurship training"],
                 link: "https://dhansarthi.com",
                 instagram: "https://www.instagram.com/dhansarthi",
-                imageSrc: [ "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689580/3ce8955f-9d70-4e80-851a-0d7db1163af6.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689615/25b83a4a-016b-4a58-9ced-b3b6a22b2302.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689686/5178beb4-6f88-4fd8-b1b5-106dbc149694.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689717/c387feee-eddb-4cfb-a5a4-547a9857ddae.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689751/34101eba-0e51-423a-b627-f739e99b6040.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689783/d2c1c0a5-2194-4944-b988-34feb93330cf.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689827/9ae52579-dbad-4b7d-bbb3-e6262cb08949.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689883/6fb986ad-fa2e-4190-8196-9bd92d3692af.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689902/17ae6f94-ffa3-480a-8ec5-fef4ab51e85e.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689918/fc134777-b874-4596-9d55-f134f0e934ac.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689938/89b0109c-845c-43cf-87da-d92fe7f463c6.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689948/7d85ecaf-fce1-4d16-8991-38f06d860e4f.png"]
+                imageSrc: [ "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689580/3ce8955f-9d70-4e80-851a-0d7db1163af6.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689615/25b83a4a-016b-4a58-9ced-b3b6a22b2302.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689686/5178beb4-6f88-4fd8-b1b5-106dbc149694.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689751/34101eba-0e51-423a-b627-f739e99b6040.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689783/d2c1c0a5-2194-4944-b988-34feb93330cf.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689827/9ae52579-dbad-4b7d-bbb3-e6262cb08949.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689883/6fb986ad-fa2e-4190-8196-9bd92d3692af.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689902/17ae6f94-ffa3-480a-8ec5-fef4ab51e85e.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689918/fc134777-b874-4596-9d55-f134f0e934ac.png",  "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689948/7d85ecaf-fce1-4d16-8991-38f06d860e4f.png"]
             },
             {
                 id: "tedx-jpis",
@@ -342,7 +342,7 @@ export const portfolioData: PortfolioData = {
                 details: "As part of the curation team for TEDx JPIS, I scouted and coordinated speakers, shaped panel themes, and handled event logistics. The event became a platform for showcasing student-led innovation and broader ideas worth spreading.\n\nBeing behind the scenes at TEDx taught me that significant events are not about the spotlight but about the quiet rigor of planning: aligning schedules, managing personalities, and ensuring the coherence of the narrative arc. It was a masterclass in how small details can have a significant impact.",
                 category: "Event Management",
                 achievements: ["Speaker curation", "Event logistics", "Student innovation showcase", "Panel themes"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png",
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124556/560d1916-97d9-4c94-828d-0a5f22363d91.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124612/d41190ad-6cfd-4f6f-bd89-09c19736b0a9.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760127855/2bd73927-7f1c-4ff5-bcc6-824f859a35cf.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760127862/7037e647-38e1-4937-ad77-8dcca9250044.png"],
                 link: "https://www.tedxyouthjpis.com/"
             },
             {
@@ -350,11 +350,11 @@ export const portfolioData: PortfolioData = {
                 title: "Editorial Board – President",
                 grade: "Current",
                 description: "Led the school's Editorial Board, transitioning it from print to digital",
-                details: "I led the school's Editorial Board, steering the transition from print to digital platforms. Our team curated student voices into published issues, blending creativity with editorial discipline. Beyond editing, I mentored juniors, guiding them not only in writing but also in developing their critical voice.\n\nThe shift to digital forced me to think about accessibility — how to keep student writing engaging in an online-first world. More than an editorial project, it was about reimagining how young voices are archived and amplified.",
+                details: "I led the school’s Editorial Board, designing, curating, and publishing five featured editions of the JPIS Journal. I oversaw every stage of production — from deciding themes and structuring content to guiding layout design and final publication. Leading a team of writers and designers, I focused on maintaining editorial quality while encouraging creativity and diverse perspectives. \n\n Each edition became a collaborative platform where students learned to write with precision and purpose, blending storytelling with visual design. For me, this wasn’t just about producing magazines — it was about shaping how our school’s voice is presented and preserved.",
                 category: "Media & Publishing",
                 achievements: ["Digital transition", "Student voice amplification", "Junior mentoring", "Online adaptation"],
-                imageSrc: [],
-                link: "https://jpis.edu.in/editorial-board"
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760115851/49d7e32c-1038-4bed-ad89-c0085181f318.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760115845/c9f8762f-0f93-4670-8998-b81e8d512bd5.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760115845/c9f8762f-0f93-4670-8998-b81e8d512bd5.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760115815/6a1b0976-a23e-429e-8cf8-5352df4fe697.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760115748/29d7b3c2-0c87-4b38-b3c6-8688567d12fe.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760115709/4514f090-e3c4-42fe-ae39-a48e3e077e11.png"],
+                link: "https://www.instagram.com/jpiseditorialboard"
             },
             {
                 id: "tech4bharat",
@@ -393,7 +393,7 @@ export const portfolioData: PortfolioData = {
                 details: "As Finance Head for the regional science fair at JPIS, I managed a budget of ₹80,000 and coordinated prize allocations for the largest school science fair in the region. Beyond the numbers, I ensured that funds were distributed transparently and fairly, giving participants confidence in the process.\n\nThe role served as a reminder that even in a student setting, finance carries significant responsibility. A poorly allocated budget could undermine months of work. Handling that responsibility gave me early practice in accountability under pressure.",
                 category: "Event Management",
                 achievements: ["₹80,000 budget managed", "Transparent fund distribution", "Regional scale", "Prize coordination"],
-                imageSrc: [],
+                // imageSrc: [],
                 link: "https://jpis.edu.in/science-fair"
             },
             {
@@ -427,7 +427,7 @@ export const portfolioData: PortfolioData = {
                 details: "Selected from over 8,000 students nationwide, I presented an original prototype of biodegradable faux leather made entirely from banana stems and rice husks at the IRIS National Science Fair. The project grew from curiosity-driven experimentation in chemistry and materials science—concepts I had first explored during my IGCSE science studies, which taught me to approach problems methodically, observe carefully, and iterate constantly.\n\nUnlike a purely theoretical project, I moved from idea to prototype to production. I extracted fibers from banana stems, processed rice husks, and combined them using natural binders, experimenting with texture, durability, and flexibility until the material could actually function as leather. Beyond the lab, I approached the project like an entrepreneur: calculating costs, optimizing production steps, and imagining how this material could be scaled for real-world applications.\n\nPresenting before a panel of national experts was both exhilarating and humbling. I learned that science isn't just about invention—it's about defending your process, explaining your choices, and translating technical complexity into clear, compelling communication. Standing there, I felt the full arc of research: curiosity, experimentation, iteration, and public engagement.\n\nThe IRIS experience was my first true intersection of science and entrepreneurship, showing me how rigorous research can be paired with practical innovation to create solutions that matter.",
                 category: "Science & Innovation",
                 achievements: ["8,000+ applicants", "Original prototype", "Entrepreneurial approach", "National recognition"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759299129/IRIS_1_sugz6f.png",
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759299129/IRIS_1_sugz6f.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253136/IRISNational_kgkqwk.jpg"],
                 link: "https://irisnationalfair.org/"
             },
             {
@@ -490,8 +490,16 @@ export const portfolioData: PortfolioData = {
                 details: "Working with Suraksha, I coordinated drives to distribute 300+ sanitary pads and led workshops teaching menstrual hygiene in underserved communities. For many girls, this was their first structured conversation about their bodies. I also co-authored and distributed an illustrated pregnancy guide through Janam, integrating health education with cultural sensitivity.\n\nThe experience taught me that taboos are dismantled slowly, through trust and repetition. Watching young girls ask hesitant but brave questions showed me that service isn't about arriving with answers, but about creating safe spaces for curiosity.",
                 category: "Public Health",
                 achievements: ["300+ sanitary pads distributed", "Hygiene workshops led", "Illustrated guides", "Cultural sensitivity"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008703/Community_Impact_jgtfmp.png",
-                link: "https://suraksha.org/"
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760118874/e5ff588d-05df-49dc-8e4b-6c6a57bd184f.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760118904/8a274dd0-822d-4516-939e-a94bb4a73edc.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760118946/5cb3b3e5-35aa-4ecb-af82-c6cd09f4500b.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760118988/489fd376-6717-49b1-bb1c-570fcc6998a8.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760119007/4d65299e-38c9-4fc5-a11a-3254e9a29d16.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760119032/80b14139-7ab2-448f-ac7c-835c136cbfa7.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760119055/300dd24e-5809-4ee1-9e7f-41152815b26e.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760119065/f2b65e5a-e754-4ae3-b61f-97b47959a110.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760119072/2c967364-cf11-4dcc-9996-21d924d948f3.png",],
+                link: "https://www.instagram.com/mission._.suraksha/"
             },
             {
                 id: "mitrajyothi",
@@ -502,7 +510,7 @@ export const portfolioData: PortfolioData = {
                 category: "Social Services",
                 achievements: ["Accessibility initiatives", "Community events organized", "Resource distribution", "Human connection"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008703/Community_Impact_jgtfmp.png",
-                link: "https://www.globalgiving.org/pfil/55418/projdoc.pdf"
+                link: "https://www.instagram.com/mitrajyothi/?hl=en"
             },
             {
                 id: "rotary-club",
@@ -512,8 +520,8 @@ export const portfolioData: PortfolioData = {
                 details: "In Bangalore, I volunteered with a Rotary-led community project focused on restoration drives. We worked on cleaning local public spaces, planting trees, and running awareness campaigns.\n\nThough less high-profile than my other projects, this work grounded me. It made me realize that service is not always about large grants or innovations; sometimes, it is simply about showing up consistently to do physical, often invisible labor that benefits everyone.",
                 category: "Environmental Stewardship",
                 achievements: ["Environmental restoration drives", "Awareness campaigns", "Community cleanup", "Tree planting"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008703/Community_Impact_jgtfmp.png",
-                link: "https://www.rotary.org/"
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120271/0fda265f-57bd-48d0-b8d9-e3c10b395487.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120299/bc3bd8bf-5828-4530-aa08-3c0a6da9f644.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120199/b6758b9d-73bc-46f6-804c-478dbc1447bd.png"],
+                link: "https://www.business-standard.com/content/press-releases-ani/ryan-international-academy-and-rotary-club-plant-1-200-saplings-across-bengaluru-in-major-green-initiative-125062500886_1.html"
             },
             {
                 id: "welfare-access-cards",
@@ -535,7 +543,13 @@ export const portfolioData: PortfolioData = {
                 details: "Through this, I learned more than just posting: I shaped conversations. I crafted messages that encouraged people to rethink everyday choices — from plastic bags and straws to packaging, urging small changes that can add up. I responded to comments, helped explain the impacts of plastic pollution, and shared tips on alternatives, such as cloth bags or reusable containers.\n\nWorking with No Plastic Use India, I also saw how digital stories can drive real-world behavior change: when someone said they'd stopped using plastic cutlery or started reusing containers, it wasn't just a social media post — it was an action. That made me realise that awareness and voice matter, but only if they lead to meaningful and lasting changes.",
                 category: "Environmental Advocacy",
                 achievements: ["Social media management", "Community engagement", "Behavior change campaigns", "Sustainable living promotion"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008703/Community_Impact_jgtfmp.png",
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120484/7328fa2d-b172-41c6-a295-e4e5a046af7b.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120515/92e3a024-1bbd-4223-b0fd-14bbded6b6a8.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120537/98f780e9-3bae-4b84-9618-314b04a1185d.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120572/37a1884a-4c52-461b-86cc-93d3c993d113.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120572/37a1884a-4c52-461b-86cc-93d3c993d113.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120603/a42ac43f-534a-4e25-b462-4b4df92cc400.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120647/e871e80f-0cb6-4647-b905-914e9faf2367.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120663/7e1fd64d-88d3-41e5-a086-b0cc7e56cd0b.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120678/0ce8b80d-ad67-4773-a3b1-372f65a9ba95.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120685/796e333b-d97f-4a3b-bc2b-995309711ed6.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120694/a621b1be-144b-4da9-b695-7fe99dd3770a.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120702/ee69b7a9-fd40-4e06-af2b-766554012bf9.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120712/91aef8a8-1c27-4837-8351-02d8813c707d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120721/a4cc9524-fa2d-4c4f-8fbe-efa59259b0e0.png"],
                 link: "https://www.instagram.com/noplasticuseindia/?hl=en"
             }
         ]
@@ -548,7 +562,7 @@ export const portfolioData: PortfolioData = {
             { label: "Projects Shipped", value: "8+" },
             { label: "Funds Raised", value: "₹15L+" },
             { label: "Users Reached", value: "8,500+" },
-            { label: "Team Leadership", value: "2,200+" }
+            { label: "Leading Team", value: "100+" }
         ],
         items: [
             {
@@ -690,7 +704,7 @@ export const portfolioData: PortfolioData = {
                 details: "Awarded funding in support of Janam, enabling expanded outreach in rural communities, development of educational materials, and operational scaling of birthing centers. The grant recognized not only innovation in maternal healthcare but also community-driven impact and sustainability.",
                 category: "Grant Award",
                 achievements: ["Funding for Janam", "Rural outreach expansion", "Educational materials", "Operational scaling"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008708/janam_okbwp6.png",
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760121948/35dc2ab6-b7a6-4a19-84df-3547ea9629fa.png",
                 link: "https://www.ibo.org/festival-of-hope/youth-in-action/janam?contentId=204588"
             },
             {
@@ -701,8 +715,8 @@ export const portfolioData: PortfolioData = {
                 details: "Selected from 350+ applicants worldwide for exceptional social innovation in the Inflection Grant program. Awarded $2,000 to scale Janam's impact, recognizing the project's potential for transformative change in maternal healthcare.",
                 category: "International Grant",
                 achievements: ["Global Top 5", "350+ applicants", "$2,000 funding", "Social innovation"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008708/janam_okbwp6.png",
-                link: ""
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760121225/7d27928d-9f3f-4284-9496-6a125ef8a1ba.png",
+                link: "https://www.linkedin.com/posts/edge-city-live_announcing-the-first-cohort-of-inflection-activity-7344092564620275712-Ev_2/"
             },
             {
                 id: "health-ministry-recognition",
@@ -733,7 +747,7 @@ export const portfolioData: PortfolioData = {
                 details: "Selected as finalist in IRIS National Science Fair. Presented self-developed biodegradable leather prototype made from banana stems and rice husks to panel of national experts, showcasing innovation in sustainable materials science.",
                 category: "National Award",
                 achievements: ["National finalist", "Original prototype", "Biodegradable leather", "Expert presentation"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759299129/IRIS_1_sugz6f.png",
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253136/IRISNational_kgkqwk.jpg",
                 link: "https://irisnationalfair.org/"
             },
             {
@@ -744,8 +758,8 @@ export const portfolioData: PortfolioData = {
                 details: "Achieved All India Rank 39 in International Economics Olympiad, ranking in the top 1% in India out of 7,000+ participants. Demonstrated exceptional understanding of economic principles and analytical thinking.",
                 category: "National Award",
                 achievements: ["AIR 39", "Top 1% in India", "7,000+ participants", "Economic excellence"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008704/Awards_Media_Recognition_mffpnj.png",
-                link: "https://meccademia.com/"
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253117/IEO2025_jy4xmv.jpg",
+                link: ""
             },
             {
                 id: "social-innovation-award",
@@ -767,7 +781,7 @@ export const portfolioData: PortfolioData = {
                 category: "Media Recognition",
                 achievements: ["Newspaper feature", "Rajasthan coverage", "Legal literacy", "Worker rights"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759952247/newpaper_ocdbkh.png",
-                link: ""
+                link: "https://www.linkedin.com/posts/eva-bothra-56650325a_legalsaathi-gratitude-seemasandesh-activity-7353733985824354305-NaLj?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfMsd4ButU3MKvKyp1BTqPv6UHrURqhH_Q"
             }
         ]
     },

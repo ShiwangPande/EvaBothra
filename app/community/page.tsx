@@ -192,44 +192,76 @@ export default function CommunityPage() {
 
                   {/* CTA */}
                   {item.link && (
-                    <a 
-                      href={item.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-base font-semibold text-purple-600 hover:text-purple-800 transition-colors duration-200 group/link w-fit"
-                    >
-                      <span>Learn More</span>
-                      <svg className="w-5 h-5 group-hover/link:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                      </svg>
-                    </a>
+                    <div className="pt-3">
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-all font-[family-name:var(--font-inter)]"
+                      >
+                        <span className="truncate max-w-[250px] underline decoration-blue-400 group-hover:decoration-blue-800">
+                          {item.link}
+                        </span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          className="h-4 w-4 text-blue-600 group-hover:text-blue-800 transition-transform group-hover:translate-x-0.5"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M17 8l4 4m0 0l-4 4m4-4H3"
+                          />
+                        </svg>
+                      </a>
+                    </div>
                   )}
                 </div>
 
 
-                {images.length > 0  && (
-                  <>
-                    {item.id === "protecther" || item.id === "welfare-access-cards" ? (
-                      <div className="max-w-4xl  lg:col-span-5 my-auto order-1 lg:order-2 pt-6 lg:pt-0 overflow-y-hidden ">
-                        <iframe
-                          src="https://www.flipbookpdf.net/web/site/a91af593e66c4fca28ebbcd0edaa10d91b3dfa0b202509.pdf.html"
-                        className="w-full h-full rounded-lg border overflow-y-hidden overscroll-y-none"
-                          style={{ minHeight: 350, maxHeight: 700, width:540 }}
-                          allowFullScreen
-                          title="Quick View PDF"
-                          frameBorder={0}
-                        ></iframe>
-                      </div>
-                    ) : (
-                      <div className="w-full md:w-[38%] flex items-center justify-center p-4 md:p-8">
-                       <Carousel
-                      images={images}
-                      onImageClick={setFullscreenImage}
-                      alt={item.title}
-                    />
-                      </div>
+                {/* PDF takes precedence over images: show PDF (and optionally carousel) ONLY when it exists for the item */}
+                {/* PDF takes precedence over images: show PDF ONLY when it exists for the item */}
+                {(item.id === "mitrajyothi" ||
+                  item.id === "protecther" ||
+                  item.id === "welfare-access-cards") ? (
+                  <div className="max-w-4xl lg:col-span-5 my-auto order-1 lg:order-2 pt-6 lg:pt-0 overflow-y-hidden">
+                    {item.id === "mitrajyothi" && (
+                      <iframe
+                        src="/assets/mitrajyothi.pdf"
+                        className="w-full h-full rounded-lg border overflow-y-hidden"
+                        style={{ minHeight: 500, maxHeight: 700, width: 540 }}
+                        allowFullScreen
+                        title="Quick View PDF"
+                        frameBorder={0}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      />
                     )}
-                  </>
+
+                    {(item.id === "protecther" || item.id === "welfare-access-cards") && (
+                      <iframe
+                        src="https://www.flipbookpdf.net/web/site/a91af593e66c4fca28ebbcd0edaa10d91b3dfa0b202509.pdf.html"
+                        className="w-full h-full rounded-lg border overflow-y-hidden"
+                        style={{ minHeight: 350, maxHeight: 700, width: 540 }}
+                        allowFullScreen
+                        title="Quick View PDF"
+                        frameBorder={0}
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      />
+                    )}
+                  </div>
+                ) : (
+                  images.length > 0 && (
+                    <div className="w-full md:w-[38%] flex items-center justify-center p-4 md:p-8">
+                      <Carousel
+                        images={images}
+                        onImageClick={setFullscreenImage}
+                        alt={item.title}
+                      />
+                    </div>
+                  )
                 )}
 
                 {/* Image/Carousel - Right Side */}

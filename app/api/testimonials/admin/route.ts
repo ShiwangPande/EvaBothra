@@ -12,13 +12,17 @@ export async function GET() {
 
     // Check if user is admin by comparing with environment variable
     const adminUserId = process.env.ADMIN_USER_ID
+    ? process.env.ADMIN_USER_ID.split(',').map(id => id.trim())
+    : []
     
     if (!adminUserId) {
       console.error('ADMIN_USER_ID not set in environment variables')
       return NextResponse.json({ error: 'Admin configuration missing' }, { status: 500 })
     }
 
-    const isAdmin = userId === adminUserId
+    const isAdmin = Array.isArray(adminUserId)
+      ? adminUserId.includes(userId)
+      : userId === adminUserId
     
     if (!isAdmin) {
       return NextResponse.json({ error: 'Access denied - not an admin' }, { status: 403 })
@@ -46,14 +50,18 @@ export async function PATCH(request: NextRequest) {
 
     // Check if user is admin by comparing with environment variable
     const adminUserId = process.env.ADMIN_USER_ID
+    ? process.env.ADMIN_USER_ID.split(',').map(id => id.trim())
+    : []
     
     if (!adminUserId) {
       console.error('ADMIN_USER_ID not set in environment variables')
       return NextResponse.json({ error: 'Admin configuration missing' }, { status: 500 })
     }
 
-    const isAdmin = userId === adminUserId
-    
+    const isAdmin = Array.isArray(adminUserId)
+      ? adminUserId.includes(userId)
+      : userId === adminUserId
+
     if (!isAdmin) {
       return NextResponse.json({ error: 'Access denied - not an admin' }, { status: 403 })
     }
