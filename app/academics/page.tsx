@@ -109,7 +109,7 @@ export default function AcademicsPage() {
               src={item.imageSrc}
               alt={item.title}
               fill
-              className="object-cover group-hover/img:scale-110 transition-transform duration-700 ease-out rounded-none md:rounded-r-2xl"
+              className="object-contain group-hover/img:scale-110 transition-transform duration-700 ease-out rounded-none md:rounded-r-2xl"
               sizes="(max-width: 768px) 100vw, 55vw"
               style={{ objectPosition: 'center' }}
             />
@@ -235,19 +235,7 @@ export default function AcademicsPage() {
           </div>
         )}
 
-        {/* Summer - Full Width Cards with Right Images */}
-        {sections.summer && (
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-5 text-gray-900">
-              {sections.summer.title.replace(/^\p{Emoji_Presentation}\s*/u, '')}
-            </h2>
-            <div className="flex flex-col gap-6">
-              {sections.summer.items.map((item, idx) => (
-                <CardWithRightImage item={item} idx={idx} key={item.id} />
-              ))}
-            </div>
-          </div>
-        )}
+    
 
         {/* Olympiads & Competitions - Full Width Cards */}
         {sections.olympiads && (
@@ -295,6 +283,20 @@ export default function AcademicsPage() {
                     )}
                   </div>
                 </article>
+              ))}
+            </div>
+          </div>
+        )}
+
+            {/* Summer - Full Width Cards with Right Images */}
+            {sections.summer && (
+          <div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-5 text-gray-900">
+              {sections.summer.title.replace(/^\p{Emoji_Presentation}\s*/u, '')}
+            </h2>
+            <div className="flex flex-col gap-6">
+              {sections.summer.items.map((item, idx) => (
+                <CardWithRightImage item={item} idx={idx} key={item.id} />
               ))}
             </div>
           </div>

@@ -186,7 +186,7 @@ export const portfolioData: PortfolioData = {
                         details: "At Capital Edge Technologies and 10xcapital10x, I stepped into the professional world of finance, applying classroom skills to real-world analysis. I worked on modeling tools, exploring how market dynamics shift under different assumptions, and saw how decisions were shaped by more than just formulas — context and intuition mattered equally.\n\nThe internship taught me to communicate insights in concise, business-ready language. It was my first time being accountable not just to my own learning, but to a firm that expected results. That sense of accountability to external stakeholders was both daunting and exhilarating.",
                         category: "Internship",
                         achievements: ["Real-world finance analysis", "Market modeling", "Professional communication", "Stakeholder accountability"],
-                        certificate: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759007150/279df43f-c71e-45b7-8964-ff93412eab30.png"
+                        imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760088742/Eva_Bothra_Internship_Letter_2__page-0001_pah3sq.jpg"
                     }
                 ]
             },
@@ -429,7 +429,23 @@ export const portfolioData: PortfolioData = {
                 achievements: ["8,000+ applicants", "Original prototype", "Entrepreneurial approach", "National recognition"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759299129/IRIS_1_sugz6f.png",
                 link: "https://irisnationalfair.org/"
-            }
+            },
+            {
+                id: "journey-of-a-high-school-student-blog",
+                title: "Journey of a High School Student – Blog Founder",
+                grade: "Grade 10",
+                description: "Created a student-led blog sharing real stories, reflections, and experiences from classrooms across the country",
+                details: "What began as my first experiment in website creation soon evolved into something more meaningful — a digital space to share the authentic experiences of high school life. I designed and launched 'Journey of a High School Student,' a blog where I chronicled my own reflections on academics, friendships, and personal growth, writing weekly pieces about the moments that define a student’s life.\n\nOver time, the project grew into a collaborative platform. I invited classmates and peers from other schools to contribute their stories, transforming the site into a shared voice for young people navigating the same challenges and aspirations. Each post became a small act of connection — a way for students to see themselves reflected in one another’s journeys.\n\nThrough this process, I learned more than just web design and writing; I discovered community-building. Managing contributions, editing articles, and keeping up a consistent publishing schedule taught me the discipline of creative collaboration and the impact of honest storytelling in bringing people together.",
+                category: "Writing & Leadership",
+                achievements: ["Founded independent blog", "Weekly published content", "Collaborative student platform", "Encouraged youth storytelling"],
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760089349/bbef6118-98fe-4a67-92e3-6e92d0f63be5.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760089430/61848da1-2639-4ad6-a02e-8b0e1ee2321d.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760089430/61848da1-2639-4ad6-a02e-8b0e1ee2321d.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760089519/53d74278-831c-41ee-a16e-66314463aa30.png", 
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760089564/5df94834-b33d-4943-8284-21a410a5f19e.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760089603/a0e17436-8f5d-4c00-973e-fa39f9b40438.png"],
+                link: "https://evabothra.wixsite.com/website"
+            },
+            
         ]
     },
 
