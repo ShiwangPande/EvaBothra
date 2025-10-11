@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-  manifest: '/manifest.json',
+  manifest: '/manifest.ts',
 }
 
 export default function RootLayout({
@@ -24,7 +24,8 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <head>
-          <link rel="manifest" href="/manifest.json" />
+          <link rel="manifest" href="/manifest.ts" />
+          <meta name="apple-mobile-web-app-title" content="Eva Bothra" />
           <meta name="theme-color" content="#007B78" />
           <script
             dangerouslySetInnerHTML={{
