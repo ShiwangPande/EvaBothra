@@ -27,7 +27,7 @@ export default function RootLayout({
           <link rel="manifest" href="/manifest.ts" />
           <meta name="apple-mobile-web-app-title" content="Eva Bothra" />
           <meta name="theme-color" content="#007B78" />
-          <script
+          {/* <script
             dangerouslySetInnerHTML={{
               __html: `
                 if ('serviceWorker' in navigator) {
@@ -43,7 +43,7 @@ export default function RootLayout({
                 }
               `,
             }}
-          />
+          /> */}
         </head>
         <body className={`font-sans bg-white text-black`}>
           <Tabbar/>

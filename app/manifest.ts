@@ -19,6 +19,18 @@ export default function manifest(): MetadataRoute.Manifest {
           sizes: "71x71"
         },
         {
+            purpose: "maskable",
+            sizes: "512x512",
+            src: "/icon512_maskable.png",
+            type: "image/png"
+        },
+        {
+            purpose: "any",
+            sizes: "512x512",
+            src: "/icon512_rounded.png",
+            type: "image/png"
+        },
+        {
           src: "/windows11/SmallTile.scale-125.png",
           sizes: "89x89"
         },
