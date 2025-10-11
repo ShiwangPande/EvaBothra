@@ -4,7 +4,7 @@ import Tabbar from '@/components/Tabbar'
 import ScrollToTop from '@/components/ScrollToTop'
 import { ClerkProvider } from "@clerk/nextjs"
 import { Toaster } from '@/components/ui/sonner'
-
+// import { ThemeProvider } from 'next-themes'
 // Add favicon/icon
 export const metadata: Metadata = {
   title: 'Eva Bothra - Portfolio',
@@ -27,6 +27,8 @@ export default function RootLayout({
           <link rel="manifest" href="/manifest.ts" />
           <meta name="apple-mobile-web-app-title" content="Eva Bothra" />
           <meta name="theme-color" content="#007B78" />
+          <meta name="color-scheme" content="light"/>
+
           {/* <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -46,10 +48,14 @@ export default function RootLayout({
           /> */}
         </head>
         <body className={`font-sans bg-white text-black`}>
+        {/* <ThemeProvider forcedTheme="light" attribute="class"> */}
+
           <Tabbar/>
           {children}
           <ScrollToTop />
           <Toaster />
+          {/* </ThemeProvider> */}
+
         </body>
       </html>
     </ClerkProvider>

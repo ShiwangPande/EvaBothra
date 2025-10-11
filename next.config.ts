@@ -17,7 +17,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-
+  darkMode: false, 
 }
 
 export default withPWA(nextConfig)
