@@ -50,13 +50,17 @@ function CarouselGridItem({
   onOpen: (src: string) => void
 }) {
   if (type === "video") {
+    // IMPORTANT: autoplay and muted for requested functionality
     return (
       <div className="relative overflow-hidden rounded-xl bg-gray-100 group hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-400/50 transition-all duration-200">
         <video
           src={src}
           controls
+          autoPlay
+          muted
+          playsInline
           className="object-cover w-full h-full rounded-xl bg-black"
-          style={{ aspectRatio: "9/14", width: "100%", height: "100%" }}
+          style={{ aspectRatio: "9/16", width: "100%", height: "100%" }}
         />
         <div className="absolute inset-0 flex items-center justify-center transition bg-black/0 group-hover:bg-black/10" />
       </div>
@@ -81,8 +85,8 @@ function CarouselGridItem({
 }
 
 /**
- * Image carousel that can optionally append a video as the last item (for certain ids).
- * To inject a video, just pass `video` prop with the video URL and it'll show after images.
+ * Image carousel that puts a video (if provided) first, shown full (not in grid), and then images in grid.
+ * To inject a video, just pass `video` prop with the video URL and it'll show before images.
  */
 function ImageCarousel({
   images,
@@ -95,20 +99,22 @@ function ImageCarousel({
   onOpen: (src: string) => void
   video?: string
 }) {
-  // Add last item as a video if video is passed
-  const carouselItems: { src: string; type: "image" | "video" }[] =
-    video
-      ? [
-          ...images.map((src) => ({ src, type: "image" as const })),
-          { src: video, type: "video" as const }
-        ]
-      : images.map((src) => ({ src, type: "image" as const }))
+  // Setup slides: if video present, first slide is just the video (single, full), remaining slides are images in groups of 4.
+  // If no video, behave as before with images in groups of 4.
 
-  // Group into slides of 4 (whether image or video)
-  const slides: { src: string; type: "image" | "video" }[][] = []
-  for (let i = 0; i < carouselItems.length; i += 4) {
-    slides.push(carouselItems.slice(i, i + 4))
+  let slides: Array<
+    | { type: "video", src: string }
+    | { type: "images", images: string[] }
+  > = []
+
+  if (video) {
+    slides.push({ type: "video", src: video })
   }
+
+  for (let i = 0; i < images.length; i += 4) {
+    slides.push({ type: "images", images: images.slice(i, i + 4) })
+  }
+
   const total = slides.length
 
   const [current, setCurrent] = useState(0)
@@ -117,7 +123,8 @@ function ImageCarousel({
   const groupRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    if (carouselItems.length <= 4) return
+    // If only one slide, no autoplay needed
+    if (total <= 1) return
     if (isPaused) {
       if (intervalRef.current) {
         clearInterval(intervalRef.current)
@@ -134,7 +141,7 @@ function ImageCarousel({
         intervalRef.current = null
       }
     }
-  }, [carouselItems.length, total, isPaused])
+  }, [total, isPaused])
 
   // stop autoplay when cursor is inside carousel
   useEffect(() => {
@@ -164,22 +171,45 @@ function ImageCarousel({
   return (
     <div className="w-full relative group" ref={groupRef} tabIndex={-1}>
       <div className="relative w-full aspect-[9/14] overflow-hidden rounded-2xl bg-gray-50">
-        <div className="absolute inset-0 grid grid-cols-2 gap-2 p-2 sm:gap-2.5 sm:p-2.5">
-          {(slides[current] ?? [carouselItems[0]]).map((item, i) => (
-            <CarouselGridItem
-              key={i}
-              src={item.src}
-              type={item.type}
-              alt={`${title} - image ${i + 1}`}
-              onOpen={item.type === "image" ? onOpen : () => {}}
+        {slides[current].type === "video" ? (
+          // Video slide (full, not in grid)
+          <div className="absolute inset-0 flex items-center justify-center p-2 sm:p-4">
+            <video
+              src={slides[current].src}
+              controls
+              autoPlay
+              muted
+              playsInline
+              className="object-cover w-full h-full rounded-2xl bg-black max-h-full"
+              style={{ aspectRatio: "9/16", width: "100%", height: "100%" }}
             />
-          ))}
+          </div>
+        ) : (
+          // Image grid slide (same as previous, up to 4 images in a grid)
+          <div className="absolute inset-0 grid grid-cols-2 gap-2 p-2 sm:gap-2.5 sm:p-2.5">
+            {(slides[current].images.length ? slides[current].images : [images[0]]).map((src, i) => (
+              <button
+                key={i}
+                type="button"
+                onClick={() => onOpen(src)}
+                className="relative overflow-hidden rounded-xl bg-gray-100 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-400/50 transition-all duration-200"
+              >
+                <Image
+                  src={src}
+                  alt={`${title} - image ${i + 1}`}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  sizes="(max-width: 640px) 60vw, (max-width: 1024px) 30vw, (max-width: 1280px) 20vw, 15vw"
+                />
+              </button>
+            ))}
 
-          {/* Fill empty slots to maintain 2×2 grid */}
-          {Array.from({ length: Math.max(0, 4 - (slides[current]?.length ?? 0)) }).map((_, i) => (
-            <div key={`empty-${i}`} className="bg-gray-100 rounded-xl" />
-          ))}
-        </div>
+            {/* Fill empty slots to maintain 2×2 grid */}
+            {Array.from({ length: Math.max(0, 4 - slides[current].images.length) }).map((_, i) => (
+              <div key={`empty-${i}`} className="bg-gray-100 rounded-xl" />
+            ))}
+          </div>
+        )}
 
         {/* Arrows */}
         {total > 1 && (
@@ -586,10 +616,13 @@ export default function LeadershipPage() {
   const imageCarouselVideoMap: Record<string, string> = {
     "teenlink": "https://res.cloudinary.com/dqv4mucxh/video/upload/v1760200070/WhatsApp_Video_2025-10-11_at_13.29.26_b316050e_es9i8m.mp4",
     "sfcc": "https://res.cloudinary.com/dqv4mucxh/video/upload/v1760200115/WhatsApp_Video_2025-10-11_at_13.25.44_d29a715c_mnpdam.mp4",
-    "cortisolx": "https://res.cloudinary.com/dqv4mucxh/video/upload/v1760200124/WhatsApp_Video_2025-10-11_at_13.25.05_359cb289_jgpyvk.mp4",
+    "iris-national-science-fair-finalist": "https://res.cloudinary.com/dqv4mucxh/video/upload/v1760200124/WhatsApp_Video_2025-10-11_at_13.25.05_359cb289_jgpyvk.mp4",
     "finance-club":"https://res.cloudinary.com/dqv4mucxh/video/upload/v1760200150/WhatsApp_Video_2025-10-11_at_13.20.04_f02ff77a_wp8ebc.mp4"
     // Add more ids and videos here as needed
   }
+
+  // The special IRIS image for 'iris-national-science-fair-finalist'
+  const irisImageUrl = "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253136/IRISNational_kgkqwk.jpg";
 
   return (
     <main className={`min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 ${inter.variable} ${playfair.variable} ${poppins.variable} ${lora.variable}`}>
@@ -647,7 +680,7 @@ export default function LeadershipPage() {
             <article className="relative">
               <div className="grid lg:grid-cols-12 gap-10 md:gap-12 items-start">
                 {/* Text content - left */}
-                {item.id === "jpis-science-fair" || item.id === "school-captain" ? (
+                {item.id === "jpis-science-fair" ? (
                   <div className="col-span-12 space-y-6 order-2 lg:order-1 text-left">
                     <div>
                       <h3 className="text-3xl md:text-5xl font-bold text-gray-900 mb-3 hover:text-blue-600 transition-colors leading-[1.15] font-[family-name:var(--font-playfair)] text-left">
@@ -772,7 +805,35 @@ export default function LeadershipPage() {
                     )}
 
                     {item.details && <ExpandableDetails details={item.details} maxHeight={300} />}
-                    {item.id ==="janam" &&(
+
+                    {/* Special IRIS image on left, regular images grid still appear as a carousel on right */}
+                    {item.id === "iris-national-science-fair-finalist" && (
+                      <div className="w-full flex justify-center items-center my-6">
+                        <button
+                          type="button"
+                          className="w-full max-w-xl aspect-video bg-gray-200 rounded-lg overflow-hidden border-2 border-gray-100 shadow hover:shadow-lg relative group"
+                          style={{ minHeight: 200 }}
+                          onClick={() => setFullscreenImage(irisImageUrl)}
+                          aria-label="Open image fullscreen"
+                        >
+                          <Image
+                            src={irisImageUrl}
+                            alt={"IRIS National Science Fair – Finalist"}
+                            fill
+                            className="object-contain group-hover:scale-105 transition-transform duration-300 rounded"
+                            sizes="(max-width: 600px) 90vw, 600px"
+                          />
+                          {/* Magnifier icon overlay */}
+                          <div className="absolute bottom-2 right-2 bg-black/60 p-2 rounded-full opacity-70 group-hover:opacity-100 transition">
+                            <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                              <circle cx="11" cy="11" r="7" stroke="currentColor" strokeWidth="2"/>
+                              <line x1="16.65" y1="16.65" x2="21" y2="21" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                            </svg>
+                          </div>
+                        </button>
+                      </div>
+                    )}
+                    {item.id === "janam" && (
                       <VideoCarousel />
                     )}
                   </div>
@@ -825,23 +886,43 @@ export default function LeadershipPage() {
                     </div>
                   )}
 
-                  {item.id =="iris-national-science-fair-finalist" &&(
-                   <div className="relative w-full h-0 overflow-hidden rounded-md" style={{ paddingTop: '56.25%' }}>
-                    <div className="mb-2 text-gray-600 text-sm font-[family-name:var(--font-inter)]">
-                      Scroll in the embedded presentation below to see more slides.
+                  {item.id === "iris-national-science-fair-finalist" && (
+                    <div className="my-2">
+                      <div className="mb-3 text-gray-600 text-sm font-[family-name:var(--font-inter)]">
+                        Scroll in the embedded presentation below to see more slides.
+                      </div>
+                      <div className="relative w-full h-0 overflow-hidden rounded-md" style={{ paddingTop: '56.25%' }}>
+                        <iframe
+                          loading="lazy"
+                          className="absolute top-0 left-0 w-full h-full border-0 rounded-md"
+                          src="https://www.canva.com/design/DAGeOH86NII/X3th3VpGAFR7zZ-Fd6wuSA/view?embed"
+                          allowFullScreen
+                          title="IRIS Biodegradable Leather – Presentation"
+                        />
+                      </div>
+                      {/* Show regular images as carousel */}
+                      {item.imageSrc && (
+                        <div className="flex flex-col items-center justify-center mt-8">
+                          <div className="mb-2 text-gray-600 text-xs font-[family-name:var(--font-inter)] italic">
+                            Click on the images to get a better idea.
+                          </div>
+                          <ImageCarousel
+                            images={
+                              Array.isArray(item.imageSrc)
+                                ? item.imageSrc.filter(Boolean)
+                                : [item.imageSrc].filter(Boolean)
+                            }
+                            title={item.title}
+                            onOpen={setFullscreenImage}
+                            video={imageCarouselVideoMap[item.id]}
+                          />
+                        </div>
+                      )}
                     </div>
-                   <iframe
-                     loading="lazy"
-                     className="absolute top-0 left-0 w-full  h-full border-0 rounded-md"
-                     src="https://www.canva.com/design/DAGeOH86NII/X3th3VpGAFR7zZ-Fd6wuSA/view?embed"
-                     allowFullScreen
-                     title="IRIS Biodegradable Leather – Presentation"
-                   />
-                 </div>
                   )}
 
                   {/* Show ImageCarousel if imageSrc exists */}
-                  {item.imageSrc && item.id !== "janam" && item.id !== "editorial-board" && (
+                  {item.imageSrc && item.id !== "janam" && item.id !== "editorial-board" && item.id !== "iris-national-science-fair-finalist" && (
                     <div className="flex flex-col items-center justify-center">
                       <div className="mb-2 text-gray-600 text-xs font-[family-name:var(--font-inter)] italic">
                         Click on the images to get a better idea.
@@ -855,9 +936,7 @@ export default function LeadershipPage() {
                         title={item.title}
                         onOpen={setFullscreenImage}
                         // Inject video carousel for ids in imageCarouselVideoMap
-                        {...(imageCarouselVideoMap[item.id]
-                          ? { video: imageCarouselVideoMap[item.id] }
-                          : {})}
+                        video={imageCarouselVideoMap[item.id]}
                       />
                     </div>
                   )}

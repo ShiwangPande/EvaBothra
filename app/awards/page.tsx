@@ -4,6 +4,88 @@ import Image from "next/image"
 import { useState } from "react"
 import { portfolioData } from "@/lib/data"
 
+// Simple carousel component
+function ImageCarousel({
+  images,
+  altBase,
+  onOpen,
+}: {
+  images: string[]
+  altBase: string
+  onOpen: (src: string) => void
+  heightClass?: string
+}) {
+  const [current, setCurrent] = useState(0)
+
+  if (!Array.isArray(images) || images.length === 0) return null
+
+  return (
+    <div className={`relative w-full  h-full flex-shrink-0 bg-neutral-100`}>
+      <button
+        className="absolute top-1/2 left-2 z-10 -translate-y-1/2 bg-white/80 hover:bg-white transition rounded-full p-1.5 shadow active:scale-95"
+        style={{ display: images.length > 1 ? undefined : "none" }}
+        onClick={(e) => {
+          e.stopPropagation()
+          setCurrent((prev) => (prev - 1 + images.length) % images.length)
+        }}
+        aria-label="Previous image"
+        tabIndex={0}
+        type="button"
+      >
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+      <button
+        className="absolute top-1/2 right-2 z-10 -translate-y-1/2 bg-white/80 hover:bg-white transition rounded-full p-1.5 shadow active:scale-95"
+        style={{ display: images.length > 1 ? undefined : "none" }}
+        onClick={(e) => {
+          e.stopPropagation()
+          setCurrent((prev) => (prev + 1) % images.length)
+        }}
+        aria-label="Next image"
+        tabIndex={0}
+        type="button"
+      >
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+      {/* Image */}
+      <button
+        onClick={() => onOpen(images[current])}
+        className="relative w-full h-full cursor-pointer group/image focus:outline-none"
+        type="button"
+        tabIndex={0}
+      >
+        <Image
+          src={images[current]}
+          alt={`${altBase} - image ${current + 1}`}
+          fill
+          className="object-contain transition-transform duration-300 group-hover/image:scale-[1.01]"
+          sizes="(max-width: 640px) 100vw, 44vw"
+        />
+        <span className="absolute bottom-3 right-3 bg-white/80 text-xs font-medium px-2 py-1 rounded shadow opacity-0 group-hover/image:opacity-100 transition-opacity duration-200 flex items-center gap-1 z-20">
+          🔍 Enlarge
+        </span>
+      </button>
+      {/* Dots */}
+      {images.length > 1 && (
+        <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+          {images.map((_, i) => (
+            <span
+              key={i}
+              className={`h-2 w-2 rounded-full transition-colors duration-200 ${
+                i === current ? "bg-neutral-800" : "bg-neutral-300"
+              }`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function AwardsPage() {
   const data = portfolioData.awards
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null)
@@ -46,10 +128,8 @@ export default function AwardsPage() {
               style={{ animationDelay: `${idx * 120}ms` }}
             >
               {/* Image or Video - Right Side */}
-              {item.imageSrc && (
-                <div
-                  className="relative w-full sm:w-[44%] h-56 sm:h-[300px] md:h-[340px] flex-shrink-0 bg-neutral-100"
-                >
+              {(!!item.imageSrc || !!item.images) && (
+                <div className="relative w-full sm:w-[44%] h-56 sm:h-[300px] md:h-[340px] flex-shrink-0 bg-neutral-100">
                   {item.id === "health-ministry-recognition" ? (
                     // 🎥 Video (inline, no enlarge)
                     <iframe
@@ -58,11 +138,20 @@ export default function AwardsPage() {
                       src="https://www.canva.com/design/DAGfI0aecvg/WLz8bTZobs-t17rDqfXjmg/watch?embed"
                       allowFullScreen
                     ></iframe>
+                  ) : Array.isArray(item.images) && item.images.length > 0 ? (
+                    // Multiple Images: Carousel
+                    <ImageCarousel
+                      images={item.images}
+                      altBase={item.title}
+                      onOpen={setFullscreenImage}
+                    />
                   ) : (
-                    // 🖼 Image (enlarge on click)
+                    // Single Image
                     <button
                       onClick={() => setFullscreenImage(typeof item.imageSrc === "string" ? item.imageSrc : null)}
                       className="relative w-full h-full cursor-pointer group/image focus:outline-none"
+                      type="button"
+                      tabIndex={0}
                     >
                       <Image
                         src={typeof item.imageSrc === "string" ? item.imageSrc : ""}
@@ -115,34 +204,34 @@ export default function AwardsPage() {
                   </p>
                 )}
 
-{item.link && (
-                    <div className="pt-3">
-                      <a
-                        href={item.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="group flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-all font-[family-name:var(--font-inter)]"
+                {item.link && (
+                  <div className="pt-3">
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-all font-[family-name:var(--font-inter)]"
+                    >
+                      <span className="truncate max-w-[250px] underline decoration-blue-400 group-hover:decoration-blue-800">
+                        {item.link}
+                      </span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-4 w-4 text-blue-600 group-hover:text-blue-800 transition-transform group-hover:translate-x-0.5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
                       >
-                        <span className="truncate max-w-[250px] underline decoration-blue-400 group-hover:decoration-blue-800">
-                          {item.link}
-                        </span>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-4 w-4 text-blue-600 group-hover:text-blue-800 transition-transform group-hover:translate-x-0.5"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                          />
-                        </svg>
-                      </a>
-                    </div>
-                  )}
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M17 8l4 4m0 0l-4 4m4-4H3"
+                        />
+                      </svg>
+                    </a>
+                  </div>
+                )}
 
                 {/* {item.link && (
                   <a

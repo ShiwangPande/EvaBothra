@@ -143,10 +143,16 @@ export default function AboutMe({ compact = false }: AboutMeProps) {
       transition={{ duration: 0.9, delay: 0.6, ease: easeInOut }}
       viewport={{ once: true }}
     >
-      <div className="relative flex items-center justify-center">
-        <div className="absolute w-full border-t border-gray-200"></div>
-        <span className="relative bg-white px-6 text-lg md:text-xl font-semibold text-[#007B78] tracking-wide">
-          Eva Bothra
+      <div className="flex flex-col items-center space-y-1">
+        <div className="relative flex items-center justify-center w-full">
+          <hr className="w-24 border-t-2 border-[#007B78]/20" />
+          <span className="mx-4 text-xl md:text-2xl font-bold tracking-wider text-[#007B78] bg-white px-5 py-1 rounded-full shadow-sm border border-[#007B78]/10">
+            Eva Bothra
+          </span>
+          <hr className="w-24 border-t-2 border-[#007B78]/20" />
+        </div>
+        <span className="text-xs text-gray-400 mt-1 tracking-wide uppercase font-semibold select-none">
+          with light, intention, & care.
         </span>
       </div>
     </motion.div>

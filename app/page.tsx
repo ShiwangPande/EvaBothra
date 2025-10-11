@@ -177,7 +177,7 @@ export default function HomePage() {
               <Testimonials />
             </section>
 
-            <section id="contact" className="relative bg-gray-50/50 z-10 py-12 md:py-16">
+            <section id="contact" className="relative bg-gray-50/50 z-10 p-5 md:pb-16">
               <ContactForm />
             </section>
           </Suspense>

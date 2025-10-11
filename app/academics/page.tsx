@@ -115,6 +115,9 @@ export default function AcademicsPage() {
       : item.imageSrc
       ? [item.imageSrc]
       : []
+  
+    const hasAchievements = item.achievements?.length > 0
+  
     return (
       <article
         key={item.id}
@@ -123,21 +126,28 @@ export default function AcademicsPage() {
       >
         {/* Gradient Accent */}
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
-
+  
         {/* Content Section */}
-        <div className="p-8 md:p-10 flex flex-col flex-1 min-w-0 justify-center">
+        <div className="p-8 md:p-10 flex flex-col min-w-0">
+
           <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
             <h3 className="text-2xl font-bold text-gray-900 leading-snug group-hover:text-blue-900 transition-colors">
               {item.title}
             </h3>
           </div>
-
-          <p className="text-gray-600 leading-relaxed mb-4 text-base md:text-lg flex-grow">
+  
+          {/* Description */}
+          <p
+            className={`text-gray-600 leading-relaxed text-base md:text-lg  ${
+              hasAchievements ? 'mb-2' : 'mb-0'
+            }`}
+          >
             {item.description}
           </p>
-
-          {item.achievements?.length ? (
-            <div className="flex flex-wrap gap-2 mb-4">
+  
+          {/* Achievements */}
+          {hasAchievements && (
+            <div className="flex flex-wrap gap-2 my-5">
               {item.achievements.slice(0, 6).map((a: string) => (
                 <span
                   key={a}
@@ -147,14 +157,16 @@ export default function AcademicsPage() {
                 </span>
               ))}
             </div>
-          ) : null}
-
+          )}
+  
+          {/* Details */}
           {item.details && (
             <p className="text-gray-600 leading-relaxed text-sm md:text-base border-t border-gray-100 pt-4 mb-5">
               {item.details.split('\n\n')[0]}
             </p>
           )}
-
+  
+          {/* Link */}
           {item.link && (
             <a
               href={item.link}
@@ -179,7 +191,7 @@ export default function AcademicsPage() {
             </a>
           )}
         </div>
-
+  
         {/* Image Section (with Carousel) */}
         {images.length > 0 && (
           <div
@@ -199,6 +211,7 @@ export default function AcademicsPage() {
       </article>
     )
   }
+  
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-white via-blue-50/20 to-white">
@@ -238,11 +251,12 @@ export default function AcademicsPage() {
         </div>
       </section>
 
-      <section className="max-w-7xl mx-auto px-6 md:px-8 pb-16 space-y-12">
+      <section className="max-w-7xl mx-auto px-6 md:px-8 pb-20 space-y-16">
+
         {/* Academic Performance - Full Width Cards */}
         {sections.academicPerformance && (
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-5 text-gray-900">
+          <div >
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-gray-900">
               {sections.academicPerformance.title.replace(/^\p{Emoji_Presentation}\s*/u, '')}
             </h2>
             <div className="flex flex-col gap-6">
@@ -293,10 +307,10 @@ export default function AcademicsPage() {
         {/* Research - Full Width Cards with Right Images */}
         {sections.research && (
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-5 text-gray-900">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900">
               {sections.research.title.replace(/^\p{Emoji_Presentation}\s*/u, '')}
             </h2>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-8">
               {sections.research.items.map((item, idx) => (
                 <CardWithRightImage item={item} idx={idx} key={item.id} />
               ))}
@@ -306,8 +320,8 @@ export default function AcademicsPage() {
 
         {/* Olympiads & Competitions - Full Width Cards with Right Images and Carousel */}
         {sections.olympiads && (
-          <div>
-            <h2 className="text-2xl md:text-3xl font-bold mb-5 text-gray-900">
+          <div className="mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-900">
               {sections.olympiads.title.replace(/^\p{Emoji_Presentation}\s*/u, '')}
             </h2>
             <div className="flex flex-col gap-6">
@@ -328,14 +342,15 @@ export default function AcademicsPage() {
                     {/* Gradient Accent */}
                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-indigo-500 to-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
                     {/* Content Section */}
-                    <div className="p-8 md:p-10 flex flex-col flex-1 min-w-0 justify-center">
+                    <div className="p-8 md:p-10 flex flex-col min-w-0">
+
                       <div className="flex flex-wrap items-start justify-between gap-3 mb-3">
                         <h3 className="text-2xl font-bold text-gray-900 leading-snug group-hover:text-blue-900 transition-colors">
                           {item.title}
                         </h3>
                       </div>
 
-                      <p className="text-gray-600 leading-relaxed mb-4 text-base md:text-lg flex-grow">
+                      <p className="text-gray-600 leading-relaxed mb-5 text-base md:text-lg ">
                         {item.description}
                       </p>
 

@@ -152,7 +152,7 @@ export const portfolioData: PortfolioData = {
                         category: "Independent Research",
                         imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1759262127/Acceptance_Letter_research_paper_page-0001_fp73y1.jpg",
                         achievements: ["80+ research hours", "Conference selection", "Publication submission", "Award entry"],
-                        link: "https://ijsser.org/"
+                        link: "https://ijsser.org/more2025.php?id=276"
                     },
                     {
                         "id": "sigma-xi-participation-2025",
@@ -166,7 +166,7 @@ export const portfolioData: PortfolioData = {
                             "Certificate of Participation from Sigma Xi",
                             "Presentation at Innosphere 2025"
                         ],
-                        // "link": ""
+                     link: "https://ijsser.org/more2025.php?id=276"
                     }
                 ]
             },
@@ -191,7 +191,7 @@ export const portfolioData: PortfolioData = {
                         details: "Selected in the top 3% of my school, I attended the Stanford-led Advanced Math Program. For two weeks, I immersed myself in advanced calculus, number theory, and finance models, solving AMC-style puzzles and tackling SUMaC-style problems.\n\nThe experience reminded me that math is not just a subject but a way of thinking — recursive, rigorous, and creative. Working through proof-based logic and game theory, I realized mathematics is my foundation, the lens through which I frame economics, finance, and even social ventures.",
                         category: "Summer Program",
                         achievements: ["Top 3% selection", "Advanced mathematics", "Proof-based logic", "Game theory"],
-                        certificate: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759007150/279df43f-c71e-45b7-8964-ff93412eab30.png"
+                        imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760208316/cad1ead3-729a-454e-8edd-a8fb69ed8972.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760208322/2079455c-eee0-416c-950c-d48a3817f785.png"]
                     },
                     {
                         id: "finance-intern",
@@ -268,7 +268,7 @@ export const portfolioData: PortfolioData = {
                 category: "Tech Entrepreneurship",
                 achievements: ["400+ beta users", "App Store & Play Store live", "₹4 lakhs funding", "TYE accelerator selection"],
                 link: "https://apps.apple.com/in/app/teenlink-connect/id6746079280",
-                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760199838/37620ac2-44da-493b-ae7d-ca213f6e9b45.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759302338/TEENLink_3_vjzmqw.png",
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760209323/9fc2c1bd-7462-43ca-b186-1989f6913716.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760199838/37620ac2-44da-493b-ae7d-ca213f6e9b45.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759302338/TEENLink_3_vjzmqw.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942972/abf60202-755d-40f3-8f41-d4f4dc394843.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200278/c4862990-7f95-43ab-9e27-da094c356089.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942944/b65e1e81-9bf6-4b7c-b793-732fa10f9458.png",
@@ -277,7 +277,7 @@ export const portfolioData: PortfolioData = {
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760163415/8afc94e3-e0e6-4344-ae09-41e4a177912a.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942894/8410607b-4b66-4001-ad19-bb54189186a7.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760163422/722af3d6-d26b-48e4-ac3b-ac4cf9c228f6.png",
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942852/3be6dd35-ba4a-4edd-b21a-cca7c872ca62.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760209456/f362539e-063a-4950-9794-c9c28d07c146.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760163430/747bc620-7f00-448d-929d-7449f33ca7e6.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760163439/a48b95b6-3776-4633-a87b-c9e158b26869.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942802/d2d776e5-c3ab-4940-a9f3-6fcefcf4709c.png",
@@ -395,10 +395,9 @@ export const portfolioData: PortfolioData = {
                 category: "Community Leadership",
                 achievements: ["Jaipur city head", "Digital literacy workshops", "Senior focus", "Banking services"],
                    imageSrc: [
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942552/62769f9c-3325-4fb5-81a3-1e4a9f193d3a.png",
+                   
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942550/d9c1dc5f-c493-4fa7-ad90-2e7499afff1d.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942546/32f4aeb6-bc0f-4f45-b559-46e2a9785827.png",
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942543/a6ed614e-ec00-4ee6-b220-4775ef43b7f9.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942540/fc75d69d-c543-4bb1-9cb4-09e35cd3fc0c.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942536/7b405df0-de3e-4d07-836f-3406c171455a.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942530/7e6953f5-0339-43a1-8edd-55dbd71070a5.png",
@@ -409,8 +408,6 @@ export const portfolioData: PortfolioData = {
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942513/27a41b88-0909-4782-9668-819e13bb0191.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942506/9b41437e-4a0e-4a40-8e3f-d59e1f89a0fa.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942503/c565592b-cedf-4bbf-89e5-3557285de683.png",
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942496/beace0ed-373a-4805-9ebe-9b183a2db7cb.png",
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942490/d9c3883c-3174-4a27-874a-2e629d4eef08.png",
 
                 ],
                 link: "https://www.tech4bharat.org.in/"
@@ -434,7 +431,22 @@ export const portfolioData: PortfolioData = {
                 details: "In Grades 9 and 10, I captained my school's hockey team and represented Karnataka at the state level. Practices demanded 8 hours a week; competitions required resilience under pressure and team cohesion.\n\nHockey taught me lessons that textbooks never could: how leadership on the field requires split-second decision-making, how losses build more character than wins, and how individual skill matters only when it serves the team. Those lessons still echo in how I lead projects today.",
                 category: "Sports",
                 achievements: ["School team captain", "State-level player", "8 hours weekly practice", "Leadership under pressure"],
-                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200028/29edfc26-6b76-44cb-b9ef-c56bdc919c26.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200363/9362859c-2114-447f-b617-3fa28584b9e1.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200371/b04277cc-fa0e-4172-8df7-01396b0bbd92.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200314/b49707b6-9b70-4e41-a7a4-2ed7dc6b8157.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200324/c93edc1d-1390-4040-8e6f-04bd0e9e99f0.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200330/c9df9501-3d7c-4c8b-90ce-42e919f77c5d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200336/979f79b0-c2fc-4e5f-a225-72d1b80b9170.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200344/c7558260-19ca-4415-8794-9cef8ece63ea.png"],
+                imageSrc: [
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760208097/dae5fd72-8269-4b29-88d7-cbb68497a74c.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200028/29edfc26-6b76-44cb-b9ef-c56bdc919c26.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200363/9362859c-2114-447f-b617-3fa28584b9e1.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200371/b04277cc-fa0e-4172-8df7-01396b0bbd92.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200314/b49707b6-9b70-4e41-a7a4-2ed7dc6b8157.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200324/c93edc1d-1390-4040-8e6f-04bd0e9e99f0.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200330/c9df9501-3d7c-4c8b-90ce-42e919f77c5d.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200336/979f79b0-c2fc-4e5f-a225-72d1b80b9170.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200344/c7558260-19ca-4415-8794-9cef8ece63ea.png",
+                "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760207989/Untitled_design_29_qcyoau.png",
+            "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760208056/ead85293-d63d-4a32-ab36-ed834386b74b.png", 
+           
+        "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760208160/23175168-bdf5-4a8a-a17a-714b332b4d78.png",
+        "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760208213/79f3b1e0-8bb8-4da6-838d-2a255344beeb.png"
+        ],
                 // link: "https://www.hockeyindia.org/"
             },
             {
@@ -456,7 +468,7 @@ export const portfolioData: PortfolioData = {
                 description: "Selected from over 8,000 students nationwide, presented biodegradable faux leather prototype",
                 details: "Selected from over 8,000 students nationwide, I presented an original prototype of biodegradable faux leather made entirely from banana stems and rice husks at the IRIS National Science Fair. The project grew from curiosity-driven experimentation in chemistry and materials science—concepts I had first explored during my IGCSE science studies, which taught me to approach problems methodically, observe carefully, and iterate constantly.\n\nUnlike a purely theoretical project, I moved from idea to prototype to production. I extracted fibers from banana stems, processed rice husks, and combined them using natural binders, experimenting with texture, durability, and flexibility until the material could actually function as leather. Beyond the lab, I approached the project like an entrepreneur: calculating costs, optimizing production steps, and imagining how this material could be scaled for real-world applications.\n\nPresenting before a panel of national experts was both exhilarating and humbling. I learned that science isn't just about invention—it's about defending your process, explaining your choices, and translating technical complexity into clear, compelling communication. Standing there, I felt the full arc of research: curiosity, experimentation, iteration, and public engagement.\n\nThe IRIS experience was my first true intersection of science and entrepreneurship, showing me how rigorous research can be paired with practical innovation to create solutions that matter.",
                 category: "Science & Innovation",
-                achievements: ["8,000+ applicants", "Original prototype", "Entrepreneurial approach", "National recognition"],
+                achievements: ["8,000+ applicants", "Entrepreneurial approach", "National recognition"],
                 imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759299129/IRIS_1_sugz6f.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760160287/ed523813-b984-417e-b007-0061efa31dd3.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200408/717a528b-1132-4b25-ac6c-1e1b6c0f6abe.png",
@@ -501,6 +513,25 @@ export const portfolioData: PortfolioData = {
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760089564/5df94834-b33d-4943-8284-21a410a5f19e.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760089603/a0e17436-8f5d-4c00-973e-fa39f9b40438.png"],
                 link: "https://evabothra.wixsite.com/website"
             },
+            {
+                id: "ballet-training",
+                title: "Ballet – ISTD Trained Performer",
+                grade: "Grade 4 (of 5)",
+                description: "Trained under the ISTD syllabus for six years and performed in three productions before 2,000+ people.",
+                details: "For six years, ballet was my quiet teacher in discipline and resilience. Trained under the Imperial Society of Teachers of Dancing (ISTD) syllabus, I completed Grade 4 out of 5 exams and performed in three productions before audiences of over 2,000 people.\n\nEach class meant a two-hour commute and countless hours of repetition to master what might look effortless on stage. But that’s what ballet taught me – that elegance is built on endurance. Balancing training with academics, hockey, and leadership meant learning time management not from a planner, but from practice.\n\nBallet shaped how I approach everything now – methodically, with precision and patience. It made me comfortable with delayed results, aware of the beauty in discipline, and more attuned to detail – traits that now guide how I think, work, and lead.",
+                category: "Arts & Leadership",
+                achievements: [
+                    "Six years of ballet training under ISTD syllabus",
+                    "Completed Grade 4 of 5 examinations",
+                    "Performed in three large productions (2,000+ audience)",
+                    "Developed discipline, endurance, and time management"
+                ],
+                imageSrc: [
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200196/7b42741c-3286-4809-b08a-778bb558073b.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200188/86cc9b6c-9d80-4963-a507-7a4c55c6df75.png"
+                ],
+            }
+            
             
         ]
     },
@@ -568,8 +599,8 @@ export const portfolioData: PortfolioData = {
                 achievements: ["Accessibility initiatives", "Community events organized", "Resource distribution", "Human connection"],
                 imageSrc: [
                     // "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159422/f083ed91-98d4-4b11-8d28-f12f212b7e89.png",
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159254/3637ada8-3bf3-4fd6-918b-1171c3b8c63f.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200118/WhatsApp_Image_2025-10-11_at_13.22.21_58b7f48d_ljurgr.jpg",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159254/3637ada8-3bf3-4fd6-918b-1171c3b8c63f.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159145/788a2499-674c-4b58-a80d-9ed305141544.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159177/8f1803f3-8c81-4926-835e-2cf604e9252a.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159272/b53eba72-58a1-406e-b941-2c9e7faa7cf3.png",
@@ -615,7 +646,7 @@ export const portfolioData: PortfolioData = {
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760158639/9e6d5e2d-6421-4c37-9d26-b7bb0edc53a6.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760158579/69e4dfb9-58f4-468f-80bc-d768e3170461.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120484/7328fa2d-b172-41c6-a295-e4e5a046af7b.png",
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200201/c675bb88-fd0f-4970-bec8-df81ea69adc7.png",
+                    // "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200201/c675bb88-fd0f-4970-bec8-df81ea69adc7.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120515/92e3a024-1bbd-4223-b0fd-14bbded6b6a8.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120537/98f780e9-3bae-4b84-9618-314b04a1185d.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120572/37a1884a-4c52-461b-86cc-93d3c993d113.png",
@@ -650,7 +681,8 @@ export const portfolioData: PortfolioData = {
                     "Mastered modern React patterns and Next.js app architecture",
                     "Implemented responsive designs using Tailwind CSS and shadcn/ui"
                 ],
-                link: ""
+                link: "",
+                imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1760209323/9fc2c1bd-7462-43ca-b186-1989f6913716.png"
             },
             {
                 id: "uiux-design",
@@ -854,7 +886,26 @@ export const portfolioData: PortfolioData = {
                 achievements: ["Newspaper feature", "Rajasthan coverage", "Legal literacy", "Worker rights"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759952247/newpaper_ocdbkh.png",
                 link: "https://www.linkedin.com/posts/eva-bothra-56650325a_legalsaathi-gratitude-seemasandesh-activity-7353733985824354305-NaLj?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfMsd4ButU3MKvKyp1BTqPv6UHrURqhH_Q"
+            },
+            {
+                id: "ballet-training",
+                title: "Ballet Performer & ISTD Trainee",
+                grade: "Completed Grade 4 (of 5)",
+                description: "Trained under the ISTD syllabus for six years, performing in productions before audiences of over 2,000 people.",
+                details: "For six years, ballet was my quiet teacher in discipline and resilience. Trained under the Imperial Society of Teachers of Dancing (ISTD) syllabus, I completed Grade 4 out of 5 exams and performed in three large-scale productions before audiences exceeding 2,000. Each class meant a two-hour commute and hours of repetition to master what might look effortless on stage. Ballet taught me that elegance is built on endurance and that patience refines precision. Balancing training with academics, hockey, and leadership strengthened my time management and persistence. Today, the same discipline and attention to detail guide how I think, work, and lead.",
+                category: "Arts & Performance",
+                achievements: [
+                    "Six years of ISTD ballet training",
+                    "Completed Grade 4 of 5 examinations",
+                    "Performed in three major productions",
+                    "Cultivated discipline, endurance, and precision"
+                ],
+                images: [
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760207254/Untitled_design_27_pammti.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760207347/Untitled_design_28_va1umb.png"
+                ],
             }
+            
         ]
     },
 
@@ -905,6 +956,7 @@ export const portfolioData: PortfolioData = {
                 category: "Meditation & Mindfulness",
                 achievements: ["10 days in silence", "1,400+ meditation hours", "Complete inward observation", "Equanimity practice"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200032/a6f4f124-9ff2-4c5c-91d4-a4450b3fc2dd.png",
+                video: "https://res.cloudinary.com/dqv4mucxh/video/upload/v1760218011/WhatsApp_Video_2025-10-11_at_13.28.49_81f1ef3f_jvwgq7.mp4",
                 link: ""
             }
         ]

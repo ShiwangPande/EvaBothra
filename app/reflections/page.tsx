@@ -3,14 +3,148 @@
 import { portfolioData } from "@/lib/data"
 import { Inter } from "next/font/google"
 
-const inter = Inter({ subsets: ["latin"], weight: ["400","500","600","700"], display:"swap" })
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+})
+
+// New helper: Allows placing image and video at different places in the flow
+function ContentWithMedia({
+  details,
+  imageSrc,
+  video,
+  alt,
+}: {
+  details: string
+  imageSrc?: string
+  video?: string
+  alt?: string
+}) {
+  const paragraphs = details.split("\n\n")
+  let imagePlaced = false
+  let videoPlaced = false
+
+  // Heuristic for placement: Place image after 1st paragraph, video after 2nd or 3rd
+  return (
+    <>
+      {paragraphs.map((p, i) => {
+        const elements = []
+        // Place image after first paragraph, if image exists and not yet placed
+        if (i === 0 && imageSrc && !imagePlaced) {
+          elements.push(
+            <p key={`p-${i}`} className="text-base md:text-lg">
+              {p}
+            </p>
+          )
+          elements.push(
+            <div
+              key="image"
+              className="my-4 flex justify-center"
+            >
+              <img
+                src={
+                  typeof imageSrc === "string"
+                    ? imageSrc
+                    : Array.isArray(imageSrc)
+                    ? imageSrc[0]
+                    : ""
+                }
+                alt={alt || ""}
+                className="h-full w-full max-w-xl rounded-xl object-cover border border-amber-200 aspect-video shadow"
+                loading="lazy"
+                style={{ objectPosition: "center" }}
+              />
+            </div>
+          )
+          imagePlaced = true
+        }
+        // Place video after 2nd or 3rd paragraph, if video exists and not yet placed
+        else if ((i === 2 || (paragraphs.length < 3 && i === 1)) && video && !videoPlaced) {
+          elements.push(
+            <p key={`p-${i}`} className="text-base md:text-lg">
+              {p}
+            </p>
+          )
+          elements.push(
+            <div key="video" className="my-5 flex justify-center">
+              <video
+                controls
+                className="rounded-xl border border-amber-200 bg-black w-full max-w-md aspect-[9/16] max-h-[400px] shadow"
+                poster={
+                  typeof imageSrc === "string"
+                    ? imageSrc
+                    : Array.isArray(imageSrc)
+                    ? imageSrc[0]
+                    : undefined
+                }
+                style={{ objectPosition: "center" }}
+              >
+                <source src={video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          )
+          videoPlaced = true
+        }
+        // Otherwise, just the paragraph
+        else {
+          elements.push(
+            <p key={`p-${i}`} className="text-base md:text-lg">
+              {p}
+            </p>
+          )
+        }
+        return elements
+      })}
+      {/* If image or video wasn't placed (e.g. too few paragraphs), append at end */}
+      {!imagePlaced && imageSrc && (
+        <div className="my-4 flex justify-center">
+          <img
+            src={
+              typeof imageSrc === "string"
+                ? imageSrc
+                : Array.isArray(imageSrc)
+                ? imageSrc[0]
+                : ""
+            }
+            alt={alt || ""}
+            className="h-full w-full max-w-xl rounded-xl object-cover border border-amber-200 aspect-video shadow"
+            loading="lazy"
+            style={{ objectPosition: "center" }}
+          />
+        </div>
+      )}
+      {!videoPlaced && video && (
+        <div className="my-5 flex justify-center">
+          <video
+            controls
+            className="rounded-xl border border-amber-200 bg-black w-full max-w-md aspect-[9/16] max-h-[340px] shadow"
+            poster={
+              typeof imageSrc === "string"
+                ? imageSrc
+                : Array.isArray(imageSrc)
+                ? imageSrc[0]
+                : undefined
+            }
+            style={{ objectPosition: "center" }}
+          >
+            <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      )}
+    </>
+  )
+}
 
 export default function ReflectionsPage() {
   const data = portfolioData.reflections
 
   return (
-    <main className={`min-h-screen bg-gradient-to-b from-white via-amber-50/30 to-white ${inter.className}`}>
-      
+    <main
+      className={`min-h-screen bg-gradient-to-b from-white via-amber-50/30 to-white ${inter.className}`}
+    >
       {/* Header */}
       <section className="max-w-4xl mx-auto px-6 md:px-8 pt-32 pb-20 text-center">
         <div className="inline-block mb-4">
@@ -28,18 +162,17 @@ export default function ReflectionsPage() {
 
       {/* Reflections */}
       <section className="max-w-5xl mx-auto px-6 md:px-8 pb-32 space-y-16">
-        {data.items.map((item, index) => (
+        {data.items.map((item) => (
           <article
             key={item.id}
             className="group relative bg-white backdrop-blur-sm shadow-lg hover:shadow-2xl rounded-2xl border border-gray-200/80 overflow-hidden transition-all duration-500 hover:-translate-y-2"
           >
             {/* Gradient accent bar */}
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-500 via-amber-400 to-amber-500 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-700"></div>
-            
             <div className="p-8 md:p-12">
               {/* Header */}
-              <header className="mb-8">
-                <div className="flex items-center gap-3 mb-4">
+              <header className="mb-6">
+                <div className="flex items-center gap-3 mb-3">
                   <span className="text-xs font-semibold uppercase tracking-wider text-gray-500">
                     {item.category}
                   </span>
@@ -58,17 +191,24 @@ export default function ReflectionsPage() {
               </header>
 
               {/* Description */}
-              <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-8 font-medium">
+              <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-5 font-medium">
                 {item.description}
               </p>
 
-              {/* Details */}
+              {/* Details with image and video placed separately, naturally */}
               <div className="space-y-5 text-gray-600 leading-relaxed mb-8 pl-4 border-l-2 border-gray-200 group-hover:border-amber-400 transition-colors duration-500">
-                {item.details.split("\n\n").map((p, i) => (
-                  <p key={i} className="text-base md:text-lg">
-                    {p}
-                  </p>
-                ))}
+                <ContentWithMedia
+                  details={item.details}
+                  imageSrc={
+                    typeof item.imageSrc === "string"
+                      ? item.imageSrc
+                      : Array.isArray(item.imageSrc)
+                      ? item.imageSrc[0]
+                      : undefined
+                  }
+                  video={item.video}
+                  alt={item.title}
+                />
               </div>
 
               {/* Achievements */}

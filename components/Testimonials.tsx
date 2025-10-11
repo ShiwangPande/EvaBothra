@@ -169,7 +169,7 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="bg-gray-50/70 py-16">
+    <section className="bg-gray-50/70 py-5">
       <div className="max-w-5xl mx-auto px-4">
         <header className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10">
           <div>
