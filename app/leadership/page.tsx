@@ -8,13 +8,13 @@ import { portfolioData } from "@/lib/data"
 import { Inter, Playfair_Display, Poppins, Lora } from 'next/font/google'
 import { Card } from "@/components/ui/card"
 
-const inter = Inter({ 
+const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter'
 })
 
-const playfair = Playfair_Display({ 
+const playfair = Playfair_Display({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-playfair',
@@ -162,7 +162,7 @@ function JanamImageCarousel({
 
   return (
     <div className="w-full relative group">
-      <div className="relative w-full aspect-[10/11] overflow-hidden rounded-xl bg-gray-50">
+      <div className="relative w-full aspect-[9/14] overflow-hidden rounded-xl bg-gray-50">
         <div className="absolute inset-0 grid grid-cols-2 gap-1.5 p-1.5 sm:gap-2 sm:p-2">
           {(slides[current] ?? [images[0]]).map((src, i) => (
             <button
@@ -171,13 +171,12 @@ function JanamImageCarousel({
               className="relative overflow-hidden rounded-lg bg-gray-100 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-400/50 transition-all duration-200"
               style={{ minHeight: 0, minWidth: 0 }}
             >
-              <Image
+             <Image
                 src={src}
                 alt={`${title} - image ${i + 1}`}
                 fill
-                className="object-cover transition-transform duration-500 group-hover:scale-100"
-                sizes="(max-width: 640px) 40vw, (max-width: 1024px) 18vw, (max-width: 1280px) 12vw, 10vw"
-                style={{ borderRadius: "0.5rem" }}
+                className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                sizes="(max-width: 640px) 60vw, (max-width: 1024px) 30vw, (max-width: 1280px) 20vw, 15vw"
               />
             </button>
           ))}
@@ -341,6 +340,10 @@ function PdfCarousel() {
 
   return (
     <div className="w-full flex flex-col items-center mt-2 relative">
+      <div className="mb-2 text-gray-600 text-sm font-[family-name:var(--font-inter)]">
+        {/* PDF instruction notice */}
+        <span>Scroll inside the PDF to read all pages.</span>
+      </div>
       <Card className="overflow-hidden rounded-lg shadow-sm transition w-full">
         <div className="aspect-[16/9] bg-gray-100 flex items-center justify-center text-gray-500 relative w-full">
           <iframe
@@ -392,6 +395,70 @@ function PdfCarousel() {
     </div>
   );
 }
+
+
+
+function ExpandableDetails({ details, maxHeight = 300 }: { details: string; maxHeight?: number }) {
+  const [expanded, setExpanded] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [showToggle, setShowToggle] = useState(false);
+
+  useEffect(() => {
+    if (contentRef.current && contentRef.current.scrollHeight > maxHeight) {
+      setShowToggle(true);
+    }
+  }, [details, maxHeight]);
+
+  return (
+    <div className="relative pt-4 border-l-4 border-blue-100 pl-6">
+      <div
+        ref={contentRef}
+        className={`overflow-hidden transition-all duration-500 ${
+          expanded ? "max-h-[9999px]" : `max-h-[${maxHeight}px]`
+        }`}
+        style={{
+          maskImage:
+            !expanded && showToggle
+              ? "linear-gradient(to bottom, black 80%, transparent 100%)"
+              : "none",
+        }}
+      >
+        {details.split("\n\n").map((p, i) => (
+          <p
+            key={i}
+            className="text-base md:text-lg text-gray-700 leading-[1.8] font-normal font-[family-name:var(--font-lora)] text-justify mb-4"
+          >
+            {p}
+          </p>
+        ))}
+      </div>
+
+      {showToggle && (
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="mt-2 text-blue-600 hover:text-blue-800 text-sm font-semibold inline-flex items-center gap-1 transition-all"
+        >
+          {expanded ? "Read less" : "Read more"}
+          <svg
+            className={`w-4 h-4 transform transition-transform ${
+              expanded ? "rotate-180" : "rotate-0"
+            }`}
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+      )}
+    </div>
+  );
+}
+
+
+
+
 
 export default function LeadershipPage() {
   const data = portfolioData.leadership
@@ -453,7 +520,7 @@ export default function LeadershipPage() {
             <article className="relative">
               <div className="grid lg:grid-cols-12 gap-10 md:gap-12 items-start">
                 {/* Text content - left */}
-               
+
                 {item.id === "jpis-science-fair" || item.id === "school-captain" ? (
                   <div className="col-span-12 space-y-6 order-2 lg:order-1 text-left">
                     <div>
@@ -512,10 +579,12 @@ export default function LeadershipPage() {
                       </div>
                     )}
 
-                    {item.details && (
+    
+
+   {item.details && (
                       <div className="pt-4 space-y-4 border-l-4 border-blue-100 pl-6">
                         {item.details.split("\n\n").map((p, i) => (
-                          <p key={i} className="text-base md:text-lg text-gray-700 leading-[1.8] font-normal font-[family-name:var(--font-lora)] text-left">
+                          <p key={i} className="text-base md:text-lg text-gray-700 leading-[1.8] font-normal font-[family-name:var(--font-lora)] text-justify">
                             {p}
                           </p>
                         ))}
@@ -580,15 +649,10 @@ export default function LeadershipPage() {
                       </div>
                     )}
 
-                    {item.details && (
-                      <div className="pt-4 space-y-4 border-l-4 border-blue-100 pl-6">
-                        {item.details.split("\n\n").map((p, i) => (
-                          <p key={i} className="text-base md:text-lg text-gray-700 leading-[1.8] font-normal font-[family-name:var(--font-lora)] text-justify">
-                            {p}
-                          </p>
-                        ))}
-                      </div>
-                    )}
+                  {item.details && <ExpandableDetails details={item.details} maxHeight={300} />}
+                  {item.id ==="janam" &&(
+                      <VideoCarousel />
+                  )}
                   </div>
                 )}
                 {/* Images and/or PDF - right */}
@@ -596,8 +660,9 @@ export default function LeadershipPage() {
                   {/* For Janam: show PDF and VideoCarousel */}
                   {item.id === "janam" && (
                     <div className="max-w-4xl w-full">
+                   
                       <div
-                        className="w-full rounded-lg border relative"
+                        className="w-full mb-12 rounded-lg border relative"
                         style={{
                           minHeight: 350,
                           maxHeight: 700,
@@ -624,7 +689,10 @@ export default function LeadershipPage() {
                           style={{ pointerEvents: "none" }}
                         />
                       </div>
-                      <VideoCarousel />
+                      <div className="mt-3 text-gray-600 text-xs font-[family-name:var(--font-inter)] italic mb-2">
+                        Tip: Click on the images below for a closer look.
+                      </div>
+                    
                       <JanamImageCarousel
                         images={
                           Array.isArray(item.imageSrc)
@@ -639,9 +707,12 @@ export default function LeadershipPage() {
 
                   {item.id =="iris-national-science-fair-finalist" &&(
                    <div className="relative w-full h-0 overflow-hidden rounded-md" style={{ paddingTop: '56.25%' }}>
+                    <div className="mb-2 text-gray-600 text-sm font-[family-name:var(--font-inter)]">
+                      Scroll in the embedded presentation below to see more slides.
+                    </div>
                    <iframe
                      loading="lazy"
-                     className="absolute top-0 left-0 w-full h-full border-0 rounded-md"
+                     className="absolute top-0 left-0 w-full  h-full border-0 rounded-md"
                      src="https://www.canva.com/design/DAGeOH86NII/X3th3VpGAFR7zZ-Fd6wuSA/view?embed"
                      allowFullScreen
                      title="IRIS Biodegradable Leather – Presentation"
@@ -651,7 +722,10 @@ export default function LeadershipPage() {
 
                   {/* Show ImageCarousel if imageSrc exists */}
                   {item.imageSrc && item.id !== "janam" && item.id !== "editorial-board" && (
-                    <div className="flex items-center justify-center">
+                    <div className="flex flex-col items-center justify-center">
+                      <div className="mb-2 text-gray-600 text-xs font-[family-name:var(--font-inter)] italic">
+                        Click on the images to get a better idea.
+                      </div>
                       <ImageCarousel
                         images={
                           Array.isArray(item.imageSrc)
@@ -667,9 +741,6 @@ export default function LeadershipPage() {
                   {/* Show Editorial Board PDF if id matches */}
                   {item.id === "editorial-board" && (
                     <div className="w-full flex flex-col items-center mt-2">
-                      {/* <p className="mb-2 text-gray-700 text-sm">
-                        Read the VISTA 2024 Editorial Board PDF below (opens inside the page):
-                      </p> */}
                       <PdfCarousel/>
                     </div>
                   )}

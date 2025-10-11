@@ -224,11 +224,11 @@ export default function CommunityPage() {
 
                 {/* PDF takes precedence over images: show PDF (and optionally carousel) ONLY when it exists for the item */}
                 {/* PDF takes precedence over images: show PDF ONLY when it exists for the item */}
-                {(item.id === "mitrajyothi" ||
+                {(
                   item.id === "protecther" ||
                   item.id === "welfare-access-cards") ? (
                   <div className="max-w-4xl lg:col-span-5 my-auto order-1 lg:order-2 pt-6 lg:pt-0 overflow-y-hidden">
-                    {item.id === "mitrajyothi" && (
+                    {/* {item.id === "mitrajyothi" && (
                       <iframe
                         src="/assets/mitrajyothi.pdf"
                         className="w-full h-full rounded-lg border overflow-y-hidden"
@@ -238,7 +238,7 @@ export default function CommunityPage() {
                         frameBorder={0}
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       />
-                    )}
+                    )} */}
 
                     {(item.id === "protecther" || item.id === "welfare-access-cards") && (
                       <iframe
@@ -251,6 +251,18 @@ export default function CommunityPage() {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       />
                     )}
+                  </div>
+                ) : item.id === "asha-niketan" ? (
+                  <div className="w-full md:w-[38%] flex items-center justify-center p-4 md:p-8">
+                    <div className="w-full aspect-[9/16] max-w-xs flex items-center justify-center">
+                      <iframe
+                        src="https://www.youtube.com/embed/m8XAuwmksQM"
+                        title="Asha Niketan Video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowFullScreen
+                        className="w-full h-full rounded-xl shadow-lg border"
+                      ></iframe>
+                    </div>
                   </div>
                 ) : (
                   images.length > 0 && (
