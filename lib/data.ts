@@ -154,6 +154,20 @@ export const portfolioData: PortfolioData = {
                         achievements: ["80+ research hours", "Conference selection", "Publication submission", "Award entry"],
                         link: "https://ijsser.org/"
                     },
+                    {
+                        "id": "sigma-xi-participation-2025",
+                        "title": "Certificate of Participation",
+                        "grade": "High School",
+                        "description": "Certificate for participation in a scientific research and innovation conference.",
+                        "details": "Presented at the **Innosphere: High School Research and Innovation Conference 2025**, organized by **Sigma Xi, The Scientific Research Honor Society**.",
+                        "category": "Scientific Research Conference",
+                        "imageSrc": "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760199832/51e5c7de-a8b0-483f-b482-ab935f1c19fc.png",
+                        "achievements": [
+                            "Certificate of Participation from Sigma Xi",
+                            "Presentation at Innosphere 2025"
+                        ],
+                        // "link": ""
+                    }
                 ]
             },
             summer: {
@@ -215,14 +229,23 @@ export const portfolioData: PortfolioData = {
                 category: "Social Innovation",
                 achievements: ["8,500+ workers reached", "8 languages", "60+ sites", "30+ legal cases", "7 states coverage"],
                 link: "https://legalsaathi.org",
-                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008688/legal_ttr2ku.png", 
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200132/WhatsApp_Image_2025-10-11_at_13.21.19_082b1944_kldek9.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008688/legal_ttr2ku.png", 
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1753881314/IMG-20250730-WA0008_g6miji.jpg", 
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1753881313/IMG-20250730-WA0009_jod3b2.jpg", 
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1753881313/IMG-20250730-WA0004_ztg9oe.jpg", 
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1753881313/IMG-20250730-WA0005_blsffn.jpg",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1753881313/IMG-20250730-WA0006_tmvo0y.jpg",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1753881313/IMG-20250730-WA0003_yb7zmt.jpg", 
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1753881314/IMG-20250730-WA0008_g6miji.jpg"]
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1753881314/IMG-20250730-WA0008_g6miji.jpg",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200440/3f70d0e5-6d51-4082-897b-009d359f4470.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200448/863eba0b-b2cb-42c7-abc7-cd4d0381218f.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200506/5ac9aaf8-035b-4c32-bd19-e2c5bd36bc93.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200516/c946ccac-0283-4051-880b-f721b989ee81.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200523/c7376551-ea3e-4fd2-aacd-9e28ea30284a.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200530/15295a7b-4fcf-4a1a-b8c7-ff52ca944806.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200540/6f4d9fb3-01e0-4dbf-97be-3cc3685e3fce.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200559/65f00247-6d24-45da-853f-1b9c7624b29f.png"
+                ]
             },
             {
                 id: "janam",
@@ -231,7 +254,7 @@ export const portfolioData: PortfolioData = {
                 description: "Transform waste shipping containers into mobile birthing centers, combining safety, dignity, and scale",
                 details: "On a rusted stretcher with paint flaking like ash, my aunt screamed through childbirth with no doctor in sight. Standing frozen in Jaipuria Government Hospital, I realized that sterile wards, steady hands, and safe births– the things I had taken for granted in Bangalore– were privileges reserved for a few. Later, talking to baijis who delivered babies on muddy floors or in hospital corridors, I saw how society normalizes its most profound injustices. That moment didn't make me despair– it made me act.\n\nJanam was born from that urgency. We transform waste shipping containers into mobile birthing centers, combining safety, dignity, and scale. One container is already operational in Mahapura, and two more are underway. Each is fully equipped, designed in collaboration with gynecologists, the National Health Mission, and Aastrika Foundation, and supported by local panchayats. Beyond infrastructure, I trained over 100 midwives, organized health camps for more than 1,500 villagers, and published illustrated pregnancy guides in both Hindi and English to dispel common myths. In partnership with ProtectHer and Suraksha, we conducted cervical vaccination drives and menstrual hygiene programs.\n\nOn the financial side, I raised over $ 12,000 through crowdfunding, CSR partnerships, and grants, managing the allocation of funds across construction, equipment, and educational materials to ensure sustainability.\n\nEvery container, every midwife trained, every rupee spent became more than a statistic– it became a lifeline. Janam taught me that confronting systemic inequity is not about charity; it's about designing solutions that are practical, scalable, and rooted in dignity. Seeing women access care once denied to them is the reason I fight to transform ideas into real-world change.",
                 category: "Healthcare Innovation",
-                imageSrc:[ "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760158408/4951a742-c51d-4c8f-bd74-d777e6ff9409.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760158402/792e0bf0-aa3a-48c8-a155-138e08880900.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307908/frame_0_06_22f_zzopbp.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307914/frame_0_13_10f_apucfz.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307915/frame_0_18_3f_fucwx2.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307871/frame_0_19_22f_hqb9nk.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307915/frame_0_30_18f_jqzige.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307885/frame_0_54_20f_ale2lk.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307909/frame_3_12_23f_d1rczo.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760113969/c574c622-fc10-426a-898d-d0dbcfea8419.png"],
+                imageSrc:[ "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760158408/4951a742-c51d-4c8f-bd74-d777e6ff9409.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760158402/792e0bf0-aa3a-48c8-a155-138e08880900.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307908/frame_0_06_22f_zzopbp.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200130/WhatsApp_Image_2025-10-11_at_13.21.43_733ded2d_rbn49r.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307914/frame_0_13_10f_apucfz.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307915/frame_0_18_3f_fucwx2.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307871/frame_0_19_22f_hqb9nk.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307915/frame_0_30_18f_jqzige.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307885/frame_0_54_20f_ale2lk.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307909/frame_3_12_23f_d1rczo.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760113969/c574c622-fc10-426a-898d-d0dbcfea8419.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760199843/94b8a23e-febc-4a1b-a2af-a8552e922dce.png"],
                 achievements: ["3 centers (1 completed)", "100+ midwives trained", "1,500+ villagers served", "$12,000+ raised"],
                 link: "https://janamindia.vercel.app",
                 instagram: "https://www.instagram.com/janamindia"
@@ -245,11 +268,11 @@ export const portfolioData: PortfolioData = {
                 category: "Tech Entrepreneurship",
                 achievements: ["400+ beta users", "App Store & Play Store live", "₹4 lakhs funding", "TYE accelerator selection"],
                 link: "https://apps.apple.com/in/app/teenlink-connect/id6746079280",
-                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759302338/TEENLink_3_vjzmqw.png",
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760199838/37620ac2-44da-493b-ae7d-ca213f6e9b45.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759302338/TEENLink_3_vjzmqw.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942972/abf60202-755d-40f3-8f41-d4f4dc394843.png",
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760163345/6070c0e7-fd9b-43c0-b0e8-d79b1675a355.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200278/c4862990-7f95-43ab-9e27-da094c356089.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942944/b65e1e81-9bf6-4b7c-b793-732fa10f9458.png",
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760163406/e7b719c1-794a-4fc9-aace-cf37cfcba814.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200285/a6840e09-5b95-4950-9750-ab5d65c7867a.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942921/789058cc-51b5-49df-b731-43a4677cecb1.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760163415/8afc94e3-e0e6-4344-ae09-41e4a177912a.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759942894/8410607b-4b66-4001-ad19-bb54189186a7.png",
@@ -270,7 +293,7 @@ export const portfolioData: PortfolioData = {
                 category: "Social Impact",
                 achievements: ["$140,000+ raised", "1,000+ participants", "Mental health support in Kota", "12-hour livestream"],
                 link: "https://www.youtube.com/watch?v=G_ya89GaXDg",
-                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253125/Kota_SFCC1_lviu66.jpg",  "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688589/30ece55b-e54e-494d-bee4-0a1476529c1c.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688654/c0c4b6e9-ad6a-428d-a539-80ae0a3e733c.png",  "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688747/86235179-bbad-4d74-af33-930444f78a98.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688784/540785fb-4605-4c1b-81d1-351d50c81629.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688836/85bddedc-b587-4944-bb75-c22dfd92759a.png"]
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200051/06d8be1d-1c5d-43ba-98db-4bdf2f98e8a3.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200256/da27db59-b1d8-453a-8d4c-cafe28a7d059.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200138/WhatsApp_Image_2025-10-11_at_13.20.14_d0fe68be_xkb01s.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253125/Kota_SFCC1_lviu66.jpg",  "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688589/30ece55b-e54e-494d-bee4-0a1476529c1c.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688654/c0c4b6e9-ad6a-428d-a539-80ae0a3e733c.png",  "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688747/86235179-bbad-4d74-af33-930444f78a98.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688784/540785fb-4605-4c1b-81d1-351d50c81629.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759688836/85bddedc-b587-4944-bb75-c22dfd92759a.png"]
             },
             {
                 id: "cortisolx",
@@ -281,7 +304,7 @@ export const portfolioData: PortfolioData = {
                 category: "Biotech & Health Tech",
                 achievements: ["1,000+ tests conducted", "Global survey", "$10,000 investment offer", "5-country reach"],
                 link: "https://cortisolx.in",
-                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114674/2e2096f5-c4c3-4f44-8ee6-8641786dcfa7.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114662/4038fc99-adb7-4321-bec5-68d03c8916e3.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114638/7f4b01d2-1a4b-45f6-9574-3be7efd4f886.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114626/b7e6efa2-e046-4bca-8ca1-7db45aa1d8dc.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114614/9b439bda-89f0-44fe-b2ae-dae841e1b02d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114605/61e04a16-d0cb-456e-a549-8dcc0f44873d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114592/bd9cdf98-039c-4e59-b2d8-04c19e6c37b9.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114579/a40bc024-3639-4d96-811b-b236cf9fc91d.png",""]
+                imageSrc: [ "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200121/WhatsApp_Image_2025-10-11_at_13.25.27_8ace029c_q3rwx3.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200042/2c938804-f287-41cb-82ed-a6fb21715e67.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114674/2e2096f5-c4c3-4f44-8ee6-8641786dcfa7.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114662/4038fc99-adb7-4321-bec5-68d03c8916e3.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114638/7f4b01d2-1a4b-45f6-9574-3be7efd4f886.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114626/b7e6efa2-e046-4bca-8ca1-7db45aa1d8dc.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114614/9b439bda-89f0-44fe-b2ae-dae841e1b02d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114605/61e04a16-d0cb-456e-a549-8dcc0f44873d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114592/bd9cdf98-039c-4e59-b2d8-04c19e6c37b9.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114579/a40bc024-3639-4d96-811b-b236cf9fc91d.png",""]
             },
             {
                 id: "internlectual",
@@ -303,7 +326,7 @@ export const portfolioData: PortfolioData = {
                 category: "Media & Advocacy",
                 achievements: ["Podcast founder", "Government partnership", "Support groups facilitated", "Weekly sessions"],
                 link: "https://www.youtube.com/@ReshapingSociety",
-                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258538/Reshaping_Society_vrh7he.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689215/8970a709-f434-4f8c-a033-623ee5b189bc.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689327/42c14bee-be47-4c9d-8472-7df2ff1797c3.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689419/950bc5c4-4fae-4d61-8705-4ff20e8e219c.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689460/77258afa-3120-4646-bc40-87794c5ff32c.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760009972/7b98f911-eeb8-439d-a43e-6a0d246f0cef.png"]
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200110/WhatsApp_Image_2025-10-11_at_13.24.42_fb7280a4_fpbks8.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200303/88556cf7-a678-47cf-a07c-c6ba650d7a16.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258538/Reshaping_Society_vrh7he.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689215/8970a709-f434-4f8c-a033-623ee5b189bc.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689327/42c14bee-be47-4c9d-8472-7df2ff1797c3.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689419/950bc5c4-4fae-4d61-8705-4ff20e8e219c.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689460/77258afa-3120-4646-bc40-87794c5ff32c.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760009972/7b98f911-eeb8-439d-a43e-6a0d246f0cef.png"]
             },
             {
                 id: "school-captain",
@@ -313,7 +336,7 @@ export const portfolioData: PortfolioData = {
                 details: "But the real work of leadership often began after hours — in hostel corridors, during late-night conversations with homesick juniors, or in quiet corners, where they helped outline essays and plan extracurricular projects. I spent evenings mentoring students on everything from MUN speeches to balancing academics with self-care. Over time, I realized that the most meaningful influence isn't in giving directions, but in listening — helping others find their own footing rather than walking them through it.\n\nLeadership, I learned, isn't about being in charge; it's about being someone others trust when things feel uncertain. Authority isn't earned through a badge, but through consistency, empathy, and showing up even when no one's watching.",
                 category: "Institutional Leadership",
                 achievements: ["2,400 students led", "TEDx curation", "Finance club oversight", "56 juniors mentored"],
-                // imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png",
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760199846/bc506ff4-4eca-4924-b895-12c7390e13bd.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200002/0001_qlizk1.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200023/5f54a791-9e5c-48e6-a452-ab9e8da5d096.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200036/96404130-8cb0-4315-93df-22e31b35e248.png"],
                 link: "https://jpischool.com/"
             },
             {
@@ -325,7 +348,7 @@ export const portfolioData: PortfolioData = {
                 category: "Club Leadership",
                 achievements: ["Newsletter published", "Budgeting website", "Workshops for 300+ women", "150+ competition participants"],
                 imageSrc: [
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124146/564ad808-0ec5-49ef-951a-fc4dd6493123.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124198/eb747039-57be-4057-b6bd-abd03ff4ab55.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124241/b96d42ae-900f-4041-b449-37dbc1376d03.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124304/93cf4ee1-9ade-41db-8389-3d7233ad3eb3.png"
+                  "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200135/WhatsApp_Image_2025-10-11_at_13.20.58_ff5743ad_i2hl9p.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200590/daeac1b1-77c7-43fc-92f7-005a07be0383.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200598/6d7366b7-74c9-4c94-9659-5b06848a84a9.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200262/05c7a219-7590-49a3-a509-059afe6cf82c.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124146/564ad808-0ec5-49ef-951a-fc4dd6493123.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200352/e6830a45-ed12-45e4-8264-cf4a0a040d61.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124198/eb747039-57be-4057-b6bd-abd03ff4ab55.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124241/b96d42ae-900f-4041-b449-37dbc1376d03.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124304/93cf4ee1-9ade-41db-8389-3d7233ad3eb3.png"
                 ],
                 link: "https://www.instagram.com/jpisfinance?igsh=MTd2MnduNDJyN25sMQ=="
             },
@@ -349,7 +372,7 @@ export const portfolioData: PortfolioData = {
                 details: "As part of the curation team for TEDx JPIS, I scouted and coordinated speakers, shaped panel themes, and handled event logistics. The event became a platform for showcasing student-led innovation and broader ideas worth spreading.\n\nBeing behind the scenes at TEDx taught me that significant events are not about the spotlight but about the quiet rigor of planning: aligning schedules, managing personalities, and ensuring the coherence of the narrative arc. It was a masterclass in how small details can have a significant impact.",
                 category: "Event Management",
                 achievements: ["Speaker curation", "Event logistics", "Student innovation showcase", "Panel themes"],
-                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124556/560d1916-97d9-4c94-828d-0a5f22363d91.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124612/d41190ad-6cfd-4f6f-bd89-09c19736b0a9.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760127855/2bd73927-7f1c-4ff5-bcc6-824f859a35cf.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760127862/7037e647-38e1-4937-ad77-8dcca9250044.png"],
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200104/WhatsApp_Image_2025-10-11_at_13.28.05_613b7ab8_hjmgid.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124556/560d1916-97d9-4c94-828d-0a5f22363d91.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124612/d41190ad-6cfd-4f6f-bd89-09c19736b0a9.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760127855/2bd73927-7f1c-4ff5-bcc6-824f859a35cf.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760127862/7037e647-38e1-4937-ad77-8dcca9250044.png"],
                 link: "https://www.tedxyouthjpis.com/"
             },
             {
@@ -411,8 +434,8 @@ export const portfolioData: PortfolioData = {
                 details: "In Grades 9 and 10, I captained my school's hockey team and represented Karnataka at the state level. Practices demanded 8 hours a week; competitions required resilience under pressure and team cohesion.\n\nHockey taught me lessons that textbooks never could: how leadership on the field requires split-second decision-making, how losses build more character than wins, and how individual skill matters only when it serves the team. Those lessons still echo in how I lead projects today.",
                 category: "Sports",
                 achievements: ["School team captain", "State-level player", "8 hours weekly practice", "Leadership under pressure"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Leadership_Activities_nsnvgv.png",
-                link: "https://www.hockeyindia.org/"
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200028/29edfc26-6b76-44cb-b9ef-c56bdc919c26.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200363/9362859c-2114-447f-b617-3fa28584b9e1.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200371/b04277cc-fa0e-4172-8df7-01396b0bbd92.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200314/b49707b6-9b70-4e41-a7a4-2ed7dc6b8157.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200324/c93edc1d-1390-4040-8e6f-04bd0e9e99f0.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200330/c9df9501-3d7c-4c8b-90ce-42e919f77c5d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200336/979f79b0-c2fc-4e5f-a225-72d1b80b9170.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200344/c7558260-19ca-4415-8794-9cef8ece63ea.png"],
+                // link: "https://www.hockeyindia.org/"
             },
             {
                 id: "school-swap-station",
@@ -436,6 +459,7 @@ export const portfolioData: PortfolioData = {
                 achievements: ["8,000+ applicants", "Original prototype", "Entrepreneurial approach", "National recognition"],
                 imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759299129/IRIS_1_sugz6f.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760160287/ed523813-b984-417e-b007-0061efa31dd3.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200408/717a528b-1132-4b25-ac6c-1e1b6c0f6abe.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760160303/c43f3c91-4087-4264-a8bc-dd4e0971cded.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760160358/96dadbe4-6964-4322-a4f2-6804f38f5469.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760160370/51f4008f-e034-4d00-9bca-9415c0baaebb.png",
@@ -500,7 +524,7 @@ export const portfolioData: PortfolioData = {
                 details: "Over the past few months, I had the privilege of volunteering at Asha Niketan, a home for individuals with Down syndrome, bipolar disorder, intellectual disabilities, and elderly residents often overlooked by society.\n\nWhat began as a simple desire to give back transformed into one of the most meaningful journeys I've experienced. I organized multi-faith prayer circles, led karaoke nights and pizza parties, and ran wellness sessions—spaces where joy, resilience, and connection emerged in the most unexpected moments. I also created handmade greeting cards and candles, providing both income and dignity to their makers.\n\nBeyond activities, I spent hours listening to residents' life stories, sharing laughs over board games, and holding space for silence when words weren't needed. Through these experiences, I learned that empathy isn't just kindness—it's commitment; inclusion isn't just access—it's dignity.\n\nVolunteering at Asha Niketan reminded me that impact isn't always loud—often, it's quiet, consistent, and deeply human. The lessons I gained continue to guide my approach to service, leadership, and community engagement.",
                 category: "Social Services",
                 achievements: ["Inclusive spaces created", "Income-generating crafts", "Multi-faith circles", "Wellness sessions"],
-                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760007127/eb3bf492-4d2b-499e-b110-510c446395e6.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760007211/a1bd512a-a51f-4e8d-831a-3d47e9cb4fdc.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760007268/341a3a17-24a4-4313-8fc6-f9a794f2977d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760007308/6b070aa0-40c3-45be-81e1-079ebdfe1700.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760007308/6b070aa0-40c3-45be-81e1-079ebdfe1700.png"],
+                imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760007127/eb3bf492-4d2b-499e-b110-510c446395e6.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200230/3cc92ede-183b-44e6-942c-994bad93d8f4.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760007268/341a3a17-24a4-4313-8fc6-f9a794f2977d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200237/ea874592-2fc9-4467-b9fe-a1bd0c91b5fb.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200214/9199e123-9b0d-433c-be75-478b8a73214a.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200220/77ff8f79-2f3b-4112-90ee-6185affc50e9.png"],
                 link: "https://www.linkedin.com/posts/eva-bothra-56650325a_over-the-past-few-months-i-had-the-privilege-activity-7342855198857404416-M-5l?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfMsd4ButU3MKvKyp1BTqPv6UHrURqhH_Q"
             },
             {
@@ -545,6 +569,7 @@ export const portfolioData: PortfolioData = {
                 imageSrc: [
                     // "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159422/f083ed91-98d4-4b11-8d28-f12f212b7e89.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159254/3637ada8-3bf3-4fd6-918b-1171c3b8c63f.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200118/WhatsApp_Image_2025-10-11_at_13.22.21_58b7f48d_ljurgr.jpg",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159145/788a2499-674c-4b58-a80d-9ed305141544.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159177/8f1803f3-8c81-4926-835e-2cf604e9252a.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159272/b53eba72-58a1-406e-b941-2c9e7faa7cf3.png",
@@ -552,7 +577,7 @@ export const portfolioData: PortfolioData = {
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159284/2af12214-89f7-49ec-98f8-6f2b1dda07dd.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159378/5c7bb605-e372-4805-8387-e342f1d05f65.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159429/8563421f-0c2a-4911-b993-f5cc3c9b931a.png",
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159434/471dce42-54c9-4591-8b4d-e31229bc6c24.png"],
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159434/471dce42-54c9-4591-8b4d-e31229bc6c24.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200045/666ddfc7-3039-4439-b794-8f4169b18e4e.png"],
                 link: "https://www.globalgiving.org/pfil/55418/projdoc.pdf"
             },
             {
@@ -590,6 +615,7 @@ export const portfolioData: PortfolioData = {
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760158639/9e6d5e2d-6421-4c37-9d26-b7bb0edc53a6.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760158579/69e4dfb9-58f4-468f-80bc-d768e3170461.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120484/7328fa2d-b172-41c6-a295-e4e5a046af7b.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200201/c675bb88-fd0f-4970-bec8-df81ea69adc7.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120515/92e3a024-1bbd-4223-b0fd-14bbded6b6a8.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120537/98f780e9-3bae-4b84-9618-314b04a1185d.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120572/37a1884a-4c52-461b-86cc-93d3c993d113.png",
@@ -762,7 +788,7 @@ export const portfolioData: PortfolioData = {
                 category: "International Grant",
                 achievements: ["Global Top 5", "350+ applicants", "$2,000 funding", "Social innovation"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760121225/7d27928d-9f3f-4284-9496-6a125ef8a1ba.png",
-                link: "https://www.linkedin.com/posts/edge-city-live_announcing-the-first-cohort-of-inflection-activity-7344092564620275712-Ev_2/"
+                link: "https://edgeesmeralda2025.substack.com/p/announcing-our-first-inflection-grantees"
             },
             {
                 id: "health-ministry-recognition",
@@ -853,7 +879,7 @@ export const portfolioData: PortfolioData = {
                 category: "Media & Advocacy",
                 achievements: ["Weekly episodes", "Government partnership", "Support groups", "Survivor advocacy"],
                 link: "www.youtube.com/@ReshapingSociety",
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760009972/7b98f911-eeb8-439d-a43e-6a0d246f0cef.png"
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200303/88556cf7-a678-47cf-a07c-c6ba650d7a16.png"
             }
         ]
     },
@@ -878,7 +904,7 @@ export const portfolioData: PortfolioData = {
                 details: "In the stillness of a Jaipur winter, I spent ten days in silence — no phone, no books, no conversation, and nearly 1,400 hours of meditation under the guidance of Dr. Renuka Goel, my Vipassana teacher. It was my first sustained experience of complete inward observation, and perhaps the first time I understood the discipline of simply being.\n\nVipassana, as taught in the tradition of S. N. Goenka, is a technique of insight — a systematic training of awareness through continuous attention to bodily sensations. From 4:00 a.m. until 9:00 p.m., the day unfolded in complete silence. Ten hours of seated meditation, broken only by brief meals and rest, created a rhythm that dissolved the usual boundaries between body and mind. With no clocks, no mirrors, and no eye contact, time lost its familiar weight; what remained was the cycle of breath and the movement of attention.\n\nEach session began with ānāpāna, observing the breath as it flows in and out — not controlling it, just noticing. Gradually, the practice deepened into Vipassana: scanning the body from head to toe, observing sensations — heat, tingling, tightness, calm — without reaction or preference. The simplicity is deceptive. To sit perfectly still for an hour is to watch the mind's restlessness laid bare. Yet in that repetition lies the heart of the practice: equanimity.\n\nDr. Goel often reminded us that Vipassana isn't about escape or transcendence, but about seeing reality as it is — impermanent, interconnected, and constantly changing. Over days, I began to feel that truth not as a concept, but as an experience. A sensation would arise, crest, and dissolve — like thoughts, emotions, and memories themselves. Nothing stayed fixed.\n\nWhat Vipassana offered was not peace in the sentimental sense, but clarity — a quietness that isn't the absence of noise but the ability to stay undisturbed within it. The silence became a mirror, reflecting how every moment, no matter how fleeting, carries its own completeness.\n\nWhen the ten days ended, the world outside felt louder but lighter. Vipassana didn't change my circumstances; it changed my relationship to them. It taught me that awareness is not passive — it's active presence. To observe without resistance is to understand, and to understand is to begin transforming.",
                 category: "Meditation & Mindfulness",
                 achievements: ["10 days in silence", "1,400+ meditation hours", "Complete inward observation", "Equanimity practice"],
-                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008687/Reflections_g1ubec.png",
+                imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200032/a6f4f124-9ff2-4c5c-91d4-a4450b3fc2dd.png",
                 link: ""
             }
         ]
@@ -938,7 +964,7 @@ export const portfolioData: PortfolioData = {
             key: 'reshaping-society',
             title: 'Reshaping Society – Podcast',
             // imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258538/Reshaping_Society_vrh7he.png',
-            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1760009972/7b98f911-eeb8-439d-a43e-6a0d246f0cef.png',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200303/88556cf7-a678-47cf-a07c-c6ba650d7a16.png',
             href: '/youtube',
             external: false
         }

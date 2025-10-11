@@ -35,54 +35,144 @@ const lora = Lora({
   weight: ['400', '500', '600', '700']
 })
 
+/**
+ * A single grid item in the carousel, can be image or video.
+ */
+function CarouselGridItem({
+  src,
+  type,
+  alt,
+  onOpen,
+}: {
+  src: string
+  type: "image" | "video"
+  alt: string
+  onOpen: (src: string) => void
+}) {
+  if (type === "video") {
+    return (
+      <div className="relative overflow-hidden rounded-xl bg-gray-100 group hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-400/50 transition-all duration-200">
+        <video
+          src={src}
+          controls
+          className="object-cover w-full h-full rounded-xl bg-black"
+          style={{ aspectRatio: "9/14", width: "100%", height: "100%" }}
+        />
+        <div className="absolute inset-0 flex items-center justify-center transition bg-black/0 group-hover:bg-black/10" />
+      </div>
+    )
+  }
+  // type === "image"
+  return (
+    <button
+      type="button"
+      onClick={() => onOpen(src)}
+      className="relative overflow-hidden rounded-xl bg-gray-100 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-400/50 transition-all duration-200"
+    >
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+        sizes="(max-width: 640px) 60vw, (max-width: 1024px) 30vw, (max-width: 1280px) 20vw, 15vw"
+      />
+    </button>
+  )
+}
+
+/**
+ * Image carousel that can optionally append a video as the last item (for certain ids).
+ * To inject a video, just pass `video` prop with the video URL and it'll show after images.
+ */
 function ImageCarousel({
   images,
   title,
   onOpen,
+  video,
 }: {
   images: string[]
   title: string
   onOpen: (src: string) => void
+  video?: string
 }) {
-  const [current, setCurrent] = useState(0)
+  // Add last item as a video if video is passed
+  const carouselItems: { src: string; type: "image" | "video" }[] =
+    video
+      ? [
+          ...images.map((src) => ({ src, type: "image" as const })),
+          { src: video, type: "video" as const }
+        ]
+      : images.map((src) => ({ src, type: "image" as const }))
 
-  // Auto-slide
-  useEffect(() => {
-    if (images.length <= 4) return
-    const id = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % Math.ceil(images.length / 4))
-    }, 4000)
-    return () => clearInterval(id)
-  }, [images])
-
-  // Group into slides of 4
-  const slides: string[][] = []
-  for (let i = 0; i < images.length; i += 4) {
-    slides.push(images.slice(i, i + 4))
+  // Group into slides of 4 (whether image or video)
+  const slides: { src: string; type: "image" | "video" }[][] = []
+  for (let i = 0; i < carouselItems.length; i += 4) {
+    slides.push(carouselItems.slice(i, i + 4))
   }
   const total = slides.length
+
+  const [current, setCurrent] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
+  const groupRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (carouselItems.length <= 4) return
+    if (isPaused) {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current)
+        intervalRef.current = null
+      }
+      return
+    }
+    intervalRef.current = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % total)
+    }, 4000)
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current)
+        intervalRef.current = null
+      }
+    }
+  }, [carouselItems.length, total, isPaused])
+
+  // stop autoplay when cursor is inside carousel
+  useEffect(() => {
+    const node = groupRef.current
+    if (!node) return
+
+    const handleMouseEnter = () => setIsPaused(true)
+    const handleMouseLeave = () => setIsPaused(false)
+    const handleFocusIn = () => setIsPaused(true)
+    const handleFocusOut = () => setIsPaused(false)
+    node.addEventListener("mouseenter", handleMouseEnter)
+    node.addEventListener("mouseleave", handleMouseLeave)
+    node.addEventListener("focusin", handleFocusIn)
+    node.addEventListener("focusout", handleFocusOut)
+
+    return () => {
+      node.removeEventListener("mouseenter", handleMouseEnter)
+      node.removeEventListener("mouseleave", handleMouseLeave)
+      node.removeEventListener("focusin", handleFocusIn)
+      node.removeEventListener("focusout", handleFocusOut)
+    }
+  }, [])
 
   const goPrev = () => setCurrent((prev) => (prev - 1 + total) % total)
   const goNext = () => setCurrent((prev) => (prev + 1) % total)
 
   return (
-    <div className="w-full relative group">
+    <div className="w-full relative group" ref={groupRef} tabIndex={-1}>
       <div className="relative w-full aspect-[9/14] overflow-hidden rounded-2xl bg-gray-50">
         <div className="absolute inset-0 grid grid-cols-2 gap-2 p-2 sm:gap-2.5 sm:p-2.5">
-          {(slides[current] ?? [images[0]]).map((src, i) => (
-            <button
+          {(slides[current] ?? [carouselItems[0]]).map((item, i) => (
+            <CarouselGridItem
               key={i}
-              onClick={() => onOpen(src)}
-              className="relative overflow-hidden rounded-xl bg-gray-100 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-400/50 transition-all duration-200"
-            >
-              <Image
-                src={src}
-                alt={`${title} - image ${i + 1}`}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                sizes="(max-width: 640px) 60vw, (max-width: 1024px) 30vw, (max-width: 1280px) 20vw, 15vw"
-              />
-            </button>
+              src={item.src}
+              type={item.type}
+              alt={`${title} - image ${i + 1}`}
+              onOpen={item.type === "image" ? onOpen : () => {}}
+            />
           ))}
 
           {/* Fill empty slots to maintain 2×2 grid */}
@@ -130,6 +220,7 @@ function ImageCarousel({
     </div>
   )
 }
+
 function JanamImageCarousel({
   images,
   title,
@@ -140,15 +231,48 @@ function JanamImageCarousel({
   onOpen: (src: string) => void
 }) {
   const [current, setCurrent] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
+  const groupRef = useRef<HTMLDivElement>(null)
+  const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
-  // Auto-slide
   useEffect(() => {
     if (images.length <= 4) return
-    const id = setInterval(() => {
+    if (isPaused) {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current)
+        intervalRef.current = null
+      }
+      return
+    }
+    intervalRef.current = setInterval(() => {
       setCurrent((prev) => (prev + 1) % Math.ceil(images.length / 4))
     }, 4000)
-    return () => clearInterval(id)
-  }, [images])
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current)
+        intervalRef.current = null
+      }
+    }
+  }, [images, isPaused])
+
+  useEffect(() => {
+    const node = groupRef.current
+    if (!node) return
+    const handleMouseEnter = () => setIsPaused(true)
+    const handleMouseLeave = () => setIsPaused(false)
+    const handleFocusIn = () => setIsPaused(true)
+    const handleFocusOut = () => setIsPaused(false)
+    node.addEventListener("mouseenter", handleMouseEnter)
+    node.addEventListener("mouseleave", handleMouseLeave)
+    node.addEventListener("focusin", handleFocusIn)
+    node.addEventListener("focusout", handleFocusOut)
+    return () => {
+      node.removeEventListener("mouseenter", handleMouseEnter)
+      node.removeEventListener("mouseleave", handleMouseLeave)
+      node.removeEventListener("focusin", handleFocusIn)
+      node.removeEventListener("focusout", handleFocusOut)
+    }
+  }, [])
 
   // Group into slides of 4
   const slides: string[][] = []
@@ -161,7 +285,7 @@ function JanamImageCarousel({
   const goNext = () => setCurrent((prev) => (prev + 1) % total)
 
   return (
-    <div className="w-full relative group">
+    <div className="w-full relative group" ref={groupRef} tabIndex={-1}>
       <div className="relative w-full aspect-[9/14] overflow-hidden rounded-xl bg-gray-50">
         <div className="absolute inset-0 grid grid-cols-2 gap-1.5 p-1.5 sm:gap-2 sm:p-2">
           {(slides[current] ?? [images[0]]).map((src, i) => (
@@ -396,8 +520,6 @@ function PdfCarousel() {
   );
 }
 
-
-
 function ExpandableDetails({ details, maxHeight = 300 }: { details: string; maxHeight?: number }) {
   const [expanded, setExpanded] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
@@ -456,13 +578,18 @@ function ExpandableDetails({ details, maxHeight = 300 }: { details: string; maxH
   );
 }
 
-
-
-
-
 export default function LeadershipPage() {
   const data = portfolioData.leadership
   const [fullscreenImage, setFullscreenImage] = useState<string | null>(null)
+
+  // Map of item.id to video link for the ImageCarousel (extendable for new items)
+  const imageCarouselVideoMap: Record<string, string> = {
+    "teenlink": "https://res.cloudinary.com/dqv4mucxh/video/upload/v1760200070/WhatsApp_Video_2025-10-11_at_13.29.26_b316050e_es9i8m.mp4",
+    "sfcc": "https://res.cloudinary.com/dqv4mucxh/video/upload/v1760200115/WhatsApp_Video_2025-10-11_at_13.25.44_d29a715c_mnpdam.mp4",
+    "cortisolx": "https://res.cloudinary.com/dqv4mucxh/video/upload/v1760200124/WhatsApp_Video_2025-10-11_at_13.25.05_359cb289_jgpyvk.mp4",
+    "finance-club":"https://res.cloudinary.com/dqv4mucxh/video/upload/v1760200150/WhatsApp_Video_2025-10-11_at_13.20.04_f02ff77a_wp8ebc.mp4"
+    // Add more ids and videos here as needed
+  }
 
   return (
     <main className={`min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 ${inter.variable} ${playfair.variable} ${poppins.variable} ${lora.variable}`}>
@@ -520,7 +647,6 @@ export default function LeadershipPage() {
             <article className="relative">
               <div className="grid lg:grid-cols-12 gap-10 md:gap-12 items-start">
                 {/* Text content - left */}
-
                 {item.id === "jpis-science-fair" || item.id === "school-captain" ? (
                   <div className="col-span-12 space-y-6 order-2 lg:order-1 text-left">
                     <div>
@@ -533,9 +659,7 @@ export default function LeadershipPage() {
                         </span>
                       )}
                     </div>
-
                     <p className="text-lg md:text-xl text-gray-700 leading-[1.8] font-normal font-[family-name:var(--font-lora)] text-left">{item.description}</p>
-
                     {item.achievements?.length > 0 && (
                       <div className="flex flex-wrap gap-2 pt-4">
                         {item.achievements.map((a, i) => (
@@ -579,9 +703,7 @@ export default function LeadershipPage() {
                       </div>
                     )}
 
-    
-
-   {item.details && (
+                    {item.details && (
                       <div className="pt-4 space-y-4 border-l-4 border-blue-100 pl-6">
                         {item.details.split("\n\n").map((p, i) => (
                           <p key={i} className="text-base md:text-lg text-gray-700 leading-[1.8] font-normal font-[family-name:var(--font-lora)] text-justify">
@@ -649,10 +771,10 @@ export default function LeadershipPage() {
                       </div>
                     )}
 
-                  {item.details && <ExpandableDetails details={item.details} maxHeight={300} />}
-                  {item.id ==="janam" &&(
+                    {item.details && <ExpandableDetails details={item.details} maxHeight={300} />}
+                    {item.id ==="janam" &&(
                       <VideoCarousel />
-                  )}
+                    )}
                   </div>
                 )}
                 {/* Images and/or PDF - right */}
@@ -660,7 +782,6 @@ export default function LeadershipPage() {
                   {/* For Janam: show PDF and VideoCarousel */}
                   {item.id === "janam" && (
                     <div className="max-w-4xl w-full">
-                   
                       <div
                         className="w-full mb-12 rounded-lg border relative"
                         style={{
@@ -692,7 +813,6 @@ export default function LeadershipPage() {
                       <div className="mt-3 text-gray-600 text-xs font-[family-name:var(--font-inter)] italic mb-2">
                         Tip: Click on the images below for a closer look.
                       </div>
-                    
                       <JanamImageCarousel
                         images={
                           Array.isArray(item.imageSrc)
@@ -734,6 +854,10 @@ export default function LeadershipPage() {
                         }
                         title={item.title}
                         onOpen={setFullscreenImage}
+                        // Inject video carousel for ids in imageCarouselVideoMap
+                        {...(imageCarouselVideoMap[item.id]
+                          ? { video: imageCarouselVideoMap[item.id] }
+                          : {})}
                       />
                     </div>
                   )}
