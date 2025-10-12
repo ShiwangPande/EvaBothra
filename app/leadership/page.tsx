@@ -639,6 +639,7 @@ export default function LeadershipPage() {
           <FadeInSection delay={100}>
             <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed font-[family-name:var(--font-inter)]">
               {data.description}
+              
             </p>
           </FadeInSection>
           {/* Stats */}
@@ -704,6 +705,7 @@ export default function LeadershipPage() {
                             {a}
                           </span>
                         ))}
+                        
                       </div>
                     )}
 
@@ -760,6 +762,17 @@ export default function LeadershipPage() {
                     </div>
 
                     <p className="text-lg md:text-xl text-gray-700 leading-[1.8] font-normal font-[family-name:var(--font-lora)] text-justify">{item.description}</p>
+                    {item.id === "finance-club" && (
+    <a
+      href="https://www.finstitute.co/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block ml-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#007B78] to-teal-400 text-gray-100 font-bold text-base shadow border border-black hover:from-teal-400 hover:to-[#007B78] hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#007B78]/40  tracking-wide scale-105 hover:scale-110"
+      style={{ fontFamily: "var(--font-inter)" }}
+    >
+      💡 Check out the budgeting site →
+    </a>
+  )}
 
                     {item.achievements?.length > 0 && (
                       <div className="flex flex-wrap gap-2 pt-4">
