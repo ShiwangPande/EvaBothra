@@ -344,11 +344,7 @@ export const portfolioData: PortfolioData = {
                 title: "Finance Club – President",
                 grade: "Current",
                 description: "Revitalized JPIS's Finance Club into a hub of dialogue and practice",
-                details: `I revitalized JPIS's Finance Club into a thriving hub of dialogue and practice. Under my leadership, the club hosted weekly sessions, published a 25-issue newsletter on financial trends, and coded a budgeting website for students (<a href="https://www.finstitute.co/" target="_blank" rel="noopener noreferrer" style="color: #2563eb; text-decoration: underline;">check out the budgeting website at finstitute.co</a>).\n\n
-                
-Our flagship initiatives included "Future of Finance," a virtual series featuring experts such as ISB's N.V. Kumaraguru, and Invested, a mock investment competition that drew over 150 participants nationwide. We also partnered with DhanSarthi to lead financial literacy workshops for over 300 rural women, teaching them banking and savings practices.\n\n
-
-The club convinced me that finance education isn't elitist — it's liberating. Whether through stock simulations or real women opening their first bank accounts, I saw finance as a language of empowerment.`,
+                details: "I revitalized JPIS's Finance Club into a thriving hub of dialogue and practice. Under my leadership, the club hosted weekly sessions, published a 25-issue newsletter on financial trends, and coded a budgeting website for students (check out the budgeting website at https://www.finstitute.co/).\n\nOur flagship initiatives included \"Future of Finance,\" a virtual series featuring experts such as ISB's N.V. Kumaraguru, and Invested, a mock investment competition that drew over 150 participants nationwide. We also partnered with DhanSarthi to lead financial literacy workshops for over 300 rural women, teaching them banking and savings practices.\n\nThe club convinced me that finance education isn't elitist — it's liberating. Whether through stock simulations or real women opening their first bank accounts, I saw finance as a language of empowerment.",
                 category: "Club Leadership",
                 achievements: ["Newsletter published", "Budgeting website", "Workshops for 300+ women", "150+ competition participants"],
                 imageSrc: [
