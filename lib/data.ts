@@ -350,7 +350,7 @@ export const portfolioData: PortfolioData = {
                 imageSrc: [
                   "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200135/WhatsApp_Image_2025-10-11_at_13.20.58_ff5743ad_i2hl9p.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200590/daeac1b1-77c7-43fc-92f7-005a07be0383.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200598/6d7366b7-74c9-4c94-9659-5b06848a84a9.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200262/05c7a219-7590-49a3-a509-059afe6cf82c.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124146/564ad808-0ec5-49ef-951a-fc4dd6493123.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200352/e6830a45-ed12-45e4-8264-cf4a0a040d61.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124198/eb747039-57be-4057-b6bd-abd03ff4ab55.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124241/b96d42ae-900f-4041-b449-37dbc1376d03.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124304/93cf4ee1-9ade-41db-8389-3d7233ad3eb3.png"
                 ],
-                link: "https://www.instagram.com/jpisfinance?igsh=MTd2MnduNDJyN25sMQ=="
+                link: "https://www.finstitute.co/"
             },
             {
                 id: "dhan-sarthi",
