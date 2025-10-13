@@ -532,7 +532,7 @@ export const portfolioData: PortfolioData = {
                 ],
                 imageSrc: [
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200196/7b42741c-3286-4809-b08a-778bb558073b.png",
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200188/86cc9b6c-9d80-4963-a507-7a4c55c6df75.png"
+                    // "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200188/86cc9b6c-9d80-4963-a507-7a4c55c6df75.png"
                 ],
             }
             
