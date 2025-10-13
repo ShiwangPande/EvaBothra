@@ -172,7 +172,7 @@ function ImageCarousel({
   return (
     <div className="w-full relative group" ref={groupRef} tabIndex={-1}>
       <div className="relative w-full aspect-[9/14] overflow-hidden rounded-2xl bg-gray-50">
-        {slides[current].type === "video" ? (
+      {slides[current].type === "video" ? (
           // Video slide (full, not in grid)
           <div className="absolute inset-0 flex items-center justify-center p-2 sm:p-4">
             <video
@@ -186,30 +186,54 @@ function ImageCarousel({
             />
           </div>
         ) : (
-          // Image grid slide (same as previous, up to 4 images in a grid)
-          <div className="absolute inset-0 grid grid-cols-2 gap-2 p-2 sm:gap-2.5 sm:p-2.5">
-            {(slides[current].images.length ? slides[current].images : [images[0]]).map((src, i) => (
+          // Image grid slide (same as previous, up to 4 images in a grid) OR single image if only one
+          slides[current].images.length === 1 ? (
+            // Single image display (full, centered)
+            <div className="absolute inset-0 flex items-center justify-center p-2 sm:p-4">
               <button
-                key={i}
                 type="button"
-                onClick={() => onOpen(src)}
-                className="relative overflow-hidden rounded-xl bg-gray-100 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-400/50 transition-all duration-200"
+                onClick={() => {
+                  if (slides[current].type === "images" && Array.isArray(slides[current].images)) {
+                    onOpen(slides[current].images[0])
+                  }
+                }}
+                className="relative w-full h-full overflow-hidden rounded-2xl bg-gray-100 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-400/50 transition-all duration-200"
               >
                 <Image
-                  src={src}
-                  alt={`${title} - image ${i + 1}`}
+                  src={slides[current].type === "images" && Array.isArray(slides[current].images) ? slides[current].images[0] : ""}
+                  alt={`${title} - image 1`}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-                  sizes="(max-width: 640px) 60vw, (max-width: 1024px) 30vw, (max-width: 1280px) 20vw, 15vw"
+                  sizes="(max-width: 640px) 90vw, (max-width: 1024px) 50vw, 40vw"
                 />
               </button>
-            ))}
+            </div>
+          ) : (
+            // Grid layout for multiple images
+            <div className="absolute inset-0 grid grid-cols-2 gap-2 p-2 sm:gap-2.5 sm:p-2.5">
+              {(slides[current].images.length ? slides[current].images : [images[0]]).map((src, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => onOpen(src)}
+                  className="relative overflow-hidden rounded-xl bg-gray-100 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-400/50 transition-all duration-200"
+                >
+                  <Image
+                    src={src}
+                    alt={`${title} - image ${i + 1}`}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    sizes="(max-width: 640px) 60vw, (max-width: 1024px) 30vw, (max-width: 1280px) 20vw, 15vw"
+                  />
+                </button>
+              ))}
 
-            {/* Fill empty slots to maintain 2×2 grid */}
-            {Array.from({ length: Math.max(0, 4 - slides[current].images.length) }).map((_, i) => (
-              <div key={`empty-${i}`} className="bg-gray-100 rounded-xl" />
-            ))}
-          </div>
+              {/* Fill empty slots to maintain 2×2 grid */}
+              {Array.from({ length: Math.max(0, 4 - slides[current].images.length) }).map((_, i) => (
+                <div key={`empty-${i}`} className="bg-gray-100 rounded-xl" />
+              ))}
+            </div>
+          )
         )}
 
         {/* Arrows */}
@@ -624,6 +648,8 @@ export default function LeadershipPage() {
 
   // The special IRIS image for 'iris-national-science-fair-finalist'
   const irisImageUrl = "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253136/IRISNational_kgkqwk.jpg";
+  // The special Ballet image for 'ballet-training'
+  const balletImageUrl = "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200196/7b42741c-3286-4809-b08a-778bb558073b.png";
 
   return (
     <main className={`min-h-screen bg-gradient-to-b from-gray-50 via-white to-gray-50 ${inter.variable} ${playfair.variable} ${poppins.variable} ${lora.variable}`}>
@@ -939,8 +965,22 @@ export default function LeadershipPage() {
                     </div>
                   )}
 
+                  {/* Replace the "ballet-training" images with the provided image */}
+                  {item.id === "ballet-training"  && (
+                    <div className="flex flex-col items-center justify-center">
+                      <div className="mb-2 text-gray-600 text-xs font-[family-name:var(--font-inter)] italic">
+                        One of my most memorable ballet moments.
+                      </div>
+                      <ImageCarousel
+                        images={[balletImageUrl]}
+                        title={item.title}
+                        onOpen={setFullscreenImage}
+                      />
+                    </div>
+                  )}
+
                   {/* Show ImageCarousel if imageSrc exists */}
-                  {item.imageSrc && item.id !== "janam" && item.id !== "editorial-board" && item.id !== "iris-national-science-fair-finalist" && (
+                  {item.imageSrc && item.id !== "janam" && item.id !== "editorial-board" && item.id !== "iris-national-science-fair-finalist" && item.id !== "ballet-training" && (
                     <div className="flex flex-col items-center justify-center">
                       <div className="mb-2 text-gray-600 text-xs font-[family-name:var(--font-inter)] italic">
                         Click on the images to get a better idea.
