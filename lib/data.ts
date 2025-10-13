@@ -4,7 +4,7 @@ export const portfolioData: PortfolioData = {
     about: {
         title: "About Me",
         description: "Hi! I'm Eva, a student who believes titles or trophies don't measure that impact, but by the people you stand up for and the changes you help build. Among my friends, I'm known as the \"dadi\" of the group – the one who listens, gives perspective, and keeps things honest.",
-        fullStory: "Growing up, I've learned that life rarely goes as planned, but that's what makes it all the more meaningful. I've had to grow up fast, and it's taught me grit, patience, and perspective. If I had to describe myself, I'd say I'm grounded, quietly strong, and someone who believes in showing up – for myself and for others.\n\nMy friends say Fight Song captures me best – and maybe it does. But I've never seen myself as someone fighting against life; I fight for it – for fairness, dignity, and courage, both mine and others'.",
+        fullStory: "Hi! I’m Eva, a student who believes titles or trophies don’t measure that impact, but by the people you stand up for and the changes you help build. Among my friends, I’m known as the “dadi” of the group – the one who listens, gives perspective, and keeps things honest. \n\n Growing up, I’ve learned that life rarely goes as planned, but that’s what makes it all the more meaningful. I’ve had to grow up fast, and it’s taught me grit, patience, and perspective. If I had to describe myself, I’d say I’m grounded, quietly strong, and someone who believes in showing up – for myself and for others. \n\n My friends say Fight Song captures me best – and maybe it does. But I’ve never seen myself as someone fighting against life; I fight for it – for fairness, dignity, and courage, both mine and others’.",
         callToAction: "Enter into the journey of my impact.",
         imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008695/About_Me_vjwifi.png"
         // imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1759007019/About_Me_qysv4w.png"
@@ -304,6 +304,7 @@ export const portfolioData: PortfolioData = {
                 category: "Biotech & Health Tech",
                 achievements: ["1,000+ tests conducted", "Global survey", "$10,000 investment offer", "5-country reach"],
                 link: "https://cortisolx.in",
+                instagram:"https://www.instagram.com/_cortisolx_",
                 imageSrc: [ "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200121/WhatsApp_Image_2025-10-11_at_13.25.27_8ace029c_q3rwx3.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200042/2c938804-f287-41cb-82ed-a6fb21715e67.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114674/2e2096f5-c4c3-4f44-8ee6-8641786dcfa7.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114662/4038fc99-adb7-4321-bec5-68d03c8916e3.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114638/7f4b01d2-1a4b-45f6-9574-3be7efd4f886.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114626/b7e6efa2-e046-4bca-8ca1-7db45aa1d8dc.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114614/9b439bda-89f0-44fe-b2ae-dae841e1b02d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114605/61e04a16-d0cb-456e-a549-8dcc0f44873d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114592/bd9cdf98-039c-4e59-b2d8-04c19e6c37b9.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114579/a40bc024-3639-4d96-811b-b236cf9fc91d.png",""]
             },
             {
@@ -315,6 +316,7 @@ export const portfolioData: PortfolioData = {
                 category: "Education Platform",
                 achievements: ["Global reach", "$2,000 raised", "Internships awarded", "6-country participation"],
                 link: "https://internlectual.com",
+                instagram:"https://www.instagram.com/intern_lectual",
                 imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258931/566c3c68-a099-4a25-af70-abe033958a13.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760114893/f6bce22d-1631-4f4c-9d26-c9736676abb6.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760115114/3bee8ac3-c5b6-4d0e-9b25-58dd8ecec26d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760115149/fe33afce-4f49-4d9a-9323-679a26d44cc7.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760115066/34fb9bbb-b3be-456e-962f-2ee78757c6d4.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689046/2beaf7cb-eba7-4fcc-8a73-6388bf674b3a.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760115014/42a7ffa1-f321-4da1-8129-8984e4a93933.png"]
             },
             {
@@ -324,6 +326,7 @@ export const portfolioData: PortfolioData = {
                 description: "Founded a podcast platform to open conversations on taboo issues like sexual abuse and drug use",
                 details: "Reshaping Society began as a small idea — to speak openly about what most people avoid: sexual abuse, mental health, and drug use. I founded and hosted the podcast to create conversations that were honest, sensitive, and informed. Each episode brought together lawyers, psychologists, and survivors for dialogues that blended empathy with realism, translating personal experience into social insight.\n\nIn partnership with the Karnataka Government's Anti-Drug Campaign, the conversations extended beyond the digital space into public awareness initiatives. Alongside the podcast, I co-facilitated weekly anonymous support groups on Zoom with licensed therapist Dr. Prerna Maheshwari, offering survivors a quiet, safe space to share.\n\nBeyond hosting, I handled the full production process — scripting, editing, and designing promotional clips to grow viewership. I taught myself video editing and digital promotion, learning to balance authenticity with algorithmic reach. Every thumbnail, caption, and cut became an extension of the message: that dialogue is powerful only when it's accessible.\n\nThrough Reshaping Society, I learned that storytelling isn't just expression — it's impact. A conversation, when handled with care, can challenge silence, rebuild trust, and give people ownership of their stories.",
                 category: "Media & Advocacy",
+                instagram:"https://www.instagram.com/reshapingsociety_",
                 achievements: ["Podcast founder", "Government partnership", "Support groups facilitated", "Weekly sessions"],
                 link: "https://www.youtube.com/@ReshapingSociety",
                 imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200110/WhatsApp_Image_2025-10-11_at_13.24.42_fb7280a4_fpbks8.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200303/88556cf7-a678-47cf-a07c-c6ba650d7a16.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258538/Reshaping_Society_vrh7he.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689215/8970a709-f434-4f8c-a033-623ee5b189bc.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689327/42c14bee-be47-4c9d-8472-7df2ff1797c3.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689419/950bc5c4-4fae-4d61-8705-4ff20e8e219c.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759689460/77258afa-3120-4646-bc40-87794c5ff32c.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760009972/7b98f911-eeb8-439d-a43e-6a0d246f0cef.png"]
@@ -332,8 +335,8 @@ export const portfolioData: PortfolioData = {
                 id: "school-captain",
                 title: "Jayshree Periwal International School – School Captain",
                 grade: "Grade 12",
-                description: "As School Captain of 2,400 students, I led assemblies, managed school-wide events, and balanced dual responsibilities in both academic and hostel leadership. My tenure included curating speakers for TEDx JPIS, overseeing the school's Finance Club and Editorial Board, and designing a summer council program on finance and entrepreneurship for 56 juniors.",
-                details: "But the real work of leadership often began after hours — in hostel corridors, during late-night conversations with homesick juniors, or in quiet corners, where they helped outline essays and plan extracurricular projects. I spent evenings mentoring students on everything from MUN speeches to balancing academics with self-care. Over time, I realized that the most meaningful influence isn't in giving directions, but in listening — helping others find their own footing rather than walking them through it.\n\nLeadership, I learned, isn't about being in charge; it's about being someone others trust when things feel uncertain. Authority isn't earned through a badge, but through consistency, empathy, and showing up even when no one's watching.",
+                description: "As School Captain of 2,400 students, I led assemblies, managed school-wide events, and balanced dual responsibilities in both academic and hostel leadership. ",
+                details: "My tenure included curating speakers for TEDx JPIS, overseeing the school's Finance Club and Editorial Board, and designing a summer council program on finance and entrepreneurship for 56 juniors. But the real work of leadership often began after hours — in hostel corridors, during late-night conversations with homesick juniors, or in quiet corners, where they helped outline essays and plan extracurricular projects. I spent evenings mentoring students on everything from MUN speeches to balancing academics with self-care. Over time, I realized that the most meaningful influence isn't in giving directions, but in listening — helping others find their own footing rather than walking them through it.\n\nLeadership, I learned, isn't about being in charge; it's about being someone others trust when things feel uncertain. Authority isn't earned through a badge, but through consistency, empathy, and showing up even when no one's watching.",
                 category: "Institutional Leadership",
                 achievements: ["2,400 students led", "TEDx curation", "Finance club oversight", "56 juniors mentored"],
                 imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760199846/bc506ff4-4eca-4924-b895-12c7390e13bd.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200002/0001_qlizk1.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200023/5f54a791-9e5c-48e6-a452-ab9e8da5d096.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200036/96404130-8cb0-4315-93df-22e31b35e248.png"],
@@ -350,6 +353,7 @@ export const portfolioData: PortfolioData = {
                 imageSrc: [
                   "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200135/WhatsApp_Image_2025-10-11_at_13.20.58_ff5743ad_i2hl9p.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200590/daeac1b1-77c7-43fc-92f7-005a07be0383.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200598/6d7366b7-74c9-4c94-9659-5b06848a84a9.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200262/05c7a219-7590-49a3-a509-059afe6cf82c.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124146/564ad808-0ec5-49ef-951a-fc4dd6493123.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200352/e6830a45-ed12-45e4-8264-cf4a0a040d61.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124198/eb747039-57be-4057-b6bd-abd03ff4ab55.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124241/b96d42ae-900f-4041-b449-37dbc1376d03.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124304/93cf4ee1-9ade-41db-8389-3d7233ad3eb3.png"
                 ],
+                instagram:"https://www.instagram.com/jpisfinance",
                 link: "https://www.finstitute.co/"
             },
             {
@@ -458,7 +462,7 @@ export const portfolioData: PortfolioData = {
                 category: "Tech Entrepreneurship",
                 achievements: ["50+ users", "Sustainable barter platform", "First entrepreneurship experience", "Real-world problem solving"],
                 imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690300/4983d63a-3ea4-4ce9-b8cb-5ee39c0a2205.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690247/0448036d-53dc-4a4e-bc6a-be892114382a.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690340/493f5b4c-6212-4023-8123-485597df432a.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690373/60cf08bc-94a3-4d27-bfeb-95af9df71aa1.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690438/f9427036-83d7-4d55-8362-dfae82e0e28d.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690493/fac227d5-8eb3-40e5-92e2-a127b10994f0.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690509/e8e2a5bf-be3e-472e-9543-0550b0ab06bc.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759690536/87299668-5cd5-48af-9cb6-2a41e3f4feb1.png"],
-                link: "https://www.instagram.com/schoolswapstation",
+                // link: "https://www.instagram.com/schoolswapstation",
                 instagram: "https://www.instagram.com/schoolswapstation"
             },
             {
@@ -577,6 +581,7 @@ export const portfolioData: PortfolioData = {
                 details: "Working with Suraksha, I coordinated drives to distribute 300+ sanitary pads and led workshops teaching menstrual hygiene in underserved communities. For many girls, this was their first structured conversation about their bodies. I also co-authored and distributed an illustrated pregnancy guide through Janam, integrating health education with cultural sensitivity.\n\nThe experience taught me that taboos are dismantled slowly, through trust and repetition. Watching young girls ask hesitant but brave questions showed me that service isn't about arriving with answers, but about creating safe spaces for curiosity.",
                 category: "Public Health",
                 achievements: ["300+ sanitary pads distributed", "Hygiene workshops led", "Illustrated guides", "Cultural sensitivity"],
+                instagram:"https://www.instagram.com/mission._.suraksha/",
                 imageSrc: [
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760118904/8a274dd0-822d-4516-939e-a94bb4a73edc.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760118946/5cb3b3e5-35aa-4ecb-af82-c6cd09f4500b.png",
@@ -587,7 +592,7 @@ export const portfolioData: PortfolioData = {
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760119065/f2b65e5a-e754-4ae3-b61f-97b47959a110.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760119072/2c967364-cf11-4dcc-9996-21d924d948f3.png",
                 "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760118874/e5ff588d-05df-49dc-8e4b-6c6a57bd184f.png",],
-                link: "https://www.instagram.com/mission._.suraksha/"
+                // link: "https://www.instagram.com/mission._.suraksha/"
             },
             {
                 id: "mitrajyothi",
@@ -597,6 +602,7 @@ export const portfolioData: PortfolioData = {
                 details: "At Mitrajyothi, a nonprofit for the visually impaired, I worked on initiatives that bridged accessibility gaps. Tasks ranged from organizing community events to distributing resources. More than the technical help, it was the human conversations — listening to how people adapted to everyday challenges — that stayed with me.\n\nMitrajyothi taught me the value of humility in service: often, what feels like \"help\" from the outside is actually collaboration, building alongside people who already possess extraordinary resilience.",
                 category: "Social Services",
                 achievements: ["Accessibility initiatives", "Community events organized", "Resource distribution", "Human connection"],
+                instagram:"https://www.instagram.com/mitrajyothi/",
                 imageSrc: [
                     // "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760159422/f083ed91-98d4-4b11-8d28-f12f212b7e89.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200118/WhatsApp_Image_2025-10-11_at_13.22.21_58b7f48d_ljurgr.jpg",
@@ -638,8 +644,8 @@ export const portfolioData: PortfolioData = {
                 id: "no-plastic-use-india",
                 title: "No Plastic Use India – Social Media Volunteer",
                 grade: "Current",
-                description: "I volunteered with No Plastic Use India, a movement committed to reducing single-use plastic and promoting sustainable living. My specific role was handling their social media — creating content, managing community engagement, and helping grow their online presence.",
-                details: "Through this, I learned more than just posting: I shaped conversations. I crafted messages that encouraged people to rethink everyday choices — from plastic bags and straws to packaging, urging small changes that can add up. I responded to comments, helped explain the impacts of plastic pollution, and shared tips on alternatives, such as cloth bags or reusable containers.\n\nWorking with No Plastic Use India, I also saw how digital stories can drive real-world behavior change: when someone said they'd stopped using plastic cutlery or started reusing containers, it wasn't just a social media post — it was an action. That made me realise that awareness and voice matter, but only if they lead to meaningful and lasting changes.",
+                description: "I volunteered with No Plastic Use India, a movement committed to reducing single-use plastic and promoting sustainable living.",
+                details: "My specific role was handling their social media — creating content, managing community engagement, and helping grow their online presence. Through this, I learned more than just posting: I shaped conversations. I crafted messages that encouraged people to rethink everyday choices — from plastic bags and straws to packaging, urging small changes that can add up. I responded to comments, helped explain the impacts of plastic pollution, and shared tips on alternatives, such as cloth bags or reusable containers.\n\nWorking with No Plastic Use India, I also saw how digital stories can drive real-world behavior change: when someone said they'd stopped using plastic cutlery or started reusing containers, it wasn't just a social media post — it was an action. That made me realise that awareness and voice matter, but only if they lead to meaningful and lasting changes.",
                 category: "Environmental Advocacy",
                 achievements: ["Social media management", "Community engagement", "Behavior change campaigns", "Sustainable living promotion"],
                 imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760158647/3a30f44c-f4c9-4397-9226-ece0b2238e23.png",
@@ -653,7 +659,8 @@ export const portfolioData: PortfolioData = {
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120572/37a1884a-4c52-461b-86cc-93d3c993d113.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120603/a42ac43f-534a-4e25-b462-4b4df92cc400.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120647/e871e80f-0cb6-4647-b905-914e9faf2367.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120663/7e1fd64d-88d3-41e5-a086-b0cc7e56cd0b.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120678/0ce8b80d-ad67-4773-a3b1-372f65a9ba95.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120685/796e333b-d97f-4a3b-bc2b-995309711ed6.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120694/a621b1be-144b-4da9-b695-7fe99dd3770a.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120702/ee69b7a9-fd40-4e06-af2b-766554012bf9.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120712/91aef8a8-1c27-4837-8351-02d8813c707d.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760120721/a4cc9524-fa2d-4c4f-8fbe-efa59259b0e0.png"],
-                link: "https://www.instagram.com/noplasticuseindia/?hl=en"
+                link: "",
+                instagram:"https://www.instagram.com/noplasticuseindia/"
             }
         ]
     },

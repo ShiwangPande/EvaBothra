@@ -151,9 +151,9 @@ export default function AboutMe({ compact = false }: AboutMeProps) {
           </span>
           <hr className="w-24 border-t-2 border-[#007B78]/20" />
         </div>
-        <span className="text-xs text-gray-400 mt-1 tracking-wide uppercase font-semibold select-none">
+        {/* <span className="text-xs text-gray-400 mt-1 tracking-wide uppercase font-semibold select-none">
           with light, intention, & care.
-        </span>
+        </span> */}
       </div>
     </motion.div>
   </div>
@@ -221,20 +221,20 @@ export default function AboutMe({ compact = false }: AboutMeProps) {
             viewport={{ once: true }}
           >
             <div>
-              <p
-                className={
-                  compact
-                    ? "text-base md:text-lg leading-relaxed mb-4 text-gray-800 text-left"
-                    : "text-lg md:text-xl leading-relaxed mb-6 text-gray-800 font-light"
-                }
-              >
-                {aboutData.description}
-              </p>
-              <div className="space-y-5">
-                {(compact
-                  ? aboutData.fullStory.split('\n\n').slice(0, 1)
-                  : aboutData.fullStory.split('\n\n')
-                ).map((paragraph, index) => (
+              {aboutData.fullStory.split('\n\n').map((paragraph, index) => (
+                <p
+                  key={index}
+                  className={
+                    compact
+                      ? "text-base md:text-lg leading-relaxed mb-4 text-gray-800 text-left"
+                      : "text-lg md:text-xl leading-relaxed mb-6 text-gray-800 font-light"
+                  }
+                >
+                  {paragraph}
+                </p>
+              ))}
+              {/* <div className="space-y-5">
+                {aboutData.fullStory.split('\n\n').map((paragraph, index) => (
                   <p
                     key={index}
                     className={
@@ -246,10 +246,10 @@ export default function AboutMe({ compact = false }: AboutMeProps) {
                     {paragraph}
                   </p>
                 ))}
-              </div>
+              </div> */}
             </div>
             {/* Education and Key Traits below on large screens, stacked on small */}
-            {!compact && (
+            {/* {!compact && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-sm mt-10">
                 <div className="bg-white/80 border border-gray-100 rounded-lg shadow-sm p-5">
                   <h3 className="font-semibold mb-2 text-[#007B78] tracking-wide">Education</h3>
@@ -268,11 +268,11 @@ export default function AboutMe({ compact = false }: AboutMeProps) {
                   </ul>
                 </div>
               </div>
-            )}
+            )} */}
           </motion.div>
         </div>
         {/* For best alignment, show Education/Traits below on mobile if not compact */}
-        {!compact && (
+        {/* {!compact && (
           <div className="block md:hidden mt-10">
             <div className="grid grid-cols-1 gap-6 text-sm">
               <div className="bg-white/80 border border-gray-100 rounded-lg shadow-sm p-5">
@@ -293,7 +293,7 @@ export default function AboutMe({ compact = false }: AboutMeProps) {
               </div>
             </div>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   )

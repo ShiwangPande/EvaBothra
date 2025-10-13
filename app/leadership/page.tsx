@@ -3,10 +3,11 @@
 import Image from "next/image"
 import { useState, useEffect, useRef } from "react"
 import { portfolioData } from "@/lib/data"
+import { Card } from "@/components/ui/card"
+import { Link as LinkIcon, Instagram as InstagramIcon } from "lucide-react"
 
 // Google Fonts
 import { Inter, Playfair_Display, Poppins, Lora } from 'next/font/google'
-import { Card } from "@/components/ui/card"
 
 const inter = Inter({
   subsets: ['latin'],
@@ -709,32 +710,34 @@ export default function LeadershipPage() {
                       </div>
                     )}
 
-                    {item.link && (
-                      <div className="pt-3">
-                        <a
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-all font-[family-name:var(--font-inter)]"
-                        >
-                          <span className="truncate max-w-[250px] underline decoration-blue-400 group-hover:decoration-blue-800">
-                            {item.link}
-                          </span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-4 w-4 text-blue-600 group-hover:text-blue-800 transition-transform group-hover:translate-x-0.5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
+{(item.link || item.instagram) && (
+                      <div className="pt-3 flex gap-5 items-center justify-between  flex-wrap">
+                        {item.link && (
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-all font-[family-name:var(--font-inter)]"
                           >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M17 8l4 4m0 0l-4 4m4-4H3"
-                            />
-                          </svg>
-                        </a>
+                            <LinkIcon className="h-4 w-4 text-blue-600 group-hover:text-blue-800 transition-transform group-hover:translate-x-0.5" />
+                            <span className="truncate max-w-[250px] underline decoration-blue-400 group-hover:decoration-blue-800 ml-2">
+                              {item.link}
+                            </span>
+                          </a>
+                        )}
+                        {item.instagram && (
+                          <a
+                            href={item.instagram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex items-center gap-2 text-sm font-semibold text-pink-600 hover:text-pink-800 transition-all font-[family-name:var(--font-inter)]"
+                          >
+                            <InstagramIcon className="w-5 h-5 text-pink-600 group-hover:text-pink-800" />
+                            <span className="  underline decoration-pink-400 group-hover:decoration-pink-800 ml-2">
+                              {item.instagram}
+                            </span>
+                          </a>
+                        )}
                       </div>
                     )}
 
@@ -763,16 +766,16 @@ export default function LeadershipPage() {
 
                     <p className="text-lg md:text-xl text-gray-700 leading-[1.8] font-normal font-[family-name:var(--font-lora)] text-justify">{item.description}</p>
                     {item.id === "finance-club" && (
-    <a
-      href="https://www.finstitute.co/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="inline-block ml-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#007B78] to-teal-400 text-gray-100 font-bold text-base shadow border border-black hover:from-teal-400 hover:to-[#007B78] hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#007B78]/40  tracking-wide scale-105 hover:scale-110"
-      style={{ fontFamily: "var(--font-inter)" }}
-    >
-      💡 Check out the budgeting site →
-    </a>
-  )}
+                      <a
+                        href="https://www.finstitute.co/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block ml-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#007B78] to-teal-400 text-gray-100 font-bold text-base shadow border border-black hover:from-teal-400 hover:to-[#007B78] hover:text-black transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#007B78]/40  tracking-wide scale-105 hover:scale-110"
+                        style={{ fontFamily: "var(--font-inter)" }}
+                      >
+                        💡 Check out the budgeting site →
+                      </a>
+                    )}
 
                     {item.achievements?.length > 0 && (
                       <div className="flex flex-wrap gap-2 pt-4">
@@ -788,32 +791,34 @@ export default function LeadershipPage() {
                       </div>
                     )}
 
-                    {item.link && (
-                      <div className="pt-3">
-                        <a
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="group flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-all font-[family-name:var(--font-inter)]"
-                        >
-                          <span className="truncate max-w-[250px] underline decoration-blue-400 group-hover:decoration-blue-800">
-                            {item.link}
-                          </span>
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-4 w-4 text-blue-600 group-hover:text-blue-800 transition-transform group-hover:translate-x-0.5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
+                {(item.link || item.instagram) && (
+                      <div className="pt-3 flex gap-5 items-center justify-between  flex-wrap">
+                        {item.link && (
+                          <a
+                            href={item.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-all font-[family-name:var(--font-inter)]"
                           >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M17 8l4 4m0 0l-4 4m4-4H3"
-                            />
-                          </svg>
-                        </a>
+                            <LinkIcon className="h-4 w-4 text-blue-600 group-hover:text-blue-800 transition-transform group-hover:translate-x-0.5" />
+                            <span className="truncate max-w-[250px] underline decoration-blue-400 group-hover:decoration-blue-800 ml-2">
+                              {item.link}
+                            </span>
+                          </a>
+                        )}
+                        {item.instagram && (
+                          <a
+                            href={item.instagram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group flex items-center gap-2 text-sm font-semibold text-pink-600 hover:text-pink-800 transition-all font-[family-name:var(--font-inter)]"
+                          >
+                            <InstagramIcon className="w-5 h-5 text-pink-600 group-hover:text-pink-800" />
+                            <span className="  underline decoration-pink-400 group-hover:decoration-pink-800 ml-2">
+                              {item.instagram}
+                            </span>
+                          </a>
+                        )}
                       </div>
                     )}
 

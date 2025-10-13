@@ -3,6 +3,8 @@
 import Image from 'next/image'
 import { portfolioData } from '@/lib/data'
 import { useState } from 'react'
+// Import Lucide icons (recommend lucide-react or similar)
+import { Link as LucideLink, Instagram as LucideInstagram } from "lucide-react"
 
 function Carousel({
   images,
@@ -157,6 +159,12 @@ export default function CommunityPage() {
             const specialImgUrl = "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200201/c675bb88-fd0f-4970-bec8-df81ea69adc7.png"
             const isNoPlastic = item.id === "no-plastic-use-india"
 
+            // Use item.instagram if present for each card
+            const instagramUrl =
+              item.instagram && typeof item.instagram === "string" && item.instagram.trim()
+                ? item.instagram
+                : undefined
+
             return (
               <article 
                 key={item.id} 
@@ -197,35 +205,39 @@ export default function CommunityPage() {
                       {item.details.split('\n\n')[0]}
                     </p>
                   )}
-                  {/* CTA */}
-                  {item.link && (
-                    <div className="pt-3">
+                  {/* CTA & Instagram */}
+                  <div className="pt-3 flex gap-5 items-center justify-between  flex-wrap">
+                    {item.link && (
                       <a
                         href={item.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-800 transition-all font-[family-name:var(--font-inter)]"
                       >
+                                <LucideLink className="w-4 h-4 text-blue-600 group-hover:text-blue-800 transition-transform group-hover:translate-x-0.5" />
                         <span className="truncate max-w-[250px] underline decoration-blue-400 group-hover:decoration-blue-800">
                           {item.link}
                         </span>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-4 w-4 text-blue-600 group-hover:text-blue-800 transition-transform group-hover:translate-x-0.5"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                          />
-                        </svg>
+                
                       </a>
-                    </div>
-                  )}
+                    )}
+                    {/* Instagram link in same structure */}
+                    {instagramUrl && (
+                      <a
+                        href={instagramUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group flex items-center gap-2 text-sm font-semibold text-pink-500 hover:text-pink-700 transition-all font-[family-name:var(--font-inter)]"
+                        style={{ textDecoration: "none", outline: 0 }}
+                      >
+                          <LucideInstagram className="w-4 h-4 text-pink-500 group-hover:text-pink-700 transition-transform group-hover:translate-x-0.5" />
+                         <span className="  underline decoration-pink-400 group-hover:decoration-pink-800 ml-2">
+                              {item.instagram}
+                            </span>
+                      
+                      </a>
+                    )}
+                  </div>
                 </div>
 
                 {/* PDF takes precedence over images: show PDF ONLY when it exists for the item */}
@@ -269,8 +281,8 @@ export default function CommunityPage() {
                     )}
                   </div>
                 ) : item.id === "asha-niketan" ? (
-                  <div className="w-full md:w-[38%] flex items-center justify-center p-4 md:p-8">
-                    <div className="w-full aspect-[9/16] max-w-xs flex items-center justify-center">
+                  <div className="w-full md:w-[32%] flex items-center justify-center p-4 md:p-6">
+                    <div className="w-full aspect-[9/16] max-w-[180px] md:max-w-[200px] flex items-center justify-center">
                       <iframe
                         src="https://res.cloudinary.com/dqv4mucxh/video/upload/v1760210085/1750673102226_l0hhot.mp4"
                         title="Asha Niketan Video"

@@ -60,33 +60,33 @@ function ContentWithMedia({
           imagePlaced = true
         }
         // Place video after 2nd or 3rd paragraph, if video exists and not yet placed
-        else if ((i === 2 || (paragraphs.length < 3 && i === 1)) && video && !videoPlaced) {
-          elements.push(
-            <p key={`p-${i}`} className="text-base md:text-lg">
-              {p}
-            </p>
-          )
-          elements.push(
-            <div key="video" className="my-5 flex justify-center">
-              <video
-                controls
-                className="rounded-xl border border-amber-200 bg-black w-full max-w-md aspect-[9/16] max-h-[400px] shadow"
-                poster={
-                  typeof imageSrc === "string"
-                    ? imageSrc
-                    : Array.isArray(imageSrc)
-                    ? imageSrc[0]
-                    : undefined
-                }
-                style={{ objectPosition: "center" }}
-              >
-                <source src={video} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          )
-          videoPlaced = true
-        }
+        // else if ((i === 2 || (paragraphs.length < 3 && i === 1)) && video && !videoPlaced) {
+        //   elements.push(
+        //     <p key={`p-${i}`} className="text-base md:text-lg">
+        //       {p}
+        //     </p>
+        //   )
+        //   elements.push(
+        //     <div key="video" className="my-5 flex justify-center">
+        //       <video
+        //         controls
+        //         className="rounded-xl border border-amber-200 bg-black w-full max-w-md aspect-[9/16] max-h-[400px] shadow"
+        //         poster={
+        //           typeof imageSrc === "string"
+        //             ? imageSrc
+        //             : Array.isArray(imageSrc)
+        //             ? imageSrc[0]
+        //             : undefined
+        //         }
+        //         style={{ objectPosition: "center" }}
+        //       >
+        //         <source src={video} type="video/mp4" />
+        //         Your browser does not support the video tag.
+        //       </video>
+        //     </div>
+        //   )
+        //   videoPlaced = true
+        // }
         // Otherwise, just the paragraph
         else {
           elements.push(
@@ -115,7 +115,7 @@ function ContentWithMedia({
           />
         </div>
       )}
-      {!videoPlaced && video && (
+      {/* {!videoPlaced && video && (
         <div className="my-5 flex justify-center">
           <video
             controls
@@ -133,7 +133,7 @@ function ContentWithMedia({
             Your browser does not support the video tag.
           </video>
         </div>
-      )}
+      )} */}
     </>
   )
 }
