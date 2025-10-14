@@ -56,7 +56,6 @@ function CarouselGridItem({
       <div className="relative overflow-hidden rounded-xl bg-gray-100 group hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-blue-400/50 transition-all duration-200">
         <video
           src={src}
-          controls
           autoPlay
           muted
           playsInline
@@ -177,7 +176,7 @@ function ImageCarousel({
           <div className="absolute inset-0 flex items-center justify-center p-2 sm:p-4">
             <video
               src={slides[current].src}
-              controls
+              
               autoPlay
               muted
               playsInline
@@ -879,6 +878,20 @@ export default function LeadershipPage() {
                     )}
                     {item.id === "janam" && (
                       <VideoCarousel />
+                    )}
+                    {item.id === "sfcc" && (
+                    <div className="w-full flex justify-center items-center my-6">
+                      <video
+                        src="https://res.cloudinary.com/dqv4mucxh/video/upload/v1760481757/WhatsApp_Video_2025-10-14_at_23.38.16_f94ce239_dkrlrs.mp4"
+                        controls
+                        autoPlay
+                        muted
+                        playsInline
+                        className="w-full max-w-xl aspect-video bg-gray-200 rounded-lg shadow border-2 border-gray-100"
+                        style={{ minHeight: 200 }}
+                        aria-label="SFCC Event Video"
+                      />
+                    </div>
                     )}
                   </div>
                 )}

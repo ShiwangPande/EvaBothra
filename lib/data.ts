@@ -254,7 +254,7 @@ export const portfolioData: PortfolioData = {
                 description: "Transform waste shipping containers into mobile birthing centers, combining safety, dignity, and scale",
                 details: "On a rusted stretcher with paint flaking like ash, my aunt screamed through childbirth with no doctor in sight. Standing frozen in Jaipuria Government Hospital, I realized that sterile wards, steady hands, and safe births– the things I had taken for granted in Bangalore– were privileges reserved for a few. Later, talking to baijis who delivered babies on muddy floors or in hospital corridors, I saw how society normalizes its most profound injustices. That moment didn't make me despair– it made me act.\n\nJanam was born from that urgency. We transform waste shipping containers into mobile birthing centers, combining safety, dignity, and scale. One container is already operational in Mahapura, and two more are underway. Each is fully equipped, designed in collaboration with gynecologists, the National Health Mission, and Aastrika Foundation, and supported by local panchayats. Beyond infrastructure, I trained over 100 midwives, organized health camps for more than 1,500 villagers, and published illustrated pregnancy guides in both Hindi and English to dispel common myths. In partnership with ProtectHer and Suraksha, we conducted cervical vaccination drives and menstrual hygiene programs.\n\nOn the financial side, I raised over $ 12,000 through crowdfunding, CSR partnerships, and grants, managing the allocation of funds across construction, equipment, and educational materials to ensure sustainability.\n\nEvery container, every midwife trained, every rupee spent became more than a statistic– it became a lifeline. Janam taught me that confronting systemic inequity is not about charity; it's about designing solutions that are practical, scalable, and rooted in dignity. Seeing women access care once denied to them is the reason I fight to transform ideas into real-world change.",
                 category: "Healthcare Innovation",
-                imageSrc:[ "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760158408/4951a742-c51d-4c8f-bd74-d777e6ff9409.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760158402/792e0bf0-aa3a-48c8-a155-138e08880900.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307908/frame_0_06_22f_zzopbp.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200130/WhatsApp_Image_2025-10-11_at_13.21.43_733ded2d_rbn49r.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307914/frame_0_13_10f_apucfz.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307915/frame_0_18_3f_fucwx2.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307871/frame_0_19_22f_hqb9nk.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307915/frame_0_30_18f_jqzige.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307885/frame_0_54_20f_ale2lk.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307909/frame_3_12_23f_d1rczo.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760113969/c574c622-fc10-426a-898d-d0dbcfea8419.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760199843/94b8a23e-febc-4a1b-a2af-a8552e922dce.png"],
+                imageSrc:[ "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760158408/4951a742-c51d-4c8f-bd74-d777e6ff9409.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760158402/792e0bf0-aa3a-48c8-a155-138e08880900.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307908/frame_0_06_22f_zzopbp.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200130/WhatsApp_Image_2025-10-11_at_13.21.43_733ded2d_rbn49r.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307914/frame_0_13_10f_apucfz.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307915/frame_0_18_3f_fucwx2.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307871/frame_0_19_22f_hqb9nk.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307915/frame_0_30_18f_jqzige.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307885/frame_0_54_20f_ale2lk.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1758307909/frame_3_12_23f_d1rczo.jpg", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760113969/c574c622-fc10-426a-898d-d0dbcfea8419.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760199843/94b8a23e-febc-4a1b-a2af-a8552e922dce.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760481582/012ada99-f056-47a4-98f7-4a0dd702e045.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760481591/27f3b6ea-7d1b-4c64-a819-12eb0f45f0b4.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760481595/dda12a1d-9f8f-4449-9261-ca287dc2b76d.png"],
                 achievements: ["3 centers (1 completed)", "100+ midwives trained", "1,500+ villagers served", "$12,000+ raised"],
                 link: "https://janamindia.vercel.app",
                 instagram: "https://www.instagram.com/janamindia"
@@ -973,14 +973,14 @@ export const portfolioData: PortfolioData = {
         {
             key: 'legal-saathi',
             title: 'Legal Saathi',
-            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1758530018/Your_Legal_Rights_y1znqt.png',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1760481600/187a232e-2576-40f9-b215-39219f282c14.png',
             href: 'https://legalsaathi.org',
             external: true
         },
         {
             key: 'janam',
             title: 'Janam',
-            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1758530520/janam_mxcgpx.png',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1760481588/cfb2379c-852f-4d8b-a1fd-b4fb2dbea16a.png',
             href: 'https://janamindia.vercel.app',
             external: true
         },
@@ -1001,21 +1001,21 @@ export const portfolioData: PortfolioData = {
         {
             key: 'iris-national',
             title: 'IRIS National',
-            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1759299129/IRIS_1_sugz6f.png',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1760482902/c8bec0af-7825-4a85-8c3d-c4553a317552.png',
             href: '/iris-national',
             external: false
         },
         {
             key: 'internlectual',
             title: 'Internlectual',
-            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258931/566c3c68-a099-4a25-af70-abe033958a13.png',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1760481574/986011fd-5575-4593-98c0-c9702208bfde.png',
             href: 'https://internlectual.com',
             external: true
         },
         {
             key: 'teenlink',
             title: 'TeenLink',
-            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1759302338/TEENLink_3_vjzmqw.png',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1760481582/012ada99-f056-47a4-98f7-4a0dd702e045.png',
             href: 'https://play.google.com/',
             external: true
         },
@@ -1023,7 +1023,7 @@ export const portfolioData: PortfolioData = {
             key: 'reshaping-society',
             title: 'Reshaping Society – Podcast',
             // imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1759258538/Reshaping_Society_vrh7he.png',
-            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200303/88556cf7-a678-47cf-a07c-c6ba650d7a16.png',
+            imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1760481612/ce82f886-6ea3-4abe-b34d-9c022de63c92.png',
             href: '/youtube',
             external: false
         }
