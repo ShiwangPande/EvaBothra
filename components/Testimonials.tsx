@@ -173,7 +173,7 @@ export default function Testimonials() {
       <div className="max-w-5xl mx-auto px-4">
         <header className="flex flex-col md:flex-row md:items-center md:justify-between gap-6 mb-10">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-[#007B78] tracking-tight mb-1">Testimonials</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[#007B78] tracking-tight mb-1">Kind Words from People</h2>
             <p className="text-gray-600">
               What mentors and collaborators say about working with me.
             </p>

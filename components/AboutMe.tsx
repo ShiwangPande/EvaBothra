@@ -64,8 +64,7 @@ export default function AboutMe({ compact = false }: AboutMeProps) {
   {/* Soft glow background */}
   <div className="absolute inset-0 bg-gradient-to-r from-[#007B78]/5 via-transparent to-[#007B78]/5 blur-2xl rounded-full" />
 
-  <div className="space-y-16 relative">
-
+  <div className="space-y-8 relative">
     {/* First Quote */}
     <motion.figure
       className="text-center relative"
@@ -75,9 +74,9 @@ export default function AboutMe({ compact = false }: AboutMeProps) {
       viewport={{ once: true }}
     >
       <blockquote className="relative">
-        <p className="text-3xl md:text-4xl font-serif italic leading-relaxed text-gray-800">
+        <p className="text-2xl md:text-3xl font-serif italic leading-snug text-gray-800">
           <span
-            className="absolute -left-6 -top-6 text-6xl text-[#007B78]/30 font-extrabold select-none"
+            className="absolute -left-3 -top-3 text-4xl md:text-5xl text-[#007B78]/30 font-extrabold select-none"
             aria-hidden="true"
           >
             “
@@ -86,21 +85,21 @@ export default function AboutMe({ compact = false }: AboutMeProps) {
             Kid, you'll move mountains.
           </span>
           <span
-            className="absolute -right-6 -bottom-6 text-6xl text-[#007B78]/30 font-extrabold select-none"
+            className="absolute -right-3 -bottom-3 text-4xl md:text-5xl text-[#007B78]/30 font-extrabold select-none"
             aria-hidden="true"
           >
             ”
           </span>
         </p>
       </blockquote>
-      <figcaption className="mt-5 text-sm tracking-wide text-gray-500 font-semibold uppercase">
+      <figcaption className="mt-2 text-xs md:text-sm tracking-wide text-gray-500 font-semibold uppercase">
         — Dr. Seuss
       </figcaption>
     </motion.figure>
 
     {/* Divider */}
     <div className="flex justify-center">
-      <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-[#007B78]/40 to-transparent rounded-full" />
+      <div className="w-12 h-[2px] bg-gradient-to-r from-transparent via-[#007B78]/40 to-transparent rounded-full" />
     </div>
 
     {/* Second Quote */}
@@ -112,9 +111,9 @@ export default function AboutMe({ compact = false }: AboutMeProps) {
       viewport={{ once: true }}
     >
       <blockquote className="relative">
-        <p className="text-3xl md:text-4xl font-serif italic leading-relaxed text-gray-800">
+        <p className="text-2xl md:text-3xl font-serif italic leading-relaxed text-gray-800">
           <span
-            className="absolute -left-6 -top-6 text-6xl text-[#007B78]/30 font-extrabold select-none"
+            className="absolute -left-5 -top-5 text-4xl md:text-5xl text-[#007B78]/30 font-extrabold select-none"
             aria-hidden="true"
           >
             “
@@ -123,37 +122,34 @@ export default function AboutMe({ compact = false }: AboutMeProps) {
             The wound is the place where the light enters you.
           </span>
           <span
-            className="absolute -right-6 -bottom-6 text-6xl text-[#007B78]/30 font-extrabold select-none"
+            className="absolute -right-5 -bottom-5 text-4xl md:text-5xl text-[#007B78]/30 font-extrabold select-none"
             aria-hidden="true"
           >
             ”
           </span>
         </p>
       </blockquote>
-      <figcaption className="mt-5 text-sm tracking-wide text-gray-500 font-semibold uppercase">
+      <figcaption className="mt-3 text-xs md:text-sm tracking-wide text-gray-500 font-semibold uppercase">
         — Rumi
       </figcaption>
     </motion.figure>
 
     {/* Elegant Closing Name */}
     <motion.div
-      className="text-center relative pt-6"
+      className="text-center relative pt-4"
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9, delay: 0.6, ease: easeInOut }}
       viewport={{ once: true }}
     >
-      <div className="flex flex-col items-center space-y-1">
+      <div className="flex flex-col items-center space-y-0.5">
         <div className="relative flex items-center justify-center w-full">
-          <hr className="w-24 border-t-2 border-[#007B78]/20" />
-          <span className="mx-4 text-xl md:text-2xl font-bold tracking-wider text-[#007B78] bg-white px-5 py-1 rounded-full shadow-sm border border-[#007B78]/10">
+          <hr className="w-20 border-t-2 border-[#007B78]/20" />
+          <span className="mx-4 text-base md:text-xl font-bold tracking-wider text-[#007B78] bg-white px-4 py-0.5 rounded-full shadow-sm border border-[#007B78]/10">
             Eva Bothra
           </span>
-          <hr className="w-24 border-t-2 border-[#007B78]/20" />
+          <hr className="w-20 border-t-2 border-[#007B78]/20" />
         </div>
-        {/* <span className="text-xs text-gray-400 mt-1 tracking-wide uppercase font-semibold select-none">
-          with light, intention, & care.
-        </span> */}
       </div>
     </motion.div>
   </div>

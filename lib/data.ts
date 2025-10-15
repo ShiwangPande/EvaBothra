@@ -228,6 +228,7 @@ export const portfolioData: PortfolioData = {
                 details: "Legal Saathi is India's first QR-based legal literacy platform for workers, designed to make labor rights practical and accessible. I built the platform from scratch: coding the website, designing the QR-linked posters, writing and recording audio scripts in eight Indian languages, and creating a workshop manual for volunteers.\n\nI trained and coordinated a 15-member volunteer team to expand into cities across Karnataka, Madhya Pradesh, Bihar, Delhi, West Bengal, Tamil Nadu, and Nepal. Over 600 posters were distributed across 60+ factory, construction, and mandi sites in Jaipur, reaching more than 8,500 workers.\n\nEvery resource was vetted by a Supreme Court lawyer, and through a partnership with Citadel Law Solutions, workers gained direct access to pro bono legal counsel. To date, this has led to over 30 active labor rights cases, with follow-up support ensuring a tangible impact in the real world.\n\nLegal Saathi showed me that empowerment doesn't require grand reforms—sometimes, it's a worker scanning a QR code in their lunch break and, for the first time, accessing previously abstract rights.",
                 category: "Social Innovation",
                 achievements: ["8,500+ workers reached", "8 languages", "60+ sites", "30+ legal cases", "7 states coverage"],
+                instagram:"https://www.instagram.com/legalsaathi_/",
                 link: "https://legalsaathi.org",
                 imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200132/WhatsApp_Image_2025-10-11_at_13.21.19_082b1944_kldek9.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008688/legal_ttr2ku.png", 
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1753881314/IMG-20250730-WA0008_g6miji.jpg", 
@@ -340,7 +341,8 @@ export const portfolioData: PortfolioData = {
                 category: "Institutional Leadership",
                 achievements: ["2,400 students led", "TEDx curation", "Finance club oversight", "56 juniors mentored"],
                 imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760199846/bc506ff4-4eca-4924-b895-12c7390e13bd.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200002/0001_qlizk1.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200023/5f54a791-9e5c-48e6-a452-ab9e8da5d096.png", "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200036/96404130-8cb0-4315-93df-22e31b35e248.png"],
-                link: "https://jpischool.com/"
+                link: "https://jpischool.com/",
+                instagram:"https://www.instagram.com/jpischool/"
             },
             {
                 id: "finance-club",
@@ -377,7 +379,8 @@ export const portfolioData: PortfolioData = {
                 category: "Event Management",
                 achievements: ["Speaker curation", "Event logistics", "Student innovation showcase", "Panel themes"],
                 imageSrc: ["https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200104/WhatsApp_Image_2025-10-11_at_13.28.05_613b7ab8_hjmgid.jpg","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124556/560d1916-97d9-4c94-828d-0a5f22363d91.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760124612/d41190ad-6cfd-4f6f-bd89-09c19736b0a9.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760127855/2bd73927-7f1c-4ff5-bcc6-824f859a35cf.png","https://res.cloudinary.com/dqv4mucxh/image/upload/v1760127862/7037e647-38e1-4937-ad77-8dcca9250044.png"],
-                link: "https://www.tedxyouthjpis.com/"
+                link: "https://www.tedxyouthjpis.com/",
+                instagram:"https://www.instagram.com/tedxyouth_jpis/?hl=en",
             },
             {
                 id: "editorial-board",
@@ -532,7 +535,8 @@ export const portfolioData: PortfolioData = {
                 ],
                 imageSrc: [
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200196/7b42741c-3286-4809-b08a-778bb558073b.png",
-                    // "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200188/86cc9b6c-9d80-4963-a507-7a4c55c6df75.png"
+                        "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760207254/Untitled_design_27_pammti.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760207347/Untitled_design_28_va1umb.png"
                 ],
             }
             
@@ -892,6 +896,7 @@ export const portfolioData: PortfolioData = {
                 category: "Media Recognition",
                 achievements: ["Newspaper feature", "Rajasthan coverage", "Legal literacy", "Worker rights"],
                 imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759952247/newpaper_ocdbkh.png",
+                instagram:"https://www.instagram.com/legalsaathi_/",
                 link: "https://www.linkedin.com/posts/eva-bothra-56650325a_legalsaathi-gratitude-seemasandesh-activity-7353733985824354305-NaLj?utm_source=share&utm_medium=member_desktop&rcm=ACoAADfMsd4ButU3MKvKyp1BTqPv6UHrURqhH_Q"
             },
             {
@@ -992,8 +997,8 @@ export const portfolioData: PortfolioData = {
             external: false
         },
         {
-            key: 'cortisolx',
-            title: 'CortisolX',
+            key: 'school-captain',
+            title: 'School Captain',
             imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1759253115/cortisolx_mgbl2b.jpg',
             href: 'https://www.youtube.com/watch?v=G_ya89GaXDg',
             external: true
@@ -1016,7 +1021,7 @@ export const portfolioData: PortfolioData = {
             key: 'teenlink',
             title: 'TeenLink',
             imageSrc: 'https://res.cloudinary.com/dqv4mucxh/image/upload/v1760481582/012ada99-f056-47a4-98f7-4a0dd702e045.png',
-            href: 'https://play.google.com/',
+            href: 'https://apps.apple.com/in/app/teenlink-connect/id6746079280',
             external: true
         },
         {
