@@ -883,7 +883,6 @@ export default function LeadershipPage() {
                     <div className="w-full flex justify-center items-center my-6">
                       <video
                         src="https://res.cloudinary.com/dqv4mucxh/video/upload/v1760481757/WhatsApp_Video_2025-10-14_at_23.38.16_f94ce239_dkrlrs.mp4"
-                        controls
                         autoPlay
                         muted
                         playsInline
