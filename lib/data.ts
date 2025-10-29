@@ -18,7 +18,7 @@ export const portfolioData: PortfolioData = {
         stats: [
             { label: "IGCSE Score", value: "7 A*, 2 A" },
             { label: "IB Score", value: "41/42" },
-            { label: "SAT Score", value: "1520" },
+            { label: "SAT Score", value: "1510" },
             { label: "Research Hours", value: "80+" }
         ],
         sections: {
@@ -52,7 +52,7 @@ export const portfolioData: PortfolioData = {
                         title: "SAT",
                         grade: "Recent",
                         description: "1520 - Math has always been my stronghold (thanks, Kumon). English took more work – I had to build that foundation later, through deliberate effort.",
-                        details: "I scored higher in mocks (1550+), but test-day anxiety hit me hard. I had no chance to retake it, but honestly, the SAT ended up being more of a teacher than a test – it showed me the importance of preparation, balance, and staying calm under pressure.",
+                        details: "I scored higher in mocks (1550+), but test-day anxiety hit me hard.The SAT ended up being more of a teacher than a test – it showed me the importance of preparation, balance, and staying calm under pressure.",
                         category: "Standardized Testing",
                         achievements: ["1520 score", "Math excellence", "English improvement", "Test resilience"],
                         imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008710/Academics_Research_Activities_qfuz07.png",
