@@ -51,10 +51,10 @@ export const portfolioData: PortfolioData = {
                         id: "sat",
                         title: "SAT",
                         grade: "Recent",
-                        description: "1520 - Math has always been my stronghold (thanks, Kumon). English took more work – I had to build that foundation later, through deliberate effort.",
+                        description: "1510 - Math has always been my stronghold (thanks, Kumon). English took more work – I had to build that foundation later, through deliberate effort.",
                         details: "I scored higher in mocks (1550+), but test-day anxiety hit me hard.The SAT ended up being more of a teacher than a test – it showed me the importance of preparation, balance, and staying calm under pressure.",
                         category: "Standardized Testing",
-                        achievements: ["1520 score", "Math excellence", "English improvement", "Test resilience"],
+                        achievements: ["1510 score", "Math excellence", "English improvement", "Test resilience"],
                         imageSrc: "https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008710/Academics_Research_Activities_qfuz07.png",
                         link: "https://satsuite.collegeboard.org/sat"
                     }
