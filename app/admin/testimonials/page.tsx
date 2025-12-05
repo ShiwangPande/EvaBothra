@@ -107,6 +107,24 @@ export default function AdminTestimonialsPage() {
     }
   }
 
+  const handleDelete = async (id: string) => {
+    try {
+      const response = await fetch(`/api/testimonials/admin?id=${id}`, {
+        method: 'DELETE',
+      })
+
+      if (response.ok) {
+        await fetchTestimonials() // Refresh the list
+      } else {
+        const error = await response.json()
+        throw new Error(error.error || 'Failed to delete testimonial')
+      }
+    } catch (error) {
+      console.error('Error deleting testimonial:', error)
+      throw error
+    }
+  }
+
   const handleMarkAsRead = async (id: string) => {
     try {
       const response = await fetch('/api/contact/admin', {
@@ -237,6 +255,7 @@ export default function AdminTestimonialsPage() {
                 testimonials={testimonials}
                 onApprove={handleApprove}
                 onReject={handleReject}
+                onDelete={handleDelete}
               />
             </TabsContent>
             <TabsContent value="contact">

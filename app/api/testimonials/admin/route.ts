@@ -103,3 +103,55 @@ export async function PATCH(request: NextRequest) {
     return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
+
+export async function DELETE(request: NextRequest) {
+  try {
+    const { userId } = await auth()
+    
+    if (!userId) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
+
+    // Check if user is admin by comparing with environment variable
+    const adminUserId = process.env.ADMIN_USER_ID
+    ? process.env.ADMIN_USER_ID.split(',').map(id => id.trim())
+    : []
+    
+    if (!adminUserId) {
+      console.error('ADMIN_USER_ID not set in environment variables')
+      return NextResponse.json({ error: 'Admin configuration missing' }, { status: 500 })
+    }
+
+    const isAdmin = Array.isArray(adminUserId)
+      ? adminUserId.includes(userId)
+      : userId === adminUserId
+
+    if (!isAdmin) {
+      return NextResponse.json({ error: 'Access denied - not an admin' }, { status: 403 })
+    }
+
+    const { searchParams } = new URL(request.url)
+    const id = searchParams.get('id')
+    
+    if (!id) {
+      return NextResponse.json({ error: 'Testimonial ID is required' }, { status: 400 })
+    }
+    
+    const testimonial = await prisma.testimonial.findUnique({
+      where: { id }
+    })
+    
+    if (!testimonial) {
+      return NextResponse.json({ error: 'Testimonial not found' }, { status: 404 })
+    }
+
+    await prisma.testimonial.delete({
+      where: { id }
+    })
+
+    return NextResponse.json({ message: 'Testimonial deleted successfully' })
+  } catch (error) {
+    console.error('Error deleting testimonial:', error)
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
+  }
+}

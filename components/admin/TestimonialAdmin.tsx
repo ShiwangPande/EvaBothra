@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
-import { CheckCircle, XCircle, Clock, User, Mail, MessageSquare } from 'lucide-react'
+import { CheckCircle, XCircle, Clock, User, Mail, MessageSquare, Trash2 } from 'lucide-react'
 import { Testimonial } from '@/lib/types'
 import { toast } from 'sonner'
 
@@ -13,9 +13,10 @@ interface TestimonialAdminProps {
   testimonials: Testimonial[]
   onApprove: (id: string) => Promise<void>
   onReject: (id: string) => Promise<void>
+  onDelete: (id: string) => Promise<void>
 }
 
-export function TestimonialAdmin({ testimonials, onApprove, onReject }: TestimonialAdminProps) {
+export function TestimonialAdmin({ testimonials, onApprove, onReject, onDelete }: TestimonialAdminProps) {
   const [pendingTestimonials, setPendingTestimonials] = useState<Testimonial[]>([])
   const [approvedTestimonials, setApprovedTestimonials] = useState<Testimonial[]>([])
   const [isLoading, setIsLoading] = useState(false)
@@ -49,6 +50,30 @@ export function TestimonialAdmin({ testimonials, onApprove, onReject }: Testimon
     } finally {
       setIsLoading(false)
     }
+  }
+
+  const handleDelete = async (id: string) => {
+    if (!confirm('Are you sure you want to delete this testimonial? This action cannot be undone.')) {
+      return
+    }
+    
+    setIsLoading(true)
+    try {
+      await onDelete(id)
+      toast.success('Testimonial deleted!')
+    } catch (error) {
+      toast.error('Failed to delete testimonial')
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  const getInitials = (name: string) => {
+    if (!name || name.trim().length === 0) return '??'
+    const words = name.trim().split(/\s+/)
+    if (words.length === 1) return words[0][0].toUpperCase()
+    // First character of first name + first character of last name
+    return (words[0][0] + words[words.length - 1][0]).toUpperCase()
   }
 
   const getStatusBadge = (status: string) => {
@@ -87,9 +112,9 @@ export function TestimonialAdmin({ testimonials, onApprove, onReject }: Testimon
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-3">
                       <Avatar>
-                        <AvatarImage src={testimonial.imageSrc} alt={testimonial.author} />
+                        <AvatarImage src={testimonial.imageSrc || undefined} alt={testimonial.author} />
                         <AvatarFallback>
-                          {testimonial.author.split(' ').map(n => n[0]).join('')}
+                          {getInitials(testimonial.author)}
                         </AvatarFallback>
                       </Avatar>
                       <div>
@@ -166,9 +191,9 @@ export function TestimonialAdmin({ testimonials, onApprove, onReject }: Testimon
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-3">
                       <Avatar>
-                        <AvatarImage src={testimonial.imageSrc} alt={testimonial.author} />
+                        <AvatarImage src={testimonial.imageSrc || undefined} alt={testimonial.author} />
                         <AvatarFallback>
-                          {testimonial.author.split(' ').map(n => n[0]).join('')}
+                          {getInitials(testimonial.author)}
                         </AvatarFallback>
                       </Avatar>
                       <div>
@@ -191,9 +216,22 @@ export function TestimonialAdmin({ testimonials, onApprove, onReject }: Testimon
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <div className="flex items-start gap-2">
-                    <MessageSquare className="w-4 h-4 mt-1 text-gray-500" />
-                    <p className="text-gray-700 leading-relaxed">{testimonial.content}</p>
+                  <div className="space-y-4">
+                    <div className="flex items-start gap-2">
+                      <MessageSquare className="w-4 h-4 mt-1 text-gray-500" />
+                      <p className="text-gray-700 leading-relaxed">{testimonial.content}</p>
+                    </div>
+                    <div className="flex gap-2 pt-2">
+                      <Button 
+                        size="sm" 
+                        variant="destructive"
+                        onClick={() => handleDelete(testimonial.id)}
+                        disabled={isLoading}
+                      >
+                        <Trash2 className="w-4 h-4 mr-1" />
+                        Delete
+                      </Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

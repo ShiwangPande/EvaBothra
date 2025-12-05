@@ -10,9 +10,19 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { cn } from "@/lib/utils";
 import { Testimonial, TestimonialFormData } from "@/lib/types";
 import TestimonialForm from "./TestimonialForm";
+
+// Helper function to get initials (first character of first name + first character of last name)
+function getInitials(name: string) {
+  if (!name || name.trim().length === 0) return '??'
+  const words = name.trim().split(/\s+/)
+  if (words.length === 1) return words[0][0].toUpperCase()
+  // First character of first name + first character of last name
+  return (words[0][0] + words[words.length - 1][0]).toUpperCase()
+}
 
 // Utility to provide a skeleton card while loading or no testimonials
 function TestimonialSkeleton() {
@@ -219,16 +229,19 @@ export default function Testimonials() {
                           {t.content}
                         </p>
                         <div className="mt-6 pt-4 border-t border-gray-100 flex items-center">
-                          <img
-                            src={
-                              typeof t.imageSrc === "string" && t.imageSrc.trim()
-                                ? t.imageSrc
-                                : "/placeholder-user.jpg"
-                            }
-                            alt={t.author || "Testimonial author"}
-                            className="w-12 h-12 rounded-full object-cover border bg-gray-100"
-                            loading="lazy"
-                          />
+                          <Avatar className="w-12 h-12 border bg-gray-100">
+                            <AvatarImage 
+                              src={
+                                typeof t.imageSrc === "string" && t.imageSrc.trim()
+                                  ? t.imageSrc
+                                  : undefined
+                              } 
+                              alt={t.author || "Testimonial author"}
+                            />
+                            <AvatarFallback className="text-sm font-semibold">
+                              {getInitials(t.author || "Anonymous")}
+                            </AvatarFallback>
+                          </Avatar>
                           <div className="ml-4 min-w-0">
                             <p className="font-semibold text-black truncate">
                               {t.author || "Anonymous"}
