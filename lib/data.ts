@@ -240,7 +240,7 @@ export const portfolioData: PortfolioData = {
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1753881314/IMG-20250730-WA0008_g6miji.jpg",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200440/3f70d0e5-6d51-4082-897b-009d359f4470.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200448/863eba0b-b2cb-42c7-abc7-cd4d0381218f.png",
-                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200506/5ac9aaf8-035b-4c32-bd19-e2c5bd36bc93.png",
+                    "https://res.cloudinary.com/dqv4mucxh/image/upload/v1764936320/legalsaathiii_n4t6nu.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200516/c946ccac-0283-4051-880b-f721b989ee81.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200523/c7376551-ea3e-4fd2-aacd-9e28ea30284a.png",
                     "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760200530/15295a7b-4fcf-4a1a-b8c7-ff52ca944806.png",
