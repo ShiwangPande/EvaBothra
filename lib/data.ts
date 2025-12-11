@@ -4,7 +4,7 @@ export const portfolioData: PortfolioData = {
     about: {
         title: "About Me",
         description: "Hi! I'm Eva, a student who believes titles or trophies don't measure that impact, but by the people you stand up for and the changes you help build. Among my friends, I'm known as the \"dadi\" of the group – the one who listens, gives perspective, and keeps things honest.",
-        fullStory: "Hi! I’m Eva, a student who believes titles or trophies don’t measure that impact, but by the people you stand up for and the changes you help build. Among my friends, I’m known as the “dadi” of the group – the one who listens, gives perspective, and keeps things honest. \n\n Growing up, I’ve learned that life rarely goes as planned, but that’s what makes it all the more meaningful. I’ve had to grow up fast, and it’s taught me grit, patience, and perspective. If I had to describe myself, I’d say I’m grounded, quietly strong, and someone who believes in showing up – for myself and for others. \n\n My friends say Fight Song captures me best – and maybe it does. But I’ve never seen myself as someone fighting against life; I fight for it – for fairness, dignity, and courage, both mine and others’.",
+        fullStory: "Hi! I’m Eva, a student who believes titles or trophies don’t measure that impact, but by the people you stand up for and the changes you help build. Among my friends, I’m known as the “dadi” of the group – the one who listens, gives perspective, and keeps things honest. \n\n Growing up, I’ve learned that life rarely goes as planned, but that’s what makes it all the more meaningful. I’ve had to grow up fast, and it’s taught me grit, patience, and perspective. If I had to describe myself, I’d say I’m grounded, quietly strong, and someone who believes in showing up – for myself and for others. \n\n My friends say Fight Song captures me best – and maybe it does. But I’ve never seen myself as someone fighting against life; I fight for it – for fairness, dignity, and courage, both mine and others.",
         callToAction: "Enter into the journey of my impact.",
         imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1759008695/About_Me_vjwifi.png"
         // imageSrc:"https://res.cloudinary.com/dqv4mucxh/image/upload/v1759007019/About_Me_qysv4w.png"
@@ -159,7 +159,7 @@ export const portfolioData: PortfolioData = {
                         "title": "Certificate of Participation",
                         "grade": "High School",
                         "description": "Certificate for participation in a scientific research and innovation conference.",
-                        "details": "Presented at the **Innosphere: High School Research and Innovation Conference 2025**, organized by **Sigma Xi, The Scientific Research Honor Society**.",
+                        "details": "Presented at the Innosphere: High School Research and Innovation Conference 2025**, organized by **Sigma Xi, The Scientific Research Honor Society.",
                         "category": "Scientific Research Conference",
                         "imageSrc": "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760199832/51e5c7de-a8b0-483f-b482-ab935f1c19fc.png",
                         "achievements": [
