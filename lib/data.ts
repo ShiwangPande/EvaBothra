@@ -159,7 +159,7 @@ export const portfolioData: PortfolioData = {
                         "title": "Certificate of Participation",
                         "grade": "High School",
                         "description": "Certificate for participation in a scientific research and innovation conference.",
-                        "details": "Presented at the Innosphere: High School Research and Innovation Conference 2025**, organized by **Sigma Xi, The Scientific Research Honor Society.",
+                        "details": "Presented at the Innosphere: High School Research and Innovation Conference 2025, organized by Sigma Xi, The Scientific Research Honor Society.",
                         "category": "Scientific Research Conference",
                         "imageSrc": "https://res.cloudinary.com/dqv4mucxh/image/upload/v1760199832/51e5c7de-a8b0-483f-b482-ab935f1c19fc.png",
                         "achievements": [
